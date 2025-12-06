@@ -70,6 +70,7 @@ new file -> path C:\Apache24  and extract all files from download there
 sto path: C:\Apache24\conf\httpd.conf open last file, make sure the line: Define SRVROOT "/Apache24" deixnei: Define SRVROOT "c:/Apache24" and make sure that the lines below are exist without #:
 
 LoadModule php_module "c:/php/php8apache2_4.dll"
+
 AddType application/x-httpd-php .php
 
 PHPIniDir "C:/php"
