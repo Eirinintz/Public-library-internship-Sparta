@@ -110,9 +110,13 @@ sto path C:\Apache24\conf to file httpd antikatastasi sthn proteleytaia grammi p
 
 sto C:\Apache24\htdocs new file me onoma info.php  apo notepad o code:
 
+
+
 <? php
 phpinfo();
 ?>
+
+
 
 save as info.php all files
 
