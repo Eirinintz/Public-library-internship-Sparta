@@ -13,10 +13,11 @@ web server python php
 
 
 
-εγκατασταση flask -> cmd
+εγκατασταση flask -> cmd  -> install flask set FLASK_APP=app.py
 
 
-κατεβασμα vs code, extension python, code app.py και τρέχεις είτε στο terminal είτε στο cmd -> set FLASK_APP=app.py, cd C:\Users... στο path του φάκελου και τέλος: python app.py. 
+κατεβασμα vs code, extension python, code app.py και τρέχεις είτε στο terminal python app.py 
+είτε στο cmd pc ->  cd C:\Users... στο path του φάκελου και τέλος: python app.py. 
 
 
 εμφανιση http:... ανοιγεις browser και εμφανιση μηνυματων
