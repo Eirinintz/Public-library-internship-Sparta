@@ -19,7 +19,7 @@ Below are the steps to install and set up the development environments for both 
 
 Create a folder named **Project_Folder** in the path:
 
-`C:\`
+```C:\```
 
 ### 2. Create the Python File (app.py)
 
