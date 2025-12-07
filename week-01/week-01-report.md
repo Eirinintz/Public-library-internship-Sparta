@@ -23,11 +23,9 @@ Paste the corresponding HTML code (also available in the **week-01** folder), se
 #### 4. Install Flask
 
 Open **Command Prompt** and install Flask by running:
-
 *pip install flask*
 
 Then set the Flask application environment variable:
-
 *set FLASK_APP=app.py*
 
 #### 5. Install Python Extension in Visual Studio Code
