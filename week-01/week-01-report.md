@@ -79,11 +79,6 @@ Open that URL in your browser, and the page will display the messages:
 **This is a message.**
 
 
-
-
-
-
-
 ## 2️⃣ PHP Setup
 ### 1. Download and Install PHP
 
@@ -91,19 +86,14 @@ Go to the official PHP for Windows download page:
 
 ```https://windows.php.net/download/```
 
-Download the **Thread Safe ZIP package** for your system and extract the files into a new folder named **php** in:
+Download the **Thread Safe ZIP package** and extract it into:
 
-```C:\```
+```C:\php```
 
+### 2. Create the PHP File (```index.php```)
 
-After extraction, your folder should look like:
-
-```C:\php\```
-
-### 2. Create the PHP File (index.php)
-
-Inside the C:\php folder, create a new file named **index.php** using Notepad.
-Select **"All Files"** when saving, and paste the PHP code provided in the **week-01** folder.
+Inside the ```C:\php``` folder, create a new file named ```index.php``` using Notepad.
+Select **"All Files"** when saving, and paste the PHP code provided in the ```week-01``` folder.
 
 Example structure:
 
@@ -114,19 +104,16 @@ C:\php\
 
 ### 3. Install the PHP Extension in Visual Studio Code
 
-Open Visual Studio Code → Go to **Extensions** → Install the extension named **"PHP"**
-(This enables syntax highlighting and support for PHP code.)
+Open Visual Studio Code → Go to **Extensions** → Install the extension named **PHP** (this enables syntax highlighting and support for PHP code)
 
 ### 4. Run the PHP Development Server
 
-Open **Command Prompt** and navigate to the PHP folder:
+Open **Command Prompt** and type:
 
-```cd C:\php```
-
-
-Start the built-in PHP development server:
-
-```php -S localhost:8080```
+```
+cd C:\php
+php -S localhost:8080
+```
 
 
 If everything is correct, the server will start on port 8080.
@@ -146,8 +133,6 @@ You should now see the displayed messages:
 
 **This is a message.**
 
-
-
 ---
 
 After setting up the basic web servers using Python and PHP, the next step was to prepare the environment required for data storage and dynamic content management. For this purpose, a relational database system was introduced, using **MySQL**, which allows the application to store, retrieve, and manage library-related data efficiently (such as book information, categories, and user activity).
@@ -159,7 +144,9 @@ The following sections describe the installation steps for MySQL and Apache, as 
 
 ## 3️⃣ MySQL Database (MySQL Server)
 
-**MySQL** is one of the most widely used relational database systems, ideal for web applications like the ones developed during this project.
+**MySQL**: 
+- is one of the most widely used relational database systems, ideal for web applications like the ones developed during this project
+- is used to store, retrieve, and manage data such as book information, categories, and user activity
 
 ## Installation Steps (Windows)
 ### 1. Download MySQL Installer
@@ -173,9 +160,7 @@ The following sections describe the installation steps for MySQL and Apache, as 
 
 ### 2. Run the Installer
 
-- Open the downloaded file and choose:
-
-```Full```
+- Open the downloaded file and choose **Full** -> **Next** → **Execute**
 
 
 This installs:
@@ -190,17 +175,13 @@ This installs:
 - Utilities and connectors required for development
 ```
 
-- Then click:
-
-```Next → Execute```
-
 This installs all selected products.
 
 ### 3. Complete Configuration
 
 - During the setup:
 ```
-  Create your **MySQL root account** (username + password)
+  Create your MySQL root account (username + password)
 
   Choose the default configuration options
 
@@ -211,10 +192,11 @@ When the process finishes, MySQL Workbench will be available for use.
 
 
 
-
 ## 4️⃣ Apache HTTP Server Setup (Without XAMPP/WAMP)
 
-**Apache** is one of the most widely used web servers globally and serves as the backbone for running PHP applications in a stable, production-style environment. In this project, Apache is used to process and serve PHP pages directly from the local machine, creating a fully functional local web server setup.
+**Apache**:
+- is one of the most widely used web servers globally and serves as the backbone for running PHP applications in a stable, production-style environment
+- In this project, Apache is used to process and serve PHP pages directly from the local machine, creating a fully functional local web server setup
 
 ## Installation Steps:
 ### 1. Download Apache
@@ -317,11 +299,9 @@ If Apache is running successfully, you should see the message:
 
 ### ✔ Important Note
 
-Make sure that php and Apache24 are both located on the C:\ drive, since the configuration paths depend on this structure:
+Make sure that ```php``` and ```Apache24``` are both located on the ```C:\ drive```, since the configuration paths depend on this structure:
 ```
 C:\php
-```
-```
 C:\Apache24
 ```
 
