@@ -135,7 +135,7 @@ You should now see the displayed messages:
 
 
 
---
+---
 
 After setting up the basic web servers using Python and PHP, the next step was to prepare the environment required for data storage and dynamic content management. For this purpose, a relational database system was introduced, using MySQL, which allows the application to store, retrieve, and manage library-related data efficiently (such as book information, categories, and user activity).
 
@@ -196,44 +196,106 @@ When the process finishes, MySQL Workbench will be available for use.
 
 
 
+### 4️⃣ Apache HTTP Server Setup (Without XAMPP/WAMP)
+
+**Apache** is one of the most widely used web servers globally and serves as the backbone for running PHP applications in a stable, production-style environment. In this project, Apache is used to process and serve PHP pages directly from the local machine, creating a fully functional local web server setup.
+
+### Installation Steps:
+#### 1. Download Apache
+
+Visit the Apache Lounge download page:
+
+*https://www.apachelounge.com/download/*
 
 
+Download the version compatible with your system.
+
+#### 2. Extract Apache Files
+
+Create a new folder in the root of your C: drive:
+
+C:\Apache24
 
 
+Extract all downloaded files into this folder so your structure becomes:
 
-## 4️⃣ Apache, without XAMPP and WAMP
+C:\Apache24\bin
+C:\Apache24\conf
+C:\Apache24\htdocs
+...
 
-Steps for web server: on site: https://www.apachelounge.com/download/ and install the appropriate one
+#### 3. Configure Apache to Work with PHP
 
-new file -> path C:\Apache24  and extract all files from download there
+Navigate to:
 
-sto path: C:\Apache24\conf\httpd.conf open last file, make sure the line: Define SRVROOT "/Apache24" deixnei: Define SRVROOT "c:/Apache24" and make sure that the lines below are exist without #:
-
-  LoadModule php_module "c:/php/php8apache2_4.dll"
-
-  AddType application/x-httpd-php .php
-
-
-  PHPIniDir "C:/php"
+C:\Apache24\conf
 
 
-and save the file
+Open the file:
+
+**httpd.conf**
 
 
+Make the following adjustments:
 
-στο cmd as admin -> write: 
+#### ✔ Update the ServerRoot path
 
-cd C:\Apache24\bin
-httpd.exe -k install, service is installed
+Locate:
 
-
-
-in the same terminal write: httpd.exe -k start
+*Define SRVROOT "/Apache24"*
 
 
-browser -> give localhost and then if it is ok appears the message: "It works!"
+Change it to:
 
-(php and Apache24 in the same path C:\)
+*Define SRVROOT "c:/Apache24"*
+
+#### ✔ Enable PHP module and configuration
+
+Ensure that the following lines exist **without the # symbol** (uncommented):
+
+*LoadModule php_module "c:/php/php8apache2_4.dll"*
+*AddType application/x-httpd-php .php*
+*PHPIniDir "C:/php"*
+
+
+These lines tell Apache how to load the PHP module and where to find the PHP configuration.
+
+Save the file.
+
+#### 4. Install and Start the Apache Service
+
+Open **Command Prompt as Administrator** and run:
+
+##### Install Apache as a service:
+*cd C:\Apache24\bin*
+*httpd.exe -k install*
+
+
+This registers Apache as a Windows service.
+
+##### Start the Apache server:
+*httpd.exe -k start*
+
+
+If everything is correct, the server will start without errors.
+
+#### 5. Test the Installation
+
+Open your browser and visit:
+
+*http://localhost*
+
+
+If Apache is running successfully, you should see the message:
+
+**It works!**
+
+#### ✔ Important Note
+
+Make sure that php and Apache24 are both located on the C:\ drive, since the configuration paths depend on this structure:
+
+C:\php
+C:\Apache24
 
 
 
