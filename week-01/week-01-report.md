@@ -2,13 +2,13 @@
 
 During the first week of the internship, we set up the basic tools to create simple web applications. The goal was to build two small web servers (Python and PHP) and connect them with a database and a web server for a complete environment.
 
-- Python (Flask): Lightweight server for displaying messages and handling HTML templates (localhost:5000).
+- **Python (Flask)**: Lightweight server for displaying messages and handling HTML templates (localhost:5000).
 
-- PHP: Runs via the built-in PHP server (localhost:8080) or through Apache for a more production-like setup (localhost:80).
+- **PHP**: Runs via the built-in PHP server (localhost:8080) or through Apache for a more production-like setup (localhost:80).
 
-- Apache HTTP Server: Provides a stable environment to serve PHP pages.
+- **Apache HTTP Server**: Provides a stable environment to serve PHP pages.
 
-- MySQL Database: Stores and manages data such as books, users, and categories.
+- **MySQL Database**: Stores and manages data such as books, users, and categories.
 
 Together, these tools form a simple development stack that allows message display, data management, and local web server operation — forming the foundation for more advanced features in the library system.
 
