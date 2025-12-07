@@ -70,6 +70,9 @@ Open that URL in your browser, and the page will display the messages:
 
 
 
+
+
+
 ### 2️⃣ PHP Setup
 #### 1. Download and Install PHP
 
@@ -132,28 +135,7 @@ You should now see the displayed messages:
 
 
 
-
-
-
-## gia php
-
-στον σύνδεσμο: https://windows.php.net/download/ -> install php
-
-δημιουργία φακελου php στο path C: όπου κάνεις extract all files there
-
-στον ίδιο φάκελο δημιουργείς αρχείο index.php all files με τον κώδικα php
-
-εγκαθιστάς το extension php στο visual code
-
-στο τερματικό στο cmd -> cd C:\... ekei pou einai o fakelos αλλάζεις το directory και τρεχεις php -S localhost:8080
-
-παιρνεις το localhost και το περνάς στον browser και εμφανιζει τα μηνύματα 
-**Hello!**
-
-**Welcome!**
-
-**This is a message.**
-
+---
 
 
 
