@@ -1,20 +1,20 @@
-## Week 1 – Creating a Simple Web Server Using Python and PHP
+# Week 1 – Creating a Simple Web Server Using Python and PHP
 
 The first week focused on creating a basic web server that displays predefined messages on a web page, implemented using both Python and PHP. Below are the steps followed to install the required programming environments and set up the Python version of the project.
 
-### 1️⃣ Python Setup
-#### 1. Create the Project Folder
+## 1️⃣ Python Setup
+### 1. Create the Project Folder
 
 Create a folder named **Project_Folder** in the path:
 
 C:\
 
-#### 2. Create the Python File (app.py)
+### 2. Create the Python File (app.py)
 
 Using Notepad, create a new file named **app.py** and paste the Python code shown in the folder **week-01** of this repository.
 Save the file inside **Project_Folder**, making sure to select **"All Files"** before saving.
 
-#### 3. Create the Templates Folder and HTML File
+### 3. Create the Templates Folder and HTML File
 
 Inside **Project_Folder**, create a new folder named **templates**.
 Open Notepad again and create a file named **index.html**.
