@@ -1,4 +1,5 @@
 Combining a Web Server with PHP and MySQL
+
 Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
 
 For PHP, the following steps apply: ✅
@@ -43,9 +44,11 @@ user name, pass word
 2)Μετατρέπουμε ένα excel με στοιχεία σε CSV για να γίνει import στη βάση δεδομένων
 
 ανεβάζουμε το excel και αντί για , βάζουμε ; εκεί που το αναφέρει και import
+
 Εγκατάσταση django
 
 Στο cmd ως admin
+
 python --version
 
 python -m venv venv
