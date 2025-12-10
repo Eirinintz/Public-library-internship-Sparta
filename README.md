@@ -7,7 +7,7 @@ Welcome to the repository documenting my internship experience!
 
 ---
 
-- This repository contains all tasks, projects, notes, and documentation created during my internship at the Public Library. The purpose of this internship is to gain practical experience in library operations, digital systems, archiving, user support, and any technical or administrative activities assigned throughout the program. ✨
+This repository contains all tasks, projects, notes, and documentation created during my internship at the Public Library. The purpose of this internship is to gain practical experience in library operations, digital systems, archiving, user support, and any technical or administrative activities assigned throughout the program. ✨
 
 Key Tasks During the Internship 🛠️
 During the internship, I was involved in a variety of practical tasks, including:
