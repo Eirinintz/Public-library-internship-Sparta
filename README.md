@@ -1,7 +1,7 @@
 # Public-Library-Internship-Sparta-2025
 
 
-# 🏫 Internship Overview – Library System Project
+# 🏫 Internship-Public-Library 📚
 
 Welcome to the repository documenting my internship experience!  
 
