@@ -1,104 +1,66 @@
-## ρυθμιση php 
+Combining a Web Server with PHP and MySQL
+Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
 
-sto path C:\Apache24\conf to file httpd antikatastasi sthn proteleytaia grammi poy prosthesame prin toy AddTupe me AddHandler
+For PHP, the following steps apply: ✅
+In the Apache folder, specifically in httpd, replace AddType with AddHandler on the second-to-last line
 
+Then, optionally, go to Start, open services.msc, find Apache24, and restart it
 
+Go to the Apache path, then to htdocs, where we create a new file named info.php containing the code
 
-(proairetika) -> start -> Services.msc -> Apache24 -> restart
+Finally, after entering localhost, information related to PHP is displayed
 
+Σύνδεση server με MySql kai me php
 
-sto C:\Apache24\htdocs new file me onoma info.php  apo notepad o code:
+κατέβασμα phpmyadmin -all languages το βάζουμε εκεί C: Apache24 htdocs phpmyadmin εξαγωγή όλων των στοιχείων σε αυτόν τον φάκελο
 
+Στο path αυτό, κάνεις αντιγραφή το config.sample.inc.php και το μετονομάζεις το καινούριο σε config.inc.php
 
+ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων
 
+ανοίγεις το httpd.conf και προσθέτεις στο τέλος:
 
-<? php
-phpinfo();
-?>
+Alias phpmyadmin "C:\Apache24/htdocs\phpmyadmin"
 
+<Directory "C:\Apache24\htdocs\phpmyadmin">
 
+AllowOverride All
 
-save as info.php all files
+Requires all granted
 
+and save
 
+Στο cmd as admin: cd C:/Apache24/bin και μετά httpd -k start
 
-if it is ok, then open browser -> http://.../info.php -> and appears php informations
+Άνοιξε httpd:/localhost/phpmyadmin. Αν είναι εντάξει θα δεις την φόρμα login του phpmyadmin
 
+user name, pass word
 
+Δημιουργία βάσης δεδομένων
 
+1)new αριστερή στήλη create database, δίνεις όνομα στο database
 
-## εγκατάσταση phpmyadmin 
-κατεβασμα απο το site all languages 
+2)Μετατρέπουμε ένα excel με στοιχεία σε CSV για να γίνει import στη βάση δεδομένων
 
-δημιουργια φακελου στο htdocs -> phpmyadmin 
+ανεβάζουμε το excel και αντί για , βάζουμε ; εκεί που το αναφέρει και import
+Εγκατάσταση django
 
-εξαγωγη ολων των στιιχειων του zip εκει 
-προσοχη μην γινει διπλος φακελος 
+Στο cmd ως admin
+python --version
 
-στον φακελο που δημιουργησες κάνεις αντιγραφη το config sample.inc.php και το μετονομαζεις το καινούριο σε config.inc.php
+python -m venv venv
 
-ανοίγεις το καινουριο και στηβ γραμμη 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων 
-
-
-ανοίγεις το httpd.conf και προσθέτεις στο τελος 
-
-Alias /phpmyadmin "C:/Apache24/htdocs/phpmyadmin"
-<Directory "C:/Apache24/htdocs/phpmyadmin">
-    AllowOverride All
-    Require all grunted
-</Directory>
-
-and save.
-
-
-cmd as admin
-cd C:\Apache24\bin 
-httpd -k restart
-
-
-ανοιξε το http://localhost/phpmyadmin 
-
-αν ειναι οκ θα δεις την φορμα του login για το phpmyadmin όπου συμπληρωνεις username and password. 
-
-
-## δημιουργία βασης δεδομένων 
-new αριστερη στηλη 
-create database 
-δινεις όνομα και utf8mb4_general_ci and create 
-
-μετατροπη του excel se .csv και μετα import στην βαση δεδομένων.
-
-στο import αν δεν εμφανιζει τα στοιχεια σωστα ταξινομημενα τοτε βάζεις αντι για , βαζεις ;
-
-
-
-## επομενο βημα:
-εγκατάσταση Django 
-cmd ->python --version an einai ok tote einai egkatestimenh h python diaforetika tin katevazeis.
-
-στο ιδιο cmd as admin python -m venv venv 
 venv\scripts\activate
 
-pip install django
+pipe install django
 
-αν κατεβηκε επιτυχώς τοτε django_admin startproject myproject που το myproject ειναι ο καινουριος φακελος που δημιουργήθηκε στο path που ειναι ο cmd 
+django_admin startproject myproject
 
 cd myproject
 
-
 python manage.py runserver
 
-
-
-παιρνεις την διεύθυνση ip που θα σου δωσει και θα σου εμφανισει δτο browser την αρχικη της Django εναν πύραυλο 
-
-
-## επιμενο βημα 
-python manage.py startapp my_app το οποιο δημιουργεί φακελο μεσα στο myproject
-
-με την εντολη: code .      
-
-ανοιγει ο φακελος myapp kai myproject στο vs code 
+μετά παίρνεις την ip που σου δίνει και εμφανίζει έναν πύραυλο
 
 
 
