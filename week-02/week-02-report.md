@@ -121,7 +121,24 @@ Port: 5432
 
 python manage.py migrate για να δημιουργήσει tables στη βάση 
 
-Στο cmd: python manage.py startapp library με την οποία δημιουργείται ο φάκελος "library"
+Στο cmd: python manage.py startapp mydata με την οποία δημιουργείται ο φάκελος "mydata"
+
+στα settings βρες το INSTALLED_APPS και πρόσθεσε τη γραμμή 'mydata', στο τέλος και αποθήκευσε
+
+Στον φάκελο αυτόν, ώρες το models.py και άνοιξε το στο visual και αντικατέστησε το με τον κώδικα .... και save 
+
+Στο cmd python manage.py makemigrations
+
+python manage.py migrate 
+
+Όποτε θα εμφανίζονται τα εξής:
+
+Είναι παντού οκ 
+
+Servers Databases mydata shima public tables βλέπεις όλους τους πίνακες 
+
+τρέχει ο django server χωρίς να κάνει λάθη 
+
 
 
 
