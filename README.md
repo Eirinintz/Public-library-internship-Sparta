@@ -14,9 +14,13 @@ This repository contains all tasks, projects, notes, and documentation created d
 During the internship, I was involved in a variety of practical tasks, including:
 
 📖 Registering new books and materials in the library system.
+
 ✅ Verifying the accuracy of metadata.
+
 🗂️ Assisting in the organization and maintenance of the library collection.
+
 💻 Managing digital databases.
+
 🖨️ Assisting with digitization of files.
 
 ---
