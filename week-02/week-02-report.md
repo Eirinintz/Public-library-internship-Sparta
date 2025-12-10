@@ -65,6 +65,12 @@ python manage.py runserver
 
 μετά παίρνεις την ip που σου δίνει και εμφανίζει έναν πύραυλο
 
+μετά πατάς python manage.py startapp my_app (δημιουργεί φάκελο μέσα στο my_project)
+
+με την εντολή code . ανοίγει ο φάκελος my_app και ο my_project στο vs code
+
+
+
 
 
 
