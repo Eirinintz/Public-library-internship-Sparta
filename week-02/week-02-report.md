@@ -73,7 +73,28 @@ python manage.py runserver
 
 Για την δημιουργία φόρμας:
 
-Εγκατάσταση 
+Εγκατάσταση PostgreSQL από το chat να το ρωτήσω, ανοίγεις το αρχείο, ναι σε όλα, αφήνεις επιλεγμένα αυτά που σου έχει
+
+Διάλεξε φάκελο εγκατάστασης 
+
+βάζεις pass word 
+
+αφήνεις το Port 5432
+
+αφήνεις default 
+
+next next install finish 
+
+Στο πλαίσιο: PostgreSQL 18(x64) on Port 5432
+
+next cancel close 
+
+start pgAdmin servers pass word 
+
+Databases δεξί κλικ create database 
+
+
+
 
 
 
