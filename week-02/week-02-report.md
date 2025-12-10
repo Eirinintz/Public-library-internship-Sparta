@@ -121,6 +121,7 @@ Port: 5432
 
 python manage.py migrate για να δημιουργήσει tables στη βάση 
 
+Στο cmd: python manage.py startapp library με την οποία δημιουργείται ο φάκελος "library"
 
 
 
