@@ -59,6 +59,8 @@ pipe install django
 
 django_admin startproject myproject
 
+από εδώ και Κάτω θα πρέπει να είναι ενεργοποιημένο το venv να φαίνεται 
+
 cd myproject
 
 python manage.py runserver
@@ -68,6 +70,11 @@ python manage.py runserver
 μετά πατάς python manage.py startapp my_app (δημιουργεί φάκελο μέσα στο my_project)
 
 με την εντολή code . ανοίγει ο φάκελος my_app και ο my_project στο vs code
+
+Για την δημιουργία φόρμας:
+
+Εγκατάσταση 
+
 
 
 
