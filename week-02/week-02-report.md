@@ -121,7 +121,7 @@ Port: 5432
 
 python manage.py migrate για να δημιουργήσει tables στη βάση 
 
-Στο cmd: python manage.py startapp mydata με την οποία δημιουργείται ο φάκελος "mydata"
+Στο cmd: python manage.py startapp excel_data με την οποία δημιουργείται ο φάκελος "excel_data"
 
 στα settings βρες το INSTALLED_APPS και πρόσθεσε τη γραμμή 'mydata', στο τέλος και αποθήκευσε
 
