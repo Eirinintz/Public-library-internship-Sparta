@@ -6,7 +6,7 @@
 Welcome to the repository documenting my internship experience!  
 
 ---
-ψδσφσφσ
+
 ## 📅 Internship Details
 
 - **Organization / Company:** [Sparta Public Library]  
