@@ -19,15 +19,17 @@ During the internship, I was involved in a variety of practical tasks, including
 🖨️ Assisting with digitization of files.
 
 Tools Used 🧰
+
 🧠 ChatGPT AI tool for guidance and drafting.
+
 🤖 GitHub Copilot for code and documentation assistance.
 In general, we worked with CSV, Excel, and RFID. ✅
 
-CSV (Comma-Separated Values) is a simple text file format used to store and exchange data in a table-like structure. Each line in the file represents a record, and the values are separated by commas (or another delimiter), making it easy to open in programs like Excel, Google Sheets, or to read with programming languages. It is ideal for simple data storage and for transferring information between different applications.
+**CSV (Comma-Separated Values)** is a simple text file format used to store and exchange data in a table-like structure. Each line in the file represents a record, and the values are separated by commas (or another delimiter), making it easy to open in programs like Excel, Google Sheets, or to read with programming languages. It is ideal for simple data storage and for transferring information between different applications.
 
-Excel is a spreadsheet program that helps organize and manage data, such as a collection of books. You can list titles, authors, genres, or publication dates, and sort or filter the books to find what you need quickly.
+**Excel** is a spreadsheet program that helps organize and manage data, such as a collection of books. You can list titles, authors, genres, or publication dates, and sort or filter the books to find what you need quickly.
 
-RFID (Radio Frequency Identification) in libraries is used for the organization, management, and automation of book lending. Each book has an RFID tag with a unique code, which can be read by RFID readers without removing the book from the shelf or needing a direct line of sight. This allows for automated book borrowing and returning with high speed and accuracy.
+**RFID (Radio Frequency Identification)** in libraries is used for the organization, management, and automation of book lending. Each book has an RFID tag with a unique code, which can be read by RFID readers without removing the book from the shelf or needing a direct line of sight. This allows for automated book borrowing and returning with high speed and accuracy.
 
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯
 
