@@ -93,6 +93,35 @@ start pgAdmin servers pass word
 
 Databases δεξί κλικ create database 
 
+σύνδεση django με PostgreSQL 
+
+στο ίδιο cmd (εκεί που υπάρχει δλδ το manage.py) γράψε: 
+
+pipe install psycopg2 -binary , αν είναι οκ συνεχίζουμε 
+
+τα στοιχεία της βάσης:
+
+Database name: mydata
+
+user: postgres
+
+Pass word: τον κωδικό που έβαλες κατά τη. εγκατάσταση του PostgreSQL 
+
+host: Localhost 
+
+Port: 5432
+
+άνοιξε το αρχείο settings.py
+
+στο σημείο Database={.....}
+
+αντικατέστησε από το σημείο 'Name': 'mydata', 
+
+όταν τελειώσεις με τα παραπάνω, στο ίδιο cmd τρέξε: 
+
+python manage.py migrate για να δημιουργήσει tables στη βάση 
+
+
 
 
 
