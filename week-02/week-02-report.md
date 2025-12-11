@@ -1,74 +1,137 @@
-## Combining a Web Server with PHP and MySQL
+## 🌐 Combining a Web Server with PHP and MySQL
 
-Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
+Last week I worked with MySQL and a Web Server.
+This week, we will integrate PHP with the two above.
+
+🐘 Setting up phpMyAdmin (PHP + MySQL)
+
+⬇️ Download phpMyAdmin (all languages)
+
+Extract all files to:
+
+C:/Apache24/htdocs/phpmyadmin
 
 
+📄 Copy config file
 
-### Για την σύνδεση server με MySql kai me php
+Copy config.sample.inc.php → config.inc.php
 
-κατέβασμα phpmyadmin -all languages το βάζουμε εκεί C: Apache24 htdocs phpmyadmin εξαγωγή όλων των στοιχείων σε αυτόν τον φάκελο
+Do not add an extra .php extension.
 
-Στο path αυτό, κάνεις αντιγραφή το config.sample.inc.php και το μετονομάζεις το καινούριο σε config.inc.php, χωρίς να βαλεις την καταληξη php
+🔑 Set blowfish_secret
 
-ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων kai save
+Open config.inc.php
 
-αντικαθιστας στο τελος του httpd.conf τα εξης: 
+Go to line 16 and add a random 32-character key
+
+Save the file.
+
+⚙️ Edit httpd.conf for PHP
+
+Replace/add these lines at the end of httpd.conf:
 
 LoadModule php_module c:/php/php8apache2_4.dll
-
 AddType application/x-httpd-php .php
-
 PHPIniDir C:/php
 
-με το νεο κωδικα httpd.conf and save
 
-sth php kai sygkekrimena sth php.ini-production kanoyme antigrafh se php.ini kai meta kanoyme tiw exis allages
+🛠 Edit php.ini
 
-prepei na bgoyn ta ; apo ta exhs 
+Copy php.ini-production → php.ini in C:/php
+
+Enable required extensions by removing the ;:
+
 extension=mysqli
 extension=pdo_mysql
 
-Στο cmd as admin: cd C:/Apache24/bin και μετά httpd -k start
 
-Άνοιξε httpd:/localhost/phpmyadmin. Αν είναι εντάξει θα δεις την φόρμα login του phpmyadmin
+🚀 Start Apache
 
-user name, pass word
+cd C:/Apache24/bin
+httpd -k start
 
-### Για την δημιουργία βάσης δεδομένων
 
-1)new αριστερή στήλη create database, δίνεις όνομα στο database
+🌐 Open phpMyAdmin
 
-2)Μετατρέπουμε ένα excel με στοιχεία σε CSV για να γίνει import στη βάση δεδομένων
+Go to: http://localhost/phpmyadmin
 
-💡 Tip: Βεβαιώσου ότι τα ονόματα στηλών στο CSV ταιριάζουν με τα πεδία στη βάση.
+You should see the login form.
 
-ανεβάζουμε το excel και αντί για , βάζουμε ; εκεί που το αναφέρει και import
+Username & password → MySQL credentials.
 
-Εγκατάσταση django
+🗂 Creating a Database
 
-Στο cmd ως admin
+🆕 Create a new database
+
+In the left column of phpMyAdmin → click Create database → give it a name.
+
+📊 Import data from Excel
+
+Convert Excel to CSV.
+
+Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
+
+💡 Tip: Make sure column names in CSV match your database fields.
+
+🐍 Installing Django
+
+🔍 Check Python version
 
 python --version
 
+
+⚡ Create virtual environment
+
 python -m venv venv
 
-venv\scripts\activate
 
-pipe install django
+🚀 Activate virtual environment
 
-django_admin startproject myproject
+On Windows:
 
-από εδώ και Κάτω θα πρέπει να είναι ενεργοποιημένο το venv να φαίνεται 
+venv\Scripts\activate
+
+
+On Linux/macOS:
+
+source venv/bin/activate
+
+
+📦 Install Django
+
+pip install django
+
+
+⚠ Make sure it’s pip not pipe.
+
+📁 Create Django project
+
+django-admin startproject myproject
+
+
+🏃 Run Django development server
 
 cd myproject
-
 python manage.py runserver
 
-μετά παίρνεις την ip που σου δίνει και εμφανίζει έναν πύραυλο
 
-μετά πατάς python manage.py startapp my_app (δημιουργεί φάκελο μέσα στο my_project)
+Open the URL it provides (e.g., http://127.0.0.1:8000)
 
-με την εντολή code . ανοίγει ο φάκελος my_app και ο my_project στο vs code
+You will see a rocket 🚀 icon indicating the server is running.
+
+🛠 Create Django app
+
+python manage.py startapp my_app
+
+
+This will create a folder my_app inside myproject.
+
+💻 Open project in VS Code
+
+code .
+
+
+Opens both myproject and my_app in VS Code.
 
 ### Για την δημιουργία φόρμας:
 
