@@ -39,6 +39,8 @@ In general, we worked with CSV, Excel, and RFID. ✅
 
 **RFID (Radio Frequency Identification)** in libraries is used for the organization, management, and automation of book lending. Each book has an RFID tag with a unique code, which can be read by RFID readers without removing the book from the shelf 📚➡️📡. This allows for automated book borrowing and returning with high speed and accuracy ⚡.
 
+---
+
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯😄
 
 Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
