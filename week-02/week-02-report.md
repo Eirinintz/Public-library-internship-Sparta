@@ -116,6 +116,7 @@ This will create a folder my_app inside myproject.
 
 Opens both myproject and my_app in VS Code.
 
+---
 
 ### Για την δημιουργία φόρμας:
 
