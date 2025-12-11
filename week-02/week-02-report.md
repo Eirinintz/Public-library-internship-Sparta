@@ -2,17 +2,9 @@
 
 Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
 
-### For PHP, the following steps apply: ✅
 
-In the Apache folder, specifically in httpd, replace AddType with AddHandler on the second-to-last line
 
-Then, optionally, go to Start, open services.msc, find Apache24, and restart it
-
-Go to the Apache path, then to htdocs, where we create a new file named info.php containing the code
-
-Finally, after entering localhost, information related to PHP is displayed
-
-Σύνδεση server με MySql kai me php
+### Σύνδεση server με MySql kai me php
 
 κατέβασμα phpmyadmin -all languages το βάζουμε εκεί C: Apache24 htdocs phpmyadmin εξαγωγή όλων των στοιχείων σε αυτόν τον φάκελο
 
