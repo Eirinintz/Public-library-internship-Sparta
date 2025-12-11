@@ -35,9 +35,10 @@ Replace/add these lines at the end of **httpd.conf**:
 
 Copy **php.ini-production** → **php.ini** in `C:/php`
 
-Enable required extensions by removing the ;:
+Enable required extensions by removing the ; from the following:
 
 *extension=mysqli*
+
 *extension=pdo_mysql*
 
 ### 6️⃣ 🚀 Start Apache
