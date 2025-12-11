@@ -1,13 +1,15 @@
-# 🌐 Combining a Web Server with PHP and MySQL
+# Week 2💪⌛🗓️
+
+## 🌐 Combining a Web Server with PHP and MySQL
 
 Last week I worked with MySQL and a Web Server.
 This week, we will integrate PHP with the two above.
 
 ---
 
-## 🐘 Setting up phpMyAdmin (PHP + MySQL)
+### 🐘 Setting up phpMyAdmin (PHP + MySQL)
 
-### 1️⃣ ⬇️ Download phpMyAdmin (all languages)
+#### 1️⃣ ⬇️ Download phpMyAdmin (all languages)
 
 Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
