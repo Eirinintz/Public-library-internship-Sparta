@@ -17,24 +17,21 @@ Copy config.sample.inc.php → config.inc.php
 
 Do not add an extra .php extension.
 
-3️⃣ 🔑 Set blowfish_secret
+### 3️⃣ 🔑 Set blowfish_secret
 
 Open config.inc.php
 
-Go to line 16 and add a random 32-character key
+Go to line 16 and add a random 32-character key and save the file.
 
-Save the file.
-
-4️⃣ ⚙️ Edit httpd.conf for PHP
+### 4️⃣ ⚙️ Edit httpd.conf for PHP
 
 Replace/add these lines at the end of httpd.conf:
 
-LoadModule php_module c:/php/php8apache2_4.dll
-AddType application/x-httpd-php .php
-PHPIniDir C:/php
+`LoadModule php_module c:/php/php8apache2_4.dll`
+`AddType application/x-httpd-php .php`
+`PHPIniDir C:/php`
 
-
-5️⃣ 🛠 Edit php.ini
+### 5️⃣ 🛠 Edit php.ini
 
 Copy php.ini-production → php.ini in C:/php
 
@@ -43,20 +40,16 @@ Enable required extensions by removing the ;:
 extension=mysqli
 extension=pdo_mysql
 
+### 6️⃣ 🚀 Start Apache
 
-6️⃣ 🚀 Start Apache
+`cd C:/Apache24/bin`
+`httpd -k start`
 
-cd C:/Apache24/bin
-httpd -k start
-
-
-7️⃣ 🌐 Open phpMyAdmin
+### 7️⃣ 🌐 Open phpMyAdmin
 
 Go to: http://localhost/phpmyadmin
 
-You should see the login form.
-
-Username & password → MySQL credentials.
+You should see the login form. Username & password → MySQL credentials.
 
 🗂 Creating a Database
 
