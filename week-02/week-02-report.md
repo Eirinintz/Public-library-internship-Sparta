@@ -24,7 +24,7 @@ Requires all granted
 
 and save
 
-sth php kai sygkekrimena sth php.ini-production kanoyme tiw exis allages
+sth php kai sygkekrimena sth php.ini-production kanoyme antigrafh se php.ini kai meta kanoyme tiw exis allages
 
 prepei na bgoyn ta ; apo ta exhs 
 extension=mysqli
