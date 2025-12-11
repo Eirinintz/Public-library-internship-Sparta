@@ -4,7 +4,7 @@ Last week I did MySQL and Web Server. So this week we will do PHP in combination
 
 
 
-### Σύνδεση server με MySql kai me php
+### Για την σύνδεση server με MySql kai me php
 
 κατέβασμα phpmyadmin -all languages το βάζουμε εκεί C: Apache24 htdocs phpmyadmin εξαγωγή όλων των στοιχείων σε αυτόν τον φάκελο
 
@@ -34,7 +34,7 @@ extension=pdo_mysql
 
 user name, pass word
 
-### Δημιουργία βάσης δεδομένων
+### Για την δημιουργία βάσης δεδομένων
 
 1)new αριστερή στήλη create database, δίνεις όνομα στο database
 
