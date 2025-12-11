@@ -67,7 +67,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 💡 Tip: Make sure column names in CSV match your database fields.
 
-🐍 Installing Django
+## 🐍 Installing Django
 
 ### 1️⃣ 🔍 Check Python version
 
