@@ -8,11 +8,11 @@
 
 1) Create a folder named Project_Folder on the local disk
 
-2) Create a file named app.py inside this folder with the code
+2) Create a file named ***app.py*** inside this folder with the code
 
-3) Create a folder named templates inside the same folder, and within it create a file with the code index.html
+3) Create a folder named **templates** inside the same folder, and within it create a file with the code ***index.html***
 
-4) Download the Visual Studio Code application, install the Python extension, and add the code in a file named app.py
+4) Download the Visual Studio Code application, install the Python extension, and add the code in a file named ***app.py***
 
 5) Install Flask in the Command Prompt, then run:
 
@@ -52,7 +52,7 @@
 
 1) Download an Apache Server without XAMPP or WAMP, extract the folder, and place its contents in the correct path, specifically `C:\Apache24` on the local disk
 
-2) In this folder, open the httpd.conf file to make some changes
+2) In this folder, open the **httpd.conf** file to make some changes
 
 3) We made sure that the line `Define SRVROOT /Apache24` is set to `Define SRVROOT c:/Apache24`
 
@@ -74,5 +74,5 @@
 
 `httpd.exe -k start`, to start it
 
-7) Apache must be in the same path as the PHP folder to run httpd.exe, and finally the message It works appears on a Web Page at localhost
+7) Apache must be in the same path as the PHP folder to run **httpd.exe**, and finally the message *It works* appears on a Web Page at localhost
 
