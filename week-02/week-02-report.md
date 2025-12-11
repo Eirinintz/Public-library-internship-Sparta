@@ -2,7 +2,8 @@
 
 Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
 
-For PHP, the following steps apply: ✅
+### For PHP, the following steps apply: ✅
+
 In the Apache folder, specifically in httpd, replace AddType with AddHandler on the second-to-last line
 
 Then, optionally, go to Start, open services.msc, find Apache24, and restart it
@@ -37,7 +38,7 @@ and save
 
 user name, pass word
 
-Δημιουργία βάσης δεδομένων
+### Δημιουργία βάσης δεδομένων
 
 1)new αριστερή στήλη create database, δίνεις όνομα στο database
 
@@ -71,7 +72,7 @@ python manage.py runserver
 
 με την εντολή code . ανοίγει ο φάκελος my_app και ο my_project στο vs code
 
-Για την δημιουργία φόρμας:
+### Για την δημιουργία φόρμας:
 
 Εγκατάσταση PostgreSQL από το chat να το ρωτήσω, ανοίγεις το αρχείο, ναι σε όλα, αφήνεις επιλεγμένα αυτά που σου έχει
 
