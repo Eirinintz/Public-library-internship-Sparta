@@ -53,6 +53,8 @@ Go to: `http://localhost/phpmyadmin`
 
 You should see the login form. Username & password → MySQL credentials.
 
+---
+
 ## 🗂 Creating a Database
 
 ### 1️⃣ 🆕 Create a new database
@@ -66,6 +68,8 @@ Convert Excel to CSV.
 Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 💡 Tip: Make sure column names in CSV match your database fields.
+
+---
 
 ## 🐍 Installing Django
 
