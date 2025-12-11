@@ -26,7 +26,7 @@
 
 #### For Php, the following steps apply: ✅
 
-1) Download PHP, extract the file, and place a new folder named php on the local disk containing all the contents of the zip file
+1) Download PHP, extract the file, and place a new folder named **php** on the local disk containing all the contents of the zip file
 
 2) In the same folder, add a file named ***index.php*** containing the code
 
