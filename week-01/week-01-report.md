@@ -54,7 +54,7 @@
 
 2) In this folder, open the httpd.conf file to make some changes
 
-3) We made sure that the line Define SRVROOT /Apache24 is set to Define SRVROOT c:/Apache24
+3) We made sure that the line `Define SRVROOT /Apache24` is set to `Define SRVROOT c:/Apache24`
 
 4) And finally, we added the following lines if they do not already exist:
 
