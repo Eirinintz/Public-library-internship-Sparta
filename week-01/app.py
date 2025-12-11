@@ -1,18 +1,16 @@
 from flask import Flask
 
-# Create the Flask application instance
+# Create the Flask application (should be __name__)
 app = Flask(__name__)
 
-# List of messages that will be displayed on the webpage
-messages = ["Hello!", "Welcome!", "This is a message."]
+# List of messages to display on the homepage
+messages = ["Hello!", "Welcome!"]
 
-# Define the route for the home page (localhost:5000/)
 @app.route('/')
 def home():
-    # Join the messages with a line break so each appears on a new line
+    # Return the messages joined with a line break
     return "<br>".join(messages)
 
-# Start the Flask development server
+# Start the application (should be __name__ == '__main__')
 if __name__ == '__main__':
-    # debug=True enables automatic reload on file changes and shows errors
     app.run(debug=True)
