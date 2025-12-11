@@ -51,13 +51,13 @@ Go to: http://localhost/phpmyadmin
 
 You should see the login form. Username & password → MySQL credentials.
 
-🗂 Creating a Database
+## 🗂 Creating a Database
 
-1️⃣ 🆕 Create a new database
+### 1️⃣ 🆕 Create a new database
 
 In the left column of phpMyAdmin → click Create database → give it a name.
 
-2️⃣ 📊 Import data from Excel
+### 2️⃣ 📊 Import data from Excel
 
 Convert Excel to CSV.
 
@@ -67,61 +67,47 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 🐍 Installing Django
 
-1️⃣ 🔍 Check Python version
+### 1️⃣ 🔍 Check Python version
 
-python --version
+`python --version`
+
+### 2️⃣ ⚡ Create virtual environment
+
+`python -m venv venv`
 
 
-2️⃣ ⚡ Create virtual environment
-
-python -m venv venv
-
-
-3️⃣ 🚀 Activate virtual environment
+### 3️⃣ 🚀 Activate virtual environment
 
 On Windows:
 
-venv\Scripts\activate
+`venv\Scripts\activate`
 
+### 4️⃣ 📦 Install Django
 
-On Linux/macOS:
+`pip install django`
 
-source venv/bin/activate
+### 5️⃣ 📁 Create Django project
 
+`django-admin startproject myproject`
 
-4️⃣ 📦 Install Django
+### 6️⃣ 🏃 Run Django development server
 
-pip install django
-
-
-⚠ Make sure it’s pip not pipe.
-
-5️⃣ 📁 Create Django project
-
-django-admin startproject myproject
-
-
-6️⃣ 🏃 Run Django development server
-
-cd myproject
-python manage.py runserver
-
+`cd myproject`
+`python manage.py runserver`
 
 Open the URL it provides (e.g., http://127.0.0.1:8000)
 
 You will see a rocket 🚀 icon indicating the server is running.
 
-7️⃣ 🛠 Create Django app
+### 7️⃣ 🛠 Create Django app
 
-python manage.py startapp my_app
-
+`python manage.py startapp my_app`
 
 This will create a folder my_app inside myproject.
 
-8️⃣ 💻 Open project in VS Code
+### 8️⃣ 💻 Open project in VS Code
 
-code .
-
+`code .`
 
 Opens both myproject and my_app in VS Code.
 
