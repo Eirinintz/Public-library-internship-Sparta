@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="el">
 <head>
     <meta charset="UTF-8">
-    <title>Messages</title> <!-- The title that appears in the browser tab -->
+    <title>Messages</title>
 </head>
 <body>
-    <h1>Messages:</h1> <!-- Main page heading -->
+    <h1>List of Messages</h1>
 
-    <!-- Unordered list to display all messages -->
+    <!-- Loop through the 'messages' list passed from Flask -->
     <ul>
-        <!-- Jinja2 loop: Flask sends the 'messages' list to the template,
-             and this loop displays each message as a list item -->
-        {% for message in messages %}
-            <li>{{ message }}</li> <!-- Display each message -->
+        {% for msg in messages %}
+            <!-- Display each message inside a list item -->
+            <li>{{ msg }}</li>
         {% endfor %}
     </ul>
 </body>
 </html>
-
