@@ -1,4 +1,4 @@
-# 🌟 Week 1 – Overview: Development Stack 💪⌛�
+# Week 1  💪⌛🗓️
 
 ## Creating a Web Server and displaying messages on a website using Python and PHP and Combining a Web Server with PHP and MySQL 📚
 
