@@ -19,13 +19,11 @@ Do not add an extra .php extension.
 
 ### 3️⃣ 🔑 Set blowfish_secret
 
-Open **config.inc.php**
-
-Go to line 16 and add a random 32-character key and save the file.
+Open **config.inc.php** and go to line 16 and add a random 32-character key and save the file.
 
 ### 4️⃣ ⚙️ Edit httpd.conf for PHP
 
-Replace/add these lines at the end of httpd.conf:
+Replace/add these lines at the end of **httpd.conf**:
 
 `LoadModule php_module c:/php/php8apache2_4.dll`
 `AddType application/x-httpd-php .php`
