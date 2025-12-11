@@ -1,10 +1,10 @@
 <?php
-// Create an array with simple text messages
-$messages = ["Hello!", "Welcome!", "This is a message."];
+// Array containing messages
+$messages = ["Hello!", "Welcome!"];
 
 // Loop through each message in the array
 foreach ($messages as $msg) {
-    // Print each message followed by a line break
+    // Output the message followed by a line break
     echo $msg . "<br>";
 }
 ?>
