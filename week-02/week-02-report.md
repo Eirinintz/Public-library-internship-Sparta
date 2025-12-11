@@ -10,7 +10,7 @@ Last week I did MySQL and Web Server. So this week we will do PHP in combination
 
 Στο path αυτό, κάνεις αντιγραφή το config.sample.inc.php και το μετονομάζεις το καινούριο σε config.inc.php
 
-ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων
+ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων kai save
 
 ανοίγεις το httpd.conf και προσθέτεις στο τέλος:
 
