@@ -84,7 +84,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 ### 3️⃣ 🚀 Activate virtual environment
 
-On Windows: `venv\Scripts\activate`
+`venv\Scripts\activate`
 
 ### 4️⃣ 📦 Install Django
 
