@@ -3,6 +3,8 @@
 Last week I worked with MySQL and a Web Server.
 This week, we will integrate PHP with the two above.
 
+---
+
 🐘 Setting up phpMyAdmin (PHP + MySQL)
 
 ⬇️ Download phpMyAdmin (all languages)
