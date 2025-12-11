@@ -13,7 +13,7 @@ Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
 ### 2️⃣ 📄 Copy config file
 
-Copy config.sample.inc.php → config.inc.php
+Copy **config.sample.inc.php** → **config.inc.php**
 
 Do not add an extra .php extension.
 
