@@ -76,3 +76,12 @@
 
 7) Apache must be in the same path as the PHP folder to run **httpd.exe**, and finally the message *It works* appears on a Web Page at localhost
 
+#### For PHP, the following steps apply: ✅
+
+1) In the Apache folder, specifically in httpd, replace AddType with AddHandler on the second-to-last line
+
+2) Then, optionally, go to Start, open services.msc, find Apache24, and restart it
+
+3) Go to the Apache path, then to htdocs, where we create a new file named info.php containing the code
+
+4) Finally, after entering localhost, information related to PHP is displayed
