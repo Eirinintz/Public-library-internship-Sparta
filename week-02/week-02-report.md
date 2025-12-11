@@ -44,6 +44,7 @@ Enable required extensions by removing the ; from the following:
 ### 6️⃣ 🚀 Start Apache
 
 `cd C:/Apache24/bin`
+
 `httpd -k start`
 
 ### 7️⃣ 🌐 Open phpMyAdmin
