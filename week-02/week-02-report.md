@@ -1,23 +1,23 @@
-## 🌐 Combining a Web Server with PHP and MySQL
+# 🌐 Combining a Web Server with PHP and MySQL
 
 Last week I worked with MySQL and a Web Server.
 This week, we will integrate PHP with the two above.
 
 ---
 
-🐘 Setting up phpMyAdmin (PHP + MySQL)
+## 🐘 Setting up phpMyAdmin (PHP + MySQL)
 
-⬇️ Download phpMyAdmin (all languages)
+### 1️⃣ ⬇️ Download phpMyAdmin (all languages)
 
 Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
-📄 Copy config file
+### 2️⃣ 📄 Copy config file
 
 Copy config.sample.inc.php → config.inc.php
 
 Do not add an extra .php extension.
 
-🔑 Set blowfish_secret
+3️⃣ 🔑 Set blowfish_secret
 
 Open config.inc.php
 
@@ -25,7 +25,7 @@ Go to line 16 and add a random 32-character key
 
 Save the file.
 
-⚙️ Edit httpd.conf for PHP
+4️⃣ ⚙️ Edit httpd.conf for PHP
 
 Replace/add these lines at the end of httpd.conf:
 
@@ -34,7 +34,7 @@ AddType application/x-httpd-php .php
 PHPIniDir C:/php
 
 
-🛠 Edit php.ini
+5️⃣ 🛠 Edit php.ini
 
 Copy php.ini-production → php.ini in C:/php
 
@@ -44,13 +44,13 @@ extension=mysqli
 extension=pdo_mysql
 
 
-🚀 Start Apache
+6️⃣ 🚀 Start Apache
 
 cd C:/Apache24/bin
 httpd -k start
 
 
-🌐 Open phpMyAdmin
+7️⃣ 🌐 Open phpMyAdmin
 
 Go to: http://localhost/phpmyadmin
 
@@ -60,11 +60,11 @@ Username & password → MySQL credentials.
 
 🗂 Creating a Database
 
-🆕 Create a new database
+1️⃣ 🆕 Create a new database
 
 In the left column of phpMyAdmin → click Create database → give it a name.
 
-📊 Import data from Excel
+2️⃣ 📊 Import data from Excel
 
 Convert Excel to CSV.
 
@@ -74,17 +74,17 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 🐍 Installing Django
 
-🔍 Check Python version
+1️⃣ 🔍 Check Python version
 
 python --version
 
 
-⚡ Create virtual environment
+2️⃣ ⚡ Create virtual environment
 
 python -m venv venv
 
 
-🚀 Activate virtual environment
+3️⃣ 🚀 Activate virtual environment
 
 On Windows:
 
@@ -96,19 +96,19 @@ On Linux/macOS:
 source venv/bin/activate
 
 
-📦 Install Django
+4️⃣ 📦 Install Django
 
 pip install django
 
 
 ⚠ Make sure it’s pip not pipe.
 
-📁 Create Django project
+5️⃣ 📁 Create Django project
 
 django-admin startproject myproject
 
 
-🏃 Run Django development server
+6️⃣ 🏃 Run Django development server
 
 cd myproject
 python manage.py runserver
@@ -118,19 +118,20 @@ Open the URL it provides (e.g., http://127.0.0.1:8000)
 
 You will see a rocket 🚀 icon indicating the server is running.
 
-🛠 Create Django app
+7️⃣ 🛠 Create Django app
 
 python manage.py startapp my_app
 
 
 This will create a folder my_app inside myproject.
 
-💻 Open project in VS Code
+8️⃣ 💻 Open project in VS Code
 
 code .
 
 
 Opens both myproject and my_app in VS Code.
+
 
 ### Για την δημιουργία φόρμας:
 
