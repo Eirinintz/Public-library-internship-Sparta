@@ -19,7 +19,7 @@ Do not add an extra .php extension.
 
 ### 3️⃣ 🔑 Set blowfish_secret
 
-Open config.inc.php
+Open **config.inc.php**
 
 Go to line 16 and add a random 32-character key and save the file.
 
@@ -33,12 +33,12 @@ Replace/add these lines at the end of httpd.conf:
 
 ### 5️⃣ 🛠 Edit php.ini
 
-Copy php.ini-production → php.ini in C:/php
+Copy **php.ini-production** → **php.ini** in `C:/php`
 
 Enable required extensions by removing the ;:
 
-extension=mysqli
-extension=pdo_mysql
+*extension=mysqli*
+*extension=pdo_mysql*
 
 ### 6️⃣ 🚀 Start Apache
 
@@ -47,7 +47,7 @@ extension=pdo_mysql
 
 ### 7️⃣ 🌐 Open phpMyAdmin
 
-Go to: http://localhost/phpmyadmin
+Go to: `http://localhost/phpmyadmin`
 
 You should see the login form. Username & password → MySQL credentials.
 
@@ -78,9 +78,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 ### 3️⃣ 🚀 Activate virtual environment
 
-On Windows:
-
-`venv\Scripts\activate`
+On Windows: `venv\Scripts\activate`
 
 ### 4️⃣ 📦 Install Django
 
@@ -93,6 +91,7 @@ On Windows:
 ### 6️⃣ 🏃 Run Django development server
 
 `cd myproject`
+
 `python manage.py runserver`
 
 Open the URL it provides (e.g., http://127.0.0.1:8000)
