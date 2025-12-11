@@ -84,4 +84,4 @@
 
 3) Go to the Apache path, then to htdocs, where we create a new file named info.php containing the code
 
-4) Finally, after entering localhost, information related to PHP is displayed
+4) Finally, after entering localhost, information related to PHP is displayed 
