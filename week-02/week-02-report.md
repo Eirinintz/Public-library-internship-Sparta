@@ -13,17 +13,17 @@ This week, we will integrate PHP with the two above.
 
 Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
-### 2️⃣ 📄 Copy config file
+#### 2️⃣ 📄 Copy config file
 
 Copy **config.sample.inc.php** → **config.inc.php**
 
 Do not add an extra .php extension.
 
-### 3️⃣ 🔑 Set blowfish_secret
+#### 3️⃣ 🔑 Set blowfish_secret
 
 Open **config.inc.php** and go to line 16 and add a random 32-character key and save the file.
 
-### 4️⃣ ⚙️ Edit httpd.conf for PHP
+#### 4️⃣ ⚙️ Edit httpd.conf for PHP
 
 Replace/add these lines at the end of **httpd.conf**:
 
@@ -33,7 +33,7 @@ Replace/add these lines at the end of **httpd.conf**:
 
 `PHPIniDir C:/php`
 
-### 5️⃣ 🛠 Edit php.ini
+#### 5️⃣ 🛠 Edit php.ini
 
 Copy **php.ini-production** → **php.ini** in `C:/php`
 
@@ -43,13 +43,13 @@ Enable required extensions by removing the ; from the following:
 
 *extension=pdo_mysql*
 
-### 6️⃣ 🚀 Start Apache
+#### 6️⃣ 🚀 Start Apache
 
 `cd C:/Apache24/bin`
 
 `httpd -k start`
 
-### 7️⃣ 🌐 Open phpMyAdmin
+#### 7️⃣ 🌐 Open phpMyAdmin
 
 Go to: `http://localhost/phpmyadmin`
 
@@ -57,13 +57,13 @@ You should see the login form. Username & password → MySQL credentials.
 
 ---
 
-## 🗂 Creating a Database
+### 🗂 Creating a Database
 
-### 1️⃣ 🆕 Create a new database
+#### 1️⃣ 🆕 Create a new database
 
 In the left column of phpMyAdmin → click Create database → give it a name.
 
-### 2️⃣ 📊 Import data from Excel
+#### 2️⃣ 📊 Import data from Excel
 
 Convert Excel to CSV.
 
@@ -73,30 +73,30 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 ---
 
-## 🐍 Installing Django
+### 🐍 Installing Django
 
-### 1️⃣ 🔍 Check Python version
+#### 1️⃣ 🔍 Check Python version
 
 `python --version`
 
-### 2️⃣ ⚡ Create virtual environment
+#### 2️⃣ ⚡ Create virtual environment
 
 `python -m venv venv`
 
 
-### 3️⃣ 🚀 Activate virtual environment
+#### 3️⃣ 🚀 Activate virtual environment
 
 `venv\Scripts\activate`
 
-### 4️⃣ 📦 Install Django
+#### 4️⃣ 📦 Install Django
 
 `pip install django`
 
-### 5️⃣ 📁 Create Django project
+#### 5️⃣ 📁 Create Django project
 
 `django-admin startproject myproject`
 
-### 6️⃣ 🏃 Run Django development server
+#### 6️⃣ 🏃 Run Django development server
 
 `cd myproject`
 
@@ -106,13 +106,13 @@ Open the URL it provides (e.g., http://127.0.0.1:8000)
 
 You will see a rocket 🚀 icon indicating the server is running.
 
-### 7️⃣ 🛠 Create Django app
+#### 7️⃣ 🛠 Create Django app
 
 `python manage.py startapp my_app`
 
 This will create a folder my_app inside myproject.
 
-### 8️⃣ 💻 Open project in VS Code
+#### 8️⃣ 💻 Open project in VS Code
 
 `code .`
 
