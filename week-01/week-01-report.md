@@ -1,41 +1,42 @@
-# 🌟 Week 1 – Overview: Development Stack
+# 🌟 Week 1 – Overview: Development Stack 💪⌛�
 
-Creating a Web Server and displaying messages on a website using Python and PHP and Combining a Web Server with PHP and MySQL 📚
+## Creating a Web Server and displaying messages on a website using Python and PHP and Combining a Web Server with PHP and MySQL 📚
 
-🎯 Creating a Web Server and displaying messages on a website using Python and PHP
+### 🎯 Creating a Web Server and displaying messages on a website using Python and PHP
 
-For Python, the following steps apply: ✅
+#### For Python, the following steps apply: ✅
 
-Create a folder named Project_Folder on the local disk
+1) Create a folder named Project_Folder on the local disk
 
-Create a file named app.py inside this folder with the code
+2) Create a file named app.py inside this folder with the code
 
-Create a folder named templates inside the same folder, and within it create a file with the code index.html
+3) Create a folder named templates inside the same folder, and within it create a file with the code index.html
 
-Download the Visual Studio Code application, install the Python extension, and add the code in a file named app.py
+4) Download the Visual Studio Code application, install the Python extension, and add the code in a file named app.py
 
-Install Flask in the Command Prompt, then run:
+5) Install Flask in the Command Prompt, then run:
 
-set FLASK_APP=app.py, and finally
+`set FLASK_APP=app.py`, and finally
 
-python app.py
+`python app.py`
 
-Run the code in Visual Studio Code and get the URL/path that appears in the Visual Studio Code Command Prompt
+6) Run the code in Visual Studio Code and get the URL/path that appears in the Visual Studio Code Command Prompt
 
-Paste it into a Web Page, and the messages from the code will be displayed
+7) Paste it into a Web Page, and the messages from the code will be displayed
 
-For Php, the following steps apply: ✅
-Download PHP, extract the file, and place a new folder named php on the local disk containing all the contents of the zip file
+#### For Php, the following steps apply: ✅
 
-In the same folder, add a file named index.php containing the code
+1) Download PHP, extract the file, and place a new folder named php on the local disk containing all the contents of the zip file
 
-Install a PHP extension in Visual Studio Code and run the code
+2) In the same folder, add a file named index.php containing the code
 
-In the Command Prompt, change the directory to the folder path and then run:
+3) Install a PHP extension in Visual Studio Code and run the code
 
-php -S localhost:8080
+4) In the Command Prompt, change the directory to the folder path and then run:
 
-Display the URL/path, paste it into a Web Page, and the messages will be shown
+`php -S localhost:8080`
+
+5) Display the URL/path, paste it into a Web Page, and the messages will be shown
 
 🎯 Combining a Web Server with MySQL and PHP
 
