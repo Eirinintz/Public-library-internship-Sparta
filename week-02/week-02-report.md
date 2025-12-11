@@ -1,4 +1,4 @@
-Combining a Web Server with PHP and MySQL
+## Combining a Web Server with PHP and MySQL
 
 Last week I did MySQL and Web Server. So this week we will do PHP in combination with the two above.
 
