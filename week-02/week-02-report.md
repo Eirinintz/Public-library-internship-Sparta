@@ -3,6 +3,7 @@
 ## 🌐 Combining a Web Server with PHP and MySQL
 
 Last week I worked with MySQL and a Web Server.
+
 This week, we will integrate PHP with the two above.
 
 ---
