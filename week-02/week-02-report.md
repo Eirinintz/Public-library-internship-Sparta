@@ -7,10 +7,7 @@ This week, we will integrate PHP with the two above.
 
 ⬇️ Download phpMyAdmin (all languages)
 
-Extract all files to:
-
-C:/Apache24/htdocs/phpmyadmin
-
+Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
 📄 Copy config file
 
