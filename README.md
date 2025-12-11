@@ -23,8 +23,6 @@ During the internship, I was involved in a variety of practical tasks, including
 
 🖨️ Assisting with digitization of files.
 
----
-
 ## Tools Used 🧰
 
 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
@@ -32,6 +30,8 @@ During the internship, I was involved in a variety of practical tasks, including
 🤖 GitHub Copilot — for code and documentation assistance.
 
 In general, we worked with CSV, Excel, and RFID. ✅
+
+---
 
 **CSV (Comma-Separated Values)** is a simple text file format used to store and exchange data in a table-like structure. Each line in the file represents a record, and the values are separated by commas (or another delimiter) making it easy to open in programs like Excel or Google Sheets. Ideal for simple data storage and transferring information between applications. 📄✨
 
