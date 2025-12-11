@@ -116,7 +116,7 @@ This will create a folder my_app inside myproject.
 
 `code .`
 
-Opens both myproject and my_app in VS Code.
+Open both myproject and my_app in VS Code.
 
 ---
 
