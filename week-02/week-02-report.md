@@ -20,7 +20,7 @@ AddType application/x-httpd-php .php
 
 PHPIniDir C:/php
 
-και προσθέτεις στο τέλος το νεο κωδικα httpd.conf and save
+με το νεο κωδικα httpd.conf and save
 
 sth php kai sygkekrimena sth php.ini-production kanoyme antigrafh se php.ini kai meta kanoyme tiw exis allages
 
