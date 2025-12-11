@@ -8,7 +8,7 @@ Last week I did MySQL and Web Server. So this week we will do PHP in combination
 
 κατέβασμα phpmyadmin -all languages το βάζουμε εκεί C: Apache24 htdocs phpmyadmin εξαγωγή όλων των στοιχείων σε αυτόν τον φάκελο
 
-Στο path αυτό, κάνεις αντιγραφή το config.sample.inc.php και το μετονομάζεις το καινούριο σε config.inc.php
+Στο path αυτό, κάνεις αντιγραφή το config.sample.inc.php και το μετονομάζεις το καινούριο σε config.inc.php, χωρίς να βαλεις την καταληξη php
 
 ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων kai save
 
