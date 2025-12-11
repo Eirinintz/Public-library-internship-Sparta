@@ -12,17 +12,15 @@ Last week I did MySQL and Web Server. So this week we will do PHP in combination
 
 ανοίγεις το καινούριο και στην γραμμή 16 προσθέτεις εναν τυχαίο κωδικό 32 χαρακτήρων kai save
 
-ανοίγεις το httpd.conf και προσθέτεις στο τέλος:
+αντικαθιστας στο τελος του httpd.conf τα εξης: 
 
-Alias phpmyadmin "C:\Apache24/htdocs\phpmyadmin"
+LoadModule php_module c:/php/php8apache2_4.dll
 
-<Directory "C:\Apache24\htdocs\phpmyadmin">
+AddType application/x-httpd-php .php
 
-AllowOverride All
+PHPIniDir C:/php
 
-Requires all granted
-
-and save
+και προσθέτεις στο τέλος το νεο κωδικα httpd.conf and save
 
 sth php kai sygkekrimena sth php.ini-production kanoyme antigrafh se php.ini kai meta kanoyme tiw exis allages
 
