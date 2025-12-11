@@ -1,7 +1,7 @@
 # Public-Library-Internship-Sparta-2025
 
 
-# 🏫 Internship-Public-Library 📚
+## 🏫 Internship-Public-Library 📚
 
 Welcome to the repository documenting my internship experience!  
 
