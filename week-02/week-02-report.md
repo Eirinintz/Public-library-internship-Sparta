@@ -24,6 +24,12 @@ Requires all granted
 
 and save
 
+sth php kai sygkekrimena sth php.ini-production kanoyme tiw exis allages
+
+prepei na bgoyn ta ; apo ta exhs 
+extension=mysqli
+extension=pdo_mysql
+
 Στο cmd as admin: cd C:/Apache24/bin και μετά httpd -k start
 
 Άνοιξε httpd:/localhost/phpmyadmin. Αν είναι εντάξει θα δεις την φόρμα login του phpmyadmin
