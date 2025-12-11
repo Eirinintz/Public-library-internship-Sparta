@@ -38,39 +38,41 @@
 
 5) Display the URL/path, paste it into a Web Page, and the messages will be shown
 
-🎯 Combining a Web Server with MySQL and PHP
+---
 
-For MySQL, the following steps apply: ✅
+### 🎯 Combining a Web Server with MySQL and PHP
 
-Download the latest version of MySQL and install it
+#### For MySQL, the following steps apply: ✅
 
-Create an account and finish the installation
+1) Download the latest version of MySQL and install it
 
-For Web server, the following steps apply: ✅
+2) Create an account and finish the installation
 
-Download an Apache Server without XAMPP or WAMP, extract the folder, and place its contents in the correct path, specifically C:\Apache24 on the local disk
+#### For Web server, the following steps apply: ✅
 
-In this folder, open the httpd.conf file to make some changes
+1) Download an Apache Server without XAMPP or WAMP, extract the folder, and place its contents in the correct path, specifically `C:\Apache24` on the local disk
 
-We made sure that the line Define SRVROOT /Apache24 is set to Define SRVROOT c:/Apache24
+2) In this folder, open the httpd.conf file to make some changes
 
-And finally, we added the following lines if they do not already exist:
+3) We made sure that the line Define SRVROOT /Apache24 is set to Define SRVROOT c:/Apache24
 
-LoadModule php_module c:/php/php8apache2_4.dll
+4) And finally, we added the following lines if they do not already exist:
 
-AddType application/x-httpd-php .php
+`LoadModule php_module c:/php/php8apache2_4.dll`
 
-PHPIniDir C:/php, and then we save the file
+`AddType application/x-httpd-php .php`
 
-Open the Command Prompt as Administrator and set the correct path to show the following:
+`PHPIniDir C:/php`, and then we save the file
 
-httpd cd C:\Apache24\bin, and then
+5) Open the Command Prompt as Administrator and set the correct path to show the following:
 
-httpd.exe -k install, so, apache has been installed
+`httpd cd C:\Apache24\bin`, and then
 
-In the same Command Prompt, enter:
+`httpd.exe -k install`, so, apache has been installed
 
-httpd.exe -k start, to start it
+6) In the same Command Prompt, enter:
 
-Apache must be in the same path as the PHP folder to run httpd.exe, and finally the message It works appears on a Web Page at localhost
+`httpd.exe -k start`, to start it
+
+7) Apache must be in the same path as the PHP folder to run httpd.exe, and finally the message It works appears on a Web Page at localhost
 
