@@ -147,7 +147,7 @@ start pgAdmin servers pass word
 
 Databases δεξί κλικ create database 
 
-σύνδεση django με PostgreSQL 
+### σύνδεση django με PostgreSQL (gia import excel kai oxi me python)
 
 στο ίδιο cmd (εκεί που υπάρχει δλδ το manage.py) γράψε: 
 
@@ -155,11 +155,11 @@ pipe install psycopg2 -binary , αν είναι οκ συνεχίζουμε
 
 τα στοιχεία της βάσης:
 
-Database name: mydata
+Database name: mydb
 
 user: postgres
 
-Pass word: τον κωδικό που έβαλες κατά τη. εγκατάσταση του PostgreSQL 
+Pass word: τον κωδικό που έβαλες κατά την εγκατάσταση του PostgreSQL 
 
 host: Localhost 
 
@@ -169,7 +169,7 @@ Port: 5432
 
 στο σημείο Database={.....}
 
-αντικατέστησε από το σημείο 'Name': 'mydata', 
+αντικατέστησε από το σημείο 'Name': 'mydb', 
 
 όταν τελειώσεις με τα παραπάνω, στο ίδιο cmd τρέξε: 
 
@@ -177,9 +177,9 @@ python manage.py migrate για να δημιουργήσει tables στη βά
 
 Στο cmd: python manage.py startapp excel_data με την οποία δημιουργείται ο φάκελος "excel_data"
 
-στα settings βρες το INSTALLED_APPS και πρόσθεσε τη γραμμή 'mydata', στο τέλος και αποθήκευσε
+στα settings βρες το INSTALLED_APPS και πρόσθεσε τη γραμμή 'mydb', στο τέλος και αποθήκευσε
 
-Στον φάκελο αυτόν, ώρες το models.py και άνοιξε το στο visual και αντικατέστησε το με τον κώδικα .... και save 
+Στον φάκελο αυτόν, υπάρχει το models.py και άνοιξε το στο visual και αντικατέστησε το με τον κώδικα .... και save 
 
 Στο cmd python manage.py makemigrations
 
@@ -192,6 +192,9 @@ python manage.py migrate
 Servers Databases mydata shima public tables βλέπεις όλους τους πίνακες 
 
 τρέχει ο django server χωρίς να κάνει λάθη 
+
+### Ανάδειξη excel στο localhost χρησιμοποιωστας python
+
 
 
 
