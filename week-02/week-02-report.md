@@ -122,7 +122,7 @@ Open both myproject and my_app in Visual Studio Code.
 
 ---
 
-### 🚀 PostgreSQL Installation & Database Setup Guide
+### 🚀 PostgreSQL Installation (pgadmin) & Database Setup Guide
 
 #### 1. 🛠️ Install PostgreSQL
 1. Download the PostgreSQL installer from the official website. 📥
