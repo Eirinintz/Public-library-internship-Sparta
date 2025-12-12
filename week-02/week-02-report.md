@@ -163,10 +163,9 @@ When the Stack Builder window appears:
 3. Enter a **Database Name** (e.g., `mydatabase`). ✏️
 4. Click **Save**. 💾
 
----
-
 #### 🎉 Your PostgreSQL server and database are now ready to use! 🚀
 
+---
 
 ### σύνδεση django με PostgreSQL (gia import excel kai oxi me python)
 
