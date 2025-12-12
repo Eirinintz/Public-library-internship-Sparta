@@ -8,7 +8,7 @@ This week, we will integrate PHP with the two above.
 
 ---
 
-### 🐘 Setting up phpMyAdmin (PHP + MySQL)
+### 🐘 Setting up phpMyAdmin 
 
 #### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
 
