@@ -60,7 +60,7 @@ You should see the login form. Username & password → MySQL credentials.
 
 ---
 
-### 🗂 Creating a Database
+### 🗂 Creating a Database in phpmyadmin
 
 #### 1️⃣ 🆕 Create a new database
 
