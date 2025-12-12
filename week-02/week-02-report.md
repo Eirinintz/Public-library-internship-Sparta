@@ -167,51 +167,158 @@ When the Stack Builder window appears:
 
 ---
 
-### σύνδεση django με PostgreSQL (gia import excel kai oxi me python)
+### 🚀 Django + PostgreSQL Setup Guide
 
-στο ίδιο cmd (εκεί που υπάρχει δλδ το manage.py) γράψε: 
+#### (Preparation for Excel Import Into Database)
 
-pipe install psycopg2 -binary , αν είναι οκ συνεχίζουμε 
+This README explains step-by-step how to correctly connect Django to PostgreSQL and prepare your project for Excel data import.
+Everything here follows the correct sequence ✔️.
 
-τα στοιχεία της βάσης:
+---
 
-Database name: mydb
+#### 1️⃣ Install PostgreSQL Driver
 
-user: postgres
+In the same terminal where your `manage.py` file is located, run:
 
-Pass word: τον κωδικό που έβαλες κατά την εγκατάσταση του PostgreSQL 
+```bash
+pip install psycopg2-binary
+```
 
-host: Localhost 
+✔ If it installs successfully, continue.
 
-Port: 5432
+---
 
-άνοιξε το αρχείο settings.py
+#### 2️⃣ PostgreSQL Database Credentials
 
-στο σημείο Database={.....}
+Make sure you have a database created in pgAdmin with these settings:
 
-αντικατέστησε από το σημείο 'Name': 'mydb', 
+* **Database name:** `mydb`
+* **User:** `postgres`
+* **Password:** (the one you set when installing PostgreSQL) 🔐
+* **Host:** `localhost`
+* **Port:** `5432`
 
-όταν τελειώσεις με τα παραπάνω, στο ίδιο cmd τρέξε: 
+These values will be used by Django.
 
-python manage.py migrate για να δημιουργήσει tables στη βάση 
+---
 
-Στο cmd: python manage.py startapp excel_data με την οποία δημιουργείται ο φάκελος "excel_data"
+#### 3️⃣ Configure Django to Use PostgreSQL
 
-στα settings βρες το INSTALLED_APPS και πρόσθεσε τη γραμμή 'mydb', στο τέλος και αποθήκευσε
+Open your Django project’s `settings.py` file and find the `DATABASES = { ... }` block.
+Replace it with:
 
-Στον φάκελο αυτόν, υπάρχει το models.py και άνοιξε το στο visual και αντικατέστησε το με τον κώδικα .... και save 
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydb',
+        'USER': 'postgres',
+        'PASSWORD': 'your_postgres_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
 
-Στο cmd python manage.py makemigrations
+🎯 This connects Django to your PostgreSQL server.
 
-python manage.py migrate 
+---
 
-Όποτε θα εμφανίζονται τα εξής:
+#### 4️⃣ Run Initial Migrations
 
-Είναι παντού οκ 
+Create Django’s core tables inside PostgreSQL:
 
-Servers Databases mydata shima public tables βλέπεις όλους τους πίνακες 
+```bash
+python manage.py migrate
+```
 
-τρέχει ο django server χωρίς να κάνει λάθη 
+✔ If no errors appear, the database connection works! 🎉
+
+---
+
+#### 5️⃣ Create the Django App for Excel Handling
+
+Run:
+
+```bash
+python manage.py startapp excel_data
+```
+
+A new folder named `excel_data` will appear 📁.
+
+---
+
+#### 6️⃣ Register the App in Django Settings
+
+Open `settings.py` again and add your new app to `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    ...,
+    'excel_data',
+]
+```
+
+⚠️ Do NOT add the database name (`mydb`).
+Only Django apps go here — not databases.
+
+---
+
+#### 7️⃣ Add Your Models
+
+Open:
+
+```
+excel_data/models.py
+```
+
+Replace its content with your model definitions.
+Save the file 💾.
+
+These models define the structure of the tables that will store your Excel data.
+
+---
+
+#### 8️⃣ Create and Apply Model Migrations
+
+Run the following:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+✔ New tables will be created in your PostgreSQL database 🗃️.
+
+---
+
+#### 9️⃣ Verify Everything
+
+#### 🔍 In pgAdmin:
+
+You should now see:
+
+```
+Servers → Databases → mydb → Schemas → public → Tables
+```
+
+Your tables should be visible there 👀.
+
+#### 🖥 Start the Django Server
+
+```bash
+python manage.py runserver
+```
+
+The server should run **without any errors** 🚀.
+
+---
+
+### 🎉 Finished!
+
+Your Django project is now fully connected to PostgreSQL, your app is registered, migrations are applied, and the database is ready to receive Excel data.
+
+✅ You can now start implementing Excel import functionality using this setup.
 
 ### Ανάδειξη excel στο localhost χρησιμοποιωστας python
 
