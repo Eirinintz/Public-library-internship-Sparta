@@ -320,7 +320,7 @@ Your Django project is now fully connected to PostgreSQL, your app is registered
 
 ✅ You can now start implementing Excel import functionality using this setup.
 
-### Ανάδειξη excel στο localhost χρησιμοποιωστας python
+
 
 
 
