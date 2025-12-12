@@ -10,7 +10,7 @@ This week, we will integrate PHP with the two above.
 
 ### 🐘 Setting up phpMyAdmin (PHP + MySQL)
 
-#### 1️⃣ ⬇️ Download phpMyAdmin (all languages)
+#### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
 
 Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
 
@@ -26,7 +26,7 @@ Open **config.inc.php** and go to line 16 and add a random 32-character key and 
 
 #### 4️⃣ ⚙️ Edit httpd.conf for PHP
 
-Replace/add these lines at the end of **httpd.conf**:
+Replace/add these lines at the end of **httpd.conf** in your computer:
 
 `LoadModule php_module c:/php/php8apache2_4.dll`
 
@@ -38,13 +38,15 @@ Replace/add these lines at the end of **httpd.conf**:
 
 Copy **php.ini-production** → **php.ini** in `C:/php`
 
+production -> Server, development -> locally
+
 Enable required extensions by removing the ; from the following:
 
 *extension=mysqli*
 
 *extension=pdo_mysql*
 
-#### 6️⃣ 🚀 Start Apache
+#### 6️⃣ 🚀 Start Apache with the following:
 
 `cd C:/Apache24/bin`
 
@@ -84,8 +86,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 `python -m venv venv`
 
-
-#### 3️⃣ 🚀 Activate virtual environment
+#### 3️⃣ 🚀 Activate virtual environment (Always)
 
 `venv\Scripts\activate`
 
@@ -113,11 +114,11 @@ You will see a rocket 🚀 icon indicating the server is running.
 
 This will create a folder my_app inside myproject.
 
-#### 8️⃣ 💻 Open project in VS Code
+#### 8️⃣ 💻 Open project in Visual Studio Code
 
 `code .`
 
-Open both myproject and my_app in VS Code.
+Open both myproject and my_app in Visual Studio Code.
 
 ---
 
