@@ -135,9 +135,13 @@ Open both myproject and my_app in VS Code.
 
 next next install finish 
 
-Στο πλαίσιο: PostgreSQL 18(x64) on Port 5432
+ton stack builder wizard den ton theloume opote cancel
 
-next cancel close 
+Άνοιξε Services
+
+Βρες postgresql-x64-18
+
+Το Status πρέπει να λέει Running
 
 start pgAdmin servers pass word 
 
