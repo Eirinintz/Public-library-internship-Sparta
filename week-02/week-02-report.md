@@ -136,6 +136,7 @@ Open both *myproject* and *my_app* in Visual Studio Code.
 
 #### 2. ❌ Stack Builder
 When the Stack Builder window appears:
+
 Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### 3. 🔎 Verify PostgreSQL Service
