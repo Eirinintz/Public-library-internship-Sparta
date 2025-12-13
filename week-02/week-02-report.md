@@ -134,13 +134,9 @@ Open both myproject and my_app in Visual Studio Code.
 7. Leave Locale as **Default**. 🌍
 8. Click **Next → Next → Install → Finish**. 🎉
 
----
-
 #### 2. ❌ Stack Builder
 When the Stack Builder window appears:
 - Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
-
----
 
 #### 3. 🔎 Verify PostgreSQL Service
 1. Open **Services** (Windows Start → type *Services*). 🖥️
@@ -148,15 +144,11 @@ When the Stack Builder window appears:
 3. Ensure the **Status** is **Running**. 🟢
 4. If not, right-click → **Start**. ▶️
 
----
-
 #### 4. 🧰 Open pgAdmin
 1. Launch **pgAdmin** from the Start Menu. 🚀
 2. Set a **master password** (used only by pgAdmin). 🔑
 3. Click on the PostgreSQL server. 🗄️
 4. Enter the **password you set during PostgreSQL installation**. ✔️
-
----
 
 #### 5. 🗃️ Create a New Database
 1. In the left sidebar, expand **Servers → PostgreSQL → Databases**. 📂
@@ -175,8 +167,6 @@ When the Stack Builder window appears:
 This README explains step-by-step how to correctly connect Django to PostgreSQL and prepare your project for Excel data import.
 Everything here follows the correct sequence ✔️.
 
----
-
 #### 1️⃣ Install PostgreSQL Driver
 
 In the same terminal where your `manage.py` file is located, run:
@@ -186,8 +176,6 @@ pip install psycopg2-binary
 ```
 
 ✔ If it installs successfully, continue.
-
----
 
 #### 2️⃣ PostgreSQL Database Credentials
 
@@ -200,8 +188,6 @@ Make sure you have a database created in pgAdmin with these settings:
 * **Port:** `5432`
 
 These values will be used by Django.
-
----
 
 #### 3️⃣ Configure Django to Use PostgreSQL
 
@@ -223,8 +209,6 @@ DATABASES = {
 
 🎯 This connects Django to your PostgreSQL server.
 
----
-
 #### 4️⃣ Run Initial Migrations
 
 Create Django’s core tables inside PostgreSQL:
@@ -235,8 +219,6 @@ python manage.py migrate
 
 ✔ If no errors appear, the database connection works! 🎉
 
----
-
 #### 5️⃣ Create the Django App for Excel Handling
 
 Run:
@@ -246,8 +228,6 @@ python manage.py startapp excel_data
 ```
 
 A new folder named `excel_data` will appear 📁.
-
----
 
 #### 6️⃣ Register the App in Django Settings
 
@@ -263,8 +243,6 @@ INSTALLED_APPS = [
 ⚠️ Do NOT add the database name (`mydb`).
 Only Django apps go here — not databases.
 
----
-
 #### 7️⃣ Add Your Models
 
 Open:
@@ -278,8 +256,6 @@ Save the file 💾.
 
 These models define the structure of the tables that will store your Excel data.
 
----
-
 #### 8️⃣ Create and Apply Model Migrations
 
 Run the following:
@@ -290,8 +266,6 @@ python manage.py migrate
 ```
 
 ✔ New tables will be created in your PostgreSQL database 🗃️.
-
----
 
 #### 9️⃣ Verify Everything
 
@@ -312,8 +286,6 @@ python manage.py runserver
 ```
 
 The server should run **without any errors** 🚀.
-
----
 
 ### 🎉 Finished!
 
