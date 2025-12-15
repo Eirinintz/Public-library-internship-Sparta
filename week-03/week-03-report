@@ -11,7 +11,7 @@ excel-upload-project/
 
 2️⃣ Δομή φακέλων (απλή & σωστή)
 
-Η δομή πρέπει να είναι:
+Η δομή toy fakeloy πρέπει να είναι:
 
 excel-upload-project/
 │
@@ -88,13 +88,10 @@ npm -v
 
 Ξαναγυρνάμε στο project:
 
-cd excel-upload-project
+cd excel-upload-project (ton fakelo poy periexei ayton ton fakelo bazoyme)
 npm init -y
 npm install express multer xlsx pg
 node server.js
-
-
-cd excel-upload-project (ton fakelo poy periexei ayton ton fakelo bazoyme)
 
 Για έλεγχο:
 
@@ -109,14 +106,14 @@ package.json (ή θα δημιουργηθεί)
 2️⃣ Δημιούργησε το Node project
 npm init -y
 
-
 ✔ Θα δημιουργήσει το package.json
+
 
 3️⃣ Εγκατάσταση libraries
 npm install express multer xlsx pg
 
-
 ✔ Θα δημιουργηθεί φάκελος node_modules
+
 
 5️⃣ Βάση δεδομένων (ΜΗΝ το παραλείψεις)
 
@@ -129,13 +126,13 @@ CREATE TABLE excel_data (
     salary NUMERIC
 );
 
+and execute script
+
 1️⃣ Δημιουργία server.js
 
 Στον φάκελο excel-upload-project:
 
-Άνοιξε Notepad ή VS Code
-
-Κάνε copy–paste τον κώδικα Node που σου είχα δώσει:
+Anebase ton kvdika poy exv sto ***servers.js***
 
 Save as → server.js στον φάκελο excel-upload-project
 
@@ -152,15 +149,6 @@ public
 
 Άλλαξε το όνομα του public.html σε index.html
 
-Ο φάκελος πρέπει να είναι public:
-
-excel-upload-project/
-│
-├── server.js
-├── package.json
-├── node_modules/
-└── public/
-    └── index.html
 
 3️⃣ Τρέξε ξανά τον server
 node server.js
