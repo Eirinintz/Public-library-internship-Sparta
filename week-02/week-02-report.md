@@ -321,7 +321,7 @@ python manage.py migrate
 
 You should now see:
 
-*Servers → Databases → mydb → Schemas → public → Tables*
+*Servers → Databases → db → Schemas → public → Tables*
 
 Your tables should be visible there 👀.
 
