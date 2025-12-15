@@ -146,7 +146,7 @@ This will create a folder my_app inside myproject.
 code .
 ```
 
-Open both *myproject* and *my_app* in Visual Studio Code.
+This open the file *myproject* in Visual Studio Code.
 
 ---
 
