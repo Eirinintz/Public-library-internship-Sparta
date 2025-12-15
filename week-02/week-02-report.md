@@ -295,7 +295,7 @@ Open:
 excel_data/models.py
 ```
 
-Replace its content with your model definitions.
+Replace its content with the model code **models.py**.
 Save the file 💾.
 
 These models define the structure of the tables that will store your Excel data.
