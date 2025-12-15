@@ -51,13 +51,18 @@ Enable required extensions by removing the ; from the following:
 
 #### 6️⃣ 🚀 Start Apache with the following:
 
-`cd C:/Apache24/bin`
-
-`httpd -k start`
+```
+cd C:/Apache24/bin
+httpd -k start
+```
 
 #### 7️⃣ 🌐 Open phpMyAdmin
 
-Go to: `http://localhost/phpmyadmin`
+Go to: 
+
+```
+http://localhost/phpmyadmin
+```
 
 You should see the login form. Username & password → MySQL credentials.
 
@@ -83,29 +88,43 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 #### 1️⃣ 🔍 Check Python version
 
-`python --version`
+```
+python --version
+```
 
 #### 2️⃣ ⚡ Create virtual environment
 
-`python -m venv venv`
+```
+python -m venv venv
+```
 
 #### 3️⃣ 🚀 Activate virtual environment (Always)
 
-`venv\Scripts\activate`
+```
+venv\Scripts\activate
+```
 
 #### 4️⃣ 📦 Install Django
 
-`pip install django`
+```
+pip install django
+```
 
 #### 5️⃣ 📁 Create Django project
 
-`django-admin startproject myproject`
+```
+django-admin startproject myproject
+```
 
 #### 6️⃣ 🏃 Run Django development server
 
-```cd myproject```
+```
+cd myproject
+```
 
-```python manage.py runserver```
+```
+python manage.py runserver
+```
 
 Open the URL it provides (e.g., http://127.0.0.1:8000)
 
@@ -113,13 +132,17 @@ You will see a rocket 🚀 icon indicating the server is running.
 
 #### 7️⃣ 🛠 Create Django app
 
-```python manage.py startapp my_app```
+```
+python manage.py startapp my_app
+```
 
 This will create a folder my_app inside myproject.
 
 #### 8️⃣ 💻 Open project in Visual Studio Code
 
-```code .```
+```
+code .
+```
 
 Open both *myproject* and *my_app* in Visual Studio Code.
 
@@ -170,18 +193,18 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### 🚀 Activate virtual environment (Always)
 
-```bash
+```
 venv\Scripts\activate`
 ```
 and after
 
-```bash
+```
 cd myproject
 ```
 
 #### 🖥 Start the Django Server
 
-```bash
+```
 python manage.py runserver
 ```
 
@@ -280,7 +303,7 @@ These models define the structure of the tables that will store your Excel data.
 
 Run the following:
 
-```bash
+```
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -293,9 +316,8 @@ python manage.py migrate
 
 You should now see:
 
-```
-Servers → Databases → mydb → Schemas → public → Tables
-```
+*Servers → Databases → mydb → Schemas → public → Tables*
+
 
 Your tables should be visible there 👀.
 
