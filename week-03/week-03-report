@@ -1,40 +1,15 @@
-### να εμφανιστει η βαση, poy anebasame sto pgadmin meso toy django, στον localhost (sth forma)
+### Displaying the Database and specifically the Excel in pgadmin and then in the form (on a website)
 
 1️⃣ Φτιάξε έναν κεντρικό φάκελο project
 
 Π.χ. όπου δουλεύεις γενικά:
 
+```
 excel-upload-project/
-
-Μέσα σε αυτόν όλα.
+```
+Μέσα σε αυτόν όλα τα παρακάτω.
 
 2️⃣ Δομή φακέλων (απλή & σωστή)
-excel-upload-project/
-│
-├── server.js          👈 backend (Node.js)
-├── package.json
-│
-├── uploads/           👈 (προαιρετικό)
-│
-└── public/
-    └── index.html     👈 upload page
-
-
-📌 Τι κάνει ο καθένας:
-
-server.js → ο Node/Express κώδικας
-
-public/index.html → το page με το upload
-
-uploads/ → αν θες να αποθηκεύεις αρχεία στο disk
-(αλλιώς δεν χρειάζεται)
-
-package.json → dependencies
-
-3️⃣ Δημιουργία αρχείων (βήμα-βήμα)
-➤ Βήμα 1: Δημιούργησε τον φάκελο
-mkdir excel-upload-project
-cd excel-upload-project
 
 Η δομή πρέπει να είναι:
 
@@ -46,6 +21,19 @@ excel-upload-project/
 └── public/
     └── index.html
 
+📌 Τι κάνει tο καθένα:
+
+server.js → ο Node/Express κώδικας
+
+public/index.html → το page με το upload
+
+package.json → dependencies
+
+3️⃣ Δημιουργία αρχείων (βήμα-βήμα)
+
+➤ Βήμα 1: Δημιούργησε τον φάκελο
+mkdir excel-upload-project
+cd excel-upload-project
 
 1️⃣ Κατέβασε σωστά το Node.js
 
@@ -90,39 +78,11 @@ Finish
 node -v
 npm -v
 
-
 ΑΝ δεις version → είσαι ΟΚ ✅
 
-5️⃣ Αν ΑΚΟΜΑ δεν το βλέπει (manual fix)
-Έλεγχος αν υπάρχει το Node
+5️⃣
 
-Πήγαινε:
-
-C:\Program Files\nodejs\
-
-
-Αν ΔΕΝ υπάρχει → η εγκατάσταση δεν έγινε σωστά → ξανακάν’ την.
-
-Manual PATH (μόνο αν χρειαστεί)
-
-Search → Environment Variables
-
-Edit system environment variables
-
-Environment Variables
-
-System variables → Path → Edit
-
-Add:
-
-C:\Program Files\nodejs\
-
-
-OK → restart PC (όχι μόνο CMD)
-
-6️⃣ ΤΕΛΙΚΟΣ έλεγχος (μετά το restart)
-node -v
-npm -v
+6️⃣ 
 
 7️⃣ ΜΟΛΙΣ δουλέψει
 
@@ -244,7 +204,4 @@ SELECT * FROM excel_data;
 
 
 ➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel sth bash db. An den emfanistoyn tha prpei na tropopoihuei o kodikas se kapoia shmeia
-
-
-
 
