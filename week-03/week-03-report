@@ -1,5 +1,52 @@
 ### να εμφανιστει η βαση, poy anebasame sto pgadmin meso toy django, στον localhost (sth forma)
 
+1️⃣ Φτιάξε έναν κεντρικό φάκελο project
+
+Π.χ. όπου δουλεύεις γενικά:
+
+excel-upload-project/
+
+Μέσα σε αυτόν όλα.
+
+2️⃣ Δομή φακέλων (απλή & σωστή)
+excel-upload-project/
+│
+├── server.js          👈 backend (Node.js)
+├── package.json
+│
+├── uploads/           👈 (προαιρετικό)
+│
+└── public/
+    └── index.html     👈 upload page
+
+
+📌 Τι κάνει ο καθένας:
+
+server.js → ο Node/Express κώδικας
+
+public/index.html → το page με το upload
+
+uploads/ → αν θες να αποθηκεύεις αρχεία στο disk
+(αλλιώς δεν χρειάζεται)
+
+package.json → dependencies
+
+3️⃣ Δημιουργία αρχείων (βήμα-βήμα)
+➤ Βήμα 1: Δημιούργησε τον φάκελο
+mkdir excel-upload-project
+cd excel-upload-project
+
+Η δομή πρέπει να είναι:
+
+excel-upload-project/
+│
+├── server.js
+├── package.json
+├── node_modules/
+└── public/
+    └── index.html
+
+
 1️⃣ Κατέβασε σωστά το Node.js
 
 Άνοιξε browser
@@ -85,3 +132,29 @@ cd excel-upload-project
 npm init -y
 npm install express multer xlsx pg
 node server.js
+
+
+cd excel-upload-project (ton fakelo poy periexei ayton ton fakelo bazoyme)
+
+Για έλεγχο:
+
+dir
+
+πρέπει να δεις:
+
+server.js
+public
+package.json (ή θα δημιουργηθεί)
+
+2️⃣ Δημιούργησε το Node project
+npm init -y
+
+
+✔ Θα δημιουργήσει το package.json
+
+3️⃣ Εγκατάσταση libraries
+npm install express multer xlsx pg
+
+
+✔ Θα δημιουργηθεί φάκελος node_modules
+
