@@ -247,6 +247,8 @@ DATABASES = {
     }
 }
 ```
+and save.
+
 The Database Name should be the same everywhere
 
 🎯 This connects Django to your PostgreSQL server.
@@ -281,7 +283,7 @@ INSTALLED_APPS = [
     'excel_data',
 ]
 ```
-
+and save.
 ⚠️ Do NOT add the database name (`mydb`).
 Only Django apps go here — not databases.
 
