@@ -165,6 +165,20 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### (Preparation for Excel Import Into Database)
 
+#### 🚀 Activate virtual environment (Always)
+
+`venv\Scripts\activate` and after
+
+`cd myproject`
+
+#### 🖥 Start the Django Server
+
+```bash
+python manage.py runserver
+```
+
+The server should run **without any errors** 🚀.
+
 #### 1️⃣ Install PostgreSQL Driver
 
 In the same terminal where your `manage.py` file is located, run:
@@ -276,14 +290,6 @@ Servers → Databases → mydb → Schemas → public → Tables
 ```
 
 Your tables should be visible there 👀.
-
-#### 🖥 Start the Django Server
-
-```bash
-python manage.py runserver
-```
-
-The server should run **without any errors** 🚀.
 
 ### 🎉 Finished!
 
