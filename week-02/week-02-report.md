@@ -12,7 +12,10 @@ This week, we will integrate PHP with the two above.
 
 #### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
 
-Extract all files to: `C:/Apache24/htdocs/phpmyadmin`
+Extract all files to: 
+```
+C:/Apache24/htdocs/phpmyadmin
+```
 
 #### 2️⃣ 📄 Copy config file
 
