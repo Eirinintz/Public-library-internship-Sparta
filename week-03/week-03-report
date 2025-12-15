@@ -252,3 +252,30 @@ public
 </body>
 </html>
 
+Μετονομασία αρχείου
+
+Άλλαξε το όνομα του public.html σε index.html
+
+Ο φάκελος πρέπει να είναι public:
+
+excel-upload-project/
+│
+├── server.js
+├── package.json
+├── node_modules/
+└── public/
+    └── index.html
+
+3️⃣ Τρέξε ξανά τον server
+node server.js
+
+
+Αν όλα τα modules είναι σωστά εγκατεστημένα (express, multer, xlsx, pg) → θα δεις:
+
+Server running on http://localhost:3000
+
+4️⃣ Άνοιξε Browser
+http://localhost:3000
+
+
+➡️ Θα δεις Upload Excel page.
