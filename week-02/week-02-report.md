@@ -100,9 +100,9 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 #### 6️⃣ 🏃 Run Django development server
 
-`cd myproject`
+```cd myproject```
 
-`python manage.py runserver`
+```python manage.py runserver```
 
 Open the URL it provides (e.g., http://127.0.0.1:8000)
 
@@ -110,13 +110,13 @@ You will see a rocket 🚀 icon indicating the server is running.
 
 #### 7️⃣ 🛠 Create Django app
 
-`python manage.py startapp my_app`
+```python manage.py startapp my_app```
 
 This will create a folder my_app inside myproject.
 
 #### 8️⃣ 💻 Open project in Visual Studio Code
 
-`code .`
+```code .```
 
 Open both *myproject* and *my_app* in Visual Studio Code.
 
@@ -167,9 +167,14 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### 🚀 Activate virtual environment (Always)
 
-`venv\Scripts\activate` and after
+```bash
+venv\Scripts\activate`
+```
+and after
 
-`cd myproject`
+```bash
+cd myproject
+```
 
 #### 🖥 Start the Django Server
 
