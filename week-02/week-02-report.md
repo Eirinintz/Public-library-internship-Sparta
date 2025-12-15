@@ -12,6 +12,8 @@ This week, we will integrate PHP with MySQL and Web Server.
 
 #### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
 
+Link: https://www.phpmyadmin.net/downloads/
+
 Extract all files to: 
 ```
 C:/Apache24/htdocs/phpmyadmin
