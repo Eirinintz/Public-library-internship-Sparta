@@ -31,13 +31,7 @@ Open **config.inc.php** and go to line 16 and add a random 32-character key and 
 
 #### 4️⃣ ⚙️ Edit httpd.conf for PHP
 
-Replace/add these lines at the end of **httpd.conf** in your computer:
-
-```
-LoadModule php_module c:/php/php8apache2_4.dll
-AddType application/x-httpd-php .php
-PHPIniDir C:/php
-```
+Replace/add lines at the end of **httpd.conf** in your computer, which is in the **httpd.conf** code:
 
 #### 5️⃣ 🛠 Edit php.ini
 
