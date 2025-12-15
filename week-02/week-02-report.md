@@ -247,6 +247,7 @@ DATABASES = {
     }
 }
 ```
+++++++++++++++++++++++++++++++
 
 🎯 This connects Django to your PostgreSQL server.
 
