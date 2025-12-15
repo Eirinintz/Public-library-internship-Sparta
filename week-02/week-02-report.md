@@ -153,7 +153,7 @@ This open the file *myproject* in Visual Studio Code.
 ### 🚀 PostgreSQL Installation (pgadmin) & Database Setup Guide
 
 #### 1. 🛠️ Install PostgreSQL
-1. Download the PostgreSQL installer from the official website. 📥
+1. Download the PostgreSQL installer from the official website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. 📥
 2. Run the installer and click **Next** on all steps. 👉
 3. Leave all default components selected. ✔️
 4. Choose an installation folder (or leave the default path). 📁
