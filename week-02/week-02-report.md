@@ -2,9 +2,9 @@
 
 ## 🌐 Combining a Web Server with PHP and MySQL
 
-Last week I worked with MySQL and a Web Server.
+Last week I worked with MySQL, Web Server, Python and Php.
 
-This week, we will integrate PHP with the two above.
+This week, we will integrate PHP with MySQL and Web Server.
 
 ---
 
