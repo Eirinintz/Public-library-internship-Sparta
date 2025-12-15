@@ -1,1 +1,87 @@
 ### να εμφανιστει η βαση, poy anebasame sto pgadmin meso toy django, στον localhost (sth forma)
+
+1️⃣ Κατέβασε σωστά το Node.js
+
+Άνοιξε browser
+
+Πήγαινε στο nodejs.org
+
+Πάτα LTS (π.χ. 18 ή 20)
+
+Κατέβασε το .msi
+
+⚠️ ΜΗΝ κατεβάσεις zip
+
+2️⃣ Εγκατάσταση (ΠΟΛΥ ΣΗΜΑΝΤΙΚΟ)
+
+Όταν τρέξεις το installer:
+
+Next
+
+Next
+
+Next
+
+❗ ΜΗΝ ξετικάρεις τίποτα
+
+Βεβαιώσου ότι είναι τσεκαρισμένο:
+✔ Add to PATH
+
+Finish
+
+👉 Αν σε ρωτήσει για Tools for Native Modules → πάτα Yes
+
+3️⃣ Κλείσε ΟΛΑ τα terminal
+
+❌ Μην ξαναχρησιμοποιήσεις το παλιό CMD
+✔ Άνοιξε καινούργιο CMD ή PowerShell
+
+4️⃣ Έλεγχος
+
+Γράψε:
+
+node -v
+npm -v
+
+
+ΑΝ δεις version → είσαι ΟΚ ✅
+
+5️⃣ Αν ΑΚΟΜΑ δεν το βλέπει (manual fix)
+Έλεγχος αν υπάρχει το Node
+
+Πήγαινε:
+
+C:\Program Files\nodejs\
+
+
+Αν ΔΕΝ υπάρχει → η εγκατάσταση δεν έγινε σωστά → ξανακάν’ την.
+
+Manual PATH (μόνο αν χρειαστεί)
+
+Search → Environment Variables
+
+Edit system environment variables
+
+Environment Variables
+
+System variables → Path → Edit
+
+Add:
+
+C:\Program Files\nodejs\
+
+
+OK → restart PC (όχι μόνο CMD)
+
+6️⃣ ΤΕΛΙΚΟΣ έλεγχος (μετά το restart)
+node -v
+npm -v
+
+7️⃣ ΜΟΛΙΣ δουλέψει
+
+Ξαναγυρνάμε στο project:
+
+cd excel-upload-project
+npm init -y
+npm install express multer xlsx pg
+node server.js
