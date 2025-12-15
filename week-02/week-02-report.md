@@ -198,7 +198,7 @@ pip install psycopg2-binary
 
 Make sure you have a database created in pgAdmin with these settings:
 
-* **Database name:** `mydb`
+* **Database name:** `db`
 * **User:** `postgres`
 * **Password:** (the one you set when installing PostgreSQL) 🔐
 * **Host:** `localhost`
@@ -215,7 +215,7 @@ Replace it with:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
+        'NAME': 'db',
         'USER': 'postgres',
         'PASSWORD': 'your_postgres_password',
         'HOST': 'localhost',
