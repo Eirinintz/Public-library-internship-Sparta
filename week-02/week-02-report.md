@@ -197,7 +197,7 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### 🚀 Activate virtual environment (Always)
 
-In the Beggining:
+In the Beginning:
 
 ```
 venv\Scripts\activate`
