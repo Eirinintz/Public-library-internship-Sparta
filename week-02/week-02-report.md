@@ -295,10 +295,12 @@ Open:
 excel_data/models.py
 ```
 
-Replace its content with the model code **models.py**.
+Replace its content with the code **models.py**.
 Save the file 💾.
 
 These models define the structure of the tables that will store your Excel data.
+
+⚠️ This specific code refers to the library manuals, covering the needs of the Sparta public library.
 
 #### 8️⃣ Create and Apply Model Migrations
 
