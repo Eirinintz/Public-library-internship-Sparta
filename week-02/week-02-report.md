@@ -152,38 +152,38 @@ This open the file *myproject* in Visual Studio Code.
 
 ### 🚀 PostgreSQL Installation (pgadmin) & Database Setup Guide
 
-#### 1. 🛠️ Install PostgreSQL
-1. Download the PostgreSQL installer from the official website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. 📥
-2. Run the installer and click **Next** on all steps. 👉
-3. Leave all default components selected. ✔️
-4. Choose an installation folder (or leave the default path). 📁
-5. Enter a **password for the `postgres` superuser**. 🔐
-6. Keep the default **Port: 5432**. 🌐
-7. Leave Locale as **Default**. 🌍
-8. Click **Next → Next → Install → Finish**. 🎉
+#### 1️⃣ 🛠️ Install PostgreSQL
+- Download the PostgreSQL installer from the official website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. 📥
+- Run the installer and click **Next** on all steps. 👉
+- Leave all default components selected. ✔️
+- Choose an installation folder (or leave the default path). 📁
+- Enter a **password for the `postgres` superuser**. 🔐
+- Keep the default **Port: 5432**. 🌐
+- Leave Locale as **Default**. 🌍
+- Click **Next → Next → Install → Finish**. 🎉
 
-#### 2. ❌ Stack Builder
+#### 2️⃣❌ Stack Builder
 When the Stack Builder window appears:
 
 Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
-#### 3. 🔎 Verify PostgreSQL Service
-1. Open **Services** (Windows Start → type *Services*). 🖥️
-2. Locate **postgresql-x64-18** (or similar version). 📌
-3. Ensure the **Status** is **Running**. 🟢
-4. If not, right-click → **Start**. ▶️
+#### 3️⃣🔎 Verify PostgreSQL Service
+- Open **Services** (Windows Start → type *Services*). 🖥️
+- Locate **postgresql-x64-18** (or similar version). 📌
+- Ensure the **Status** is **Running**. 🟢
+- If not, right-click → **Start**. ▶️
 
-#### 4. 🧰 Open pgAdmin
-1. Launch **pgAdmin** from the Start Menu. 🚀
-2. Set a **master password** (used only by pgAdmin). 🔑
-3. Click on the PostgreSQL server. 🗄️
-4. Enter the **password you set during PostgreSQL installation**. ✔️
+#### 4️⃣ 🧰 Open pgAdmin
+- Launch **pgAdmin** from the Start Menu. 🚀
+- Set a **master password** (used only by pgAdmin). 🔑
+- Click on the PostgreSQL server. 🗄️
+- Enter the **password you set during PostgreSQL installation**. ✔️
 
-#### 5. 🗃️ Create a New Database
-1. In the left sidebar, expand **Servers → PostgreSQL → Databases**. 📂
-2. Right-click **Databases** → **Create → Database…** ➕
-3. Enter a **Database Name** (e.g., `mydatabase`). ✏️
-4. Click **Save**. 💾
+#### 5️⃣ 🗃️ Create a New Database
+- In the left sidebar, expand **Servers → PostgreSQL → Databases**. 📂
+- Right-click **Databases** → **Create → Database…** ➕
+- Enter a **Database Name** (e.g., `mydatabase`). ✏️
+- Click **Save**. 💾
 
 #### 🎉 Your PostgreSQL server and database are now ready to use! 🚀
 
