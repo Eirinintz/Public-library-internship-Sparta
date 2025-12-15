@@ -195,7 +195,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "mydb",
+  database: "db",
   password: "password",
   port: 5432
 });
@@ -234,7 +234,7 @@ Save as → server.js στον φάκελο excel-upload-project
 public
 
 
-Μέσα στον φάκελο public, δημιούργησε αρχείο index.html με αυτό:
+Μέσα στον φάκελο *public*, δημιούργησε αρχείο index.html με αυτό:
 
 <!DOCTYPE html>
 <html>
@@ -279,5 +279,32 @@ http://localhost:3000
 
 
 ➡️ Θα δεις Upload Excel page kai an trejei ola kala tha emfanisei Upload completed! diaforetika tha vgalei error kai tha leei sto cmd ti error einai
+
+Πώς να δεις τα δεδομένα:
+
+Άνοιξε pgAdmin
+
+Σύνδεσε στον server σου (π.χ. localhost → postgres)
+
+Στο αριστερό pane:
+
+Servers
+  └─ localhost
+      └─ Databases
+          └─ db
+              └─ Schemas
+                  └─ public
+                      └─ Tables
+                          └─ excel_data
+
+
+Κάνε δεξί click στο excel_data → Query Tool
+
+Εκτέλεσε:
+
+SELECT * FROM excel_data;
+
+
+➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel.
 
 
