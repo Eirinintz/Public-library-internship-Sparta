@@ -236,7 +236,9 @@ http://localhost:3000
 
 Άνοιξε pgAdmin
 
-Σύνδεσε στον server σου (π.χ. localhost → postgres)
+trexe στον server σου sto cmd:
+
+'node server.js'
 
 Στο αριστερό pane:
 
@@ -257,6 +259,8 @@ Servers
 SELECT * FROM excel_data;
 
 
-➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel.
+➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel sth bash db. An den emfanistoyn tha prpei na tropopoihuei o kodikas se kapoia shmeia
+
+
 
 
