@@ -187,8 +187,6 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 ### 🚀 Django + PostgreSQL Setup Guide
 
-#### (Preparation for Excel Import Into Database)
-
 #### 🚀 Activate virtual environment (Always)
 
 In the Beginning:
