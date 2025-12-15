@@ -165,9 +165,6 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### (Preparation for Excel Import Into Database)
 
-This README explains step-by-step how to correctly connect Django to PostgreSQL and prepare your project for Excel data import.
-Everything here follows the correct sequence ✔️.
-
 #### 1️⃣ Install PostgreSQL Driver
 
 In the same terminal where your `manage.py` file is located, run:
