@@ -53,6 +53,8 @@ Enable required extensions by removing the ; from the following:
 
 ```
 cd C:/Apache24/bin
+```
+```
 httpd -k start
 ```
 
@@ -214,7 +216,7 @@ The server should run **without any errors** 🚀.
 
 In the same terminal where your `manage.py` file is located, run:
 
-```bash
+```
 pip install psycopg2-binary
 ```
 
@@ -256,7 +258,7 @@ DATABASES = {
 
 Create Django’s core tables inside PostgreSQL:
 
-```bash
+```
 python manage.py migrate
 ```
 
@@ -266,7 +268,7 @@ python manage.py migrate
 
 Run:
 
-```bash
+```
 python manage.py startapp excel_data
 ```
 
@@ -305,6 +307,8 @@ Run the following:
 
 ```
 python manage.py makemigrations
+```
+```
 python manage.py migrate
 ```
 
