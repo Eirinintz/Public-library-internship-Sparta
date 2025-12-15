@@ -197,6 +197,8 @@ Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 #### 🚀 Activate virtual environment (Always)
 
+In the Beggining:
+
 ```
 venv\Scripts\activate`
 ```
@@ -323,7 +325,6 @@ python manage.py migrate
 You should now see:
 
 *Servers → Databases → mydb → Schemas → public → Tables*
-
 
 Your tables should be visible there 👀.
 
