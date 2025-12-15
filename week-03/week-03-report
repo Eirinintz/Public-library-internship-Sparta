@@ -142,18 +142,14 @@ Save as → server.js στον φάκελο excel-upload-project
 
 public
 
-Μέσα στον φάκελο *public*, δημιούργησε αρχείο index.html με αυτό:
-
-Μετονομασία αρχείου
-
-Άλλαξε το όνομα του public.html σε index.html
+Μέσα στον φάκελο *public*, δημιούργησε αρχείο index.html με ton kodika poy uparxei sto index.html
 
 
 3️⃣ Τρέξε ξανά τον server
 node server.js
 
 
-Αν όλα τα modules είναι σωστά εγκατεστημένα (express, multer, xlsx, pg) → θα δεις:
+Αν όλα τα modules είναι σωστά εγκατεστημένα tote → θα δεις to exhs:
 
 Server running on http://localhost:3000
 
@@ -171,7 +167,7 @@ trexe στον server σου sto cmd:
 
 'node server.js'
 
-Στο αριστερό pane:
+Στο αριστερό pane yparxei h exhs seira:
 
 Servers
   └─ localhost
@@ -185,7 +181,7 @@ Servers
 
 Κάνε δεξί click στο excel_data → Query Tool
 
-Εκτέλεσε:
+Εκτέλεσε and execute:
 
 SELECT * FROM excel_data;
 
