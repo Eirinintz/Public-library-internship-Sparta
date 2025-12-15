@@ -188,22 +188,6 @@ public
 
 Μέσα στον φάκελο *public*, δημιούργησε αρχείο index.html με αυτό:
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Upload Excel</title>
-</head>
-<body>
-  <h2>Upload Excel File</h2>
-
-  <form action="/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".xlsx,.xls" required />
-    <button type="submit">Upload</button>
-  </form>
-</body>
-</html>
-
 Μετονομασία αρχείου
 
 Άλλαξε το όνομα του public.html σε index.html
