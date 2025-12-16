@@ -18,10 +18,9 @@
 
 ```
 set FLASK_APP=app.py
-
 ```
 
-,and finally
+and finally
 
 ```
 python app.py
@@ -71,7 +70,7 @@ php -S localhost:8080
 LoadModule php_module c:/php/php8apache2_4.dll
 AddType application/x-httpd-php .php
 PHPIniDir C:/php
-```,
+```
 
 and then we save the file
 
@@ -79,11 +78,14 @@ and then we save the file
 
 ```
 httpd cd C:\Apache24\bin
-```, and then
+```
+
+and then
 
 ```
 httpd.exe -k install
-```,
+
+```
 
 so, apache has been installed
 
@@ -91,7 +93,7 @@ so, apache has been installed
 
 ```
 httpd.exe -k start
-```,
+```
 
 to start it
 
