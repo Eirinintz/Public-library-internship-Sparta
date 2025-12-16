@@ -16,9 +16,15 @@
 
 5) Install Flask in the Command Prompt, then run:
 
-`set FLASK_APP=app.py`, and finally
+```
+set FLASK_APP=app.py
+```,
 
-`python app.py`
+and finally
+
+```
+python app.py
+```
 
 6) Run the code in Visual Studio Code and get the URL/path that appears in the Visual Studio Code Command Prompt
 
@@ -34,7 +40,9 @@
 
 4) In the Command Prompt, change the directory to the folder path and then run:
 
-`php -S localhost:8080`
+```
+php -S localhost:8080
+```
 
 5) Display the URL/path, paste it into a Web Page, and the messages will be shown
 
@@ -58,21 +66,33 @@
 
 4) And finally, we added the following lines if they do not already exist:
 
-`LoadModule php_module c:/php/php8apache2_4.dll`
+```
+LoadModule php_module c:/php/php8apache2_4.dll
+AddType application/x-httpd-php .php
+PHPIniDir C:/php
+```,
 
-`AddType application/x-httpd-php .php`
-
-`PHPIniDir C:/php`, and then we save the file
+and then we save the file
 
 5) Open the Command Prompt as Administrator and set the correct path to show the following:
 
-`httpd cd C:\Apache24\bin`, and then
+```
+httpd cd C:\Apache24\bin
+```, and then
 
-`httpd.exe -k install`, so, apache has been installed
+```
+httpd.exe -k install
+```,
+
+so, apache has been installed
 
 6) In the same Command Prompt, enter:
 
-`httpd.exe -k start`, to start it
+```
+httpd.exe -k start
+```,
+
+to start it
 
 7) Apache must be in the same path as the PHP folder to run **httpd.exe**, and finally the message *It works* appears on a Web Page at localhost
 
