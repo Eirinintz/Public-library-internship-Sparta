@@ -128,7 +128,9 @@ Open the URL it provides (e.g., http://127.0.0.1:8000)
 
 You will see a rocket 🚀 icon indicating the server is running.
 
-#### 7️⃣ 🛠 Create Django app
+#### 7️⃣ 🛠 Create Django app 
+
+For example, run:
 
 ```
 python manage.py startapp my_app
