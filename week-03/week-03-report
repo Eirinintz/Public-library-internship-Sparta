@@ -185,6 +185,78 @@ Servers
 
 SELECT * FROM excel_data;
 
-
 ➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel sth bash db. An den emfanistoyn tha prpei na tropopoihuei o kodikas se kapoia shmeia
 
+---
+
+✅ ΒΗΜΑ 1 – ΠΟΥ ΑΚΡΙΒΩΣ ΤΟ ΚΑΝΕΙΣ
+1️⃣ Άνοιξε pgAdmin
+2️⃣ Στο αριστερό pane:
+Servers
+ └─ PostgreSQL (ή localhost)
+     └─ Databases
+         └─ db   ← (αυτή είναι η βάση σου)
+
+
+👉 Κλικ στο db
+
+3️⃣ Άνοιξε Query Tool
+
+Δεξί click στο db
+
+Πάτα Query Tool
+
+(ή από το menu: Tools → Query Tool)
+
+4️⃣ Επικόλλησε ΑΚΡΙΒΩΣ αυτόν τον κώδικα
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    arithmos_eisagogis TEXT,
+    hmerominia_eisagogis TEXT,
+    syggrafeas TEXT,
+    syggrafeas_kona TEXT,
+    titlos TEXT,
+    ekdotis TEXT,
+    ekdosi TEXT,
+    etos TEXT,
+    topos_ekdosis TEXT,
+    sxhma TEXT,
+    selides TEXT,
+    tomos TEXT,
+    tropos_promitheias TEXT,
+    isbn TEXT,
+    stili1 TEXT,
+    stili2 TEXT
+);
+
+5️⃣ Πάτα ▶ Execute
+
+✔ Αν ΔΕΝ βγάλει error → είσαι ΟΚ
+✔ Ο πίνακας books δημιουργήθηκε
+
+🔍 ΠΩΣ ΕΛΕΓΧΕΙΣ ΟΤΙ ΥΠΑΡΧΕΙ
+
+Στο pgAdmin:
+
+Schemas
+ └─ public
+     └─ Tables
+         └─ books
+
+
+Αν δεν το δεις αμέσως:
+
+δεξί click στο Tables
+
+Refresh
+
+🧪 Γρήγορος έλεγχος
+
+Στο ίδιο Query Tool:
+
+SELECT * FROM books;
+
+
+➡️ Θα δεις άδειο table (λογικό, δεν έχουμε κάνει upload ακόμα)
