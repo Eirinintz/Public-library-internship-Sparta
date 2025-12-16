@@ -18,9 +18,10 @@
 
 ```
 set FLASK_APP=app.py
-```,
 
-and finally
+```
+
+,and finally
 
 ```
 python app.py
