@@ -50,9 +50,6 @@ python app.py
 php -S localhost:8080
 ```
 
-yaml
-Αντιγραφή κώδικα
-
 5️⃣ Display the URL/path, paste it into a Web Page, and the messages will be shown 🌐📩
 
 ---
@@ -77,37 +74,33 @@ yaml
 
 4️⃣ And finally, we added the following lines if they do not already exist:
 
+```
 LoadModule php_module c:/php/php8apache2_4.dll
 AddType application/x-httpd-php .php
 PHPIniDir C:/php
-
-csharp
-Αντιγραφή κώδικα
+```
 
 💾 and then we save the file
 
 5️⃣ Open the Command Prompt as Administrator and set the correct path to show the following:
 
+```
 httpd cd C:\Apache24\bin
-
-nginx
-Αντιγραφή κώδικα
+```
 
 and then
 
+```
 httpd.exe -k install
-
-yaml
-Αντιγραφή κώδικα
+```
 
 🎉 So, Apache has been installed!
 
 6️⃣ In the same Command Prompt, enter:
 
+```
 httpd.exe -k start
-
-pgsql
-Αντιγραφή κώδικα
+```
 
 to start it 🚀
 
@@ -125,8 +118,4 @@ to start it 🚀
 
 4️⃣ Finally, after entering `localhost`, information related to PHP is displayed 🖥️💻
 
----
 
-### 📊 General
-
-In general, we worked with **Excel**, **RFID**, and **CSV** 📈🗂️
