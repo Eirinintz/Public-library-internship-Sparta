@@ -17,7 +17,7 @@ const pool = new Pool({
   user: "postgres",
   host: "localhost",
   database: "db",
-  password: "",
+  password: "", // ή το πραγματικό σου password
   port: 5432
 });
 
@@ -29,8 +29,42 @@ app.post("/upload", upload.single("file"), async (req, res) => {
 
     for (const row of data) {
       await pool.query(
-        "INSERT INTO excel_data(name, age, salary) VALUES ($1,$2,$3)",
-        [row.name, row.age, row.salary]
+        `INSERT INTO books(
+          arithmos_eisagogis,
+          hmerominia_eisagogis,
+          syggrafeas,
+          syggrafeas_kona,
+          titlos,
+          ekdotis,
+          ekdosi,
+          etos,
+          topos_ekdosis,
+          sxhma,
+          selides,
+          tomos,
+          tropos_promitheias,
+          isbn,
+          stili1,
+          stili2
+        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16)`,
+        [
+          row['ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ'],
+          row['ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ'],
+          row['ΣΥΓΓΡΑΦΕΑΣ'],
+          row['ΣΥΓΓΡΑΦΕΑΣ ΚΟΝΑ'],
+          row['ΤΙΤΛΟΣ'],
+          row['ΕΚΔΟΤΗΣ'],
+          row['ΕΚΔΟΣΗ'],
+          row['ΕΤΟΣ'],
+          row['ΤΟΠΟΣ ΕΚΔΟΣΗΣ'],
+          row['ΣΧΗΜΑ'],
+          row['ΣΕΛΙΔΕΣ'],
+          row['ΤΟΜΟΣ'],
+          row['ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ'],
+          row['ISBN'],
+          row['ΣΤΗΛΗ1'],
+          row['ΣΤΗΛΗ2']
+        ]
       );
     }
 
