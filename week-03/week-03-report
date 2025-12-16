@@ -284,3 +284,31 @@ SELECT * FROM books;
 
 Τα ελληνικά πρέπει να εμφανίζονται σωστά.
 
+sthn db query tool pername ayto 
+
+CREATE TABLE books (
+  "ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ" text,
+  "ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ" text,
+  "ΣΥΓΓΡΑΦΕΑΣ" text,
+  "ΣΥΓΓΡΑΦΕΑΣ ΚΟΝΑ" text,
+  "ΤΙΤΛΟΣ" text,
+  "ΕΚΔΟΤΗΣ" text,
+  "ΕΚΔΟΣΗ" text,
+  "ΕΤΟΣ" text,
+  "ΤΟΠΟΣ ΕΚΔΟΣΗΣ" text,
+  "ΣΧΗΜΑ" text,
+  "ΣΕΛΙΔΕΣ" text,
+  "ΤΟΜΟΣ" text,
+  "ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ" text,
+  "ISBN" text,
+  "ΣΤΗΛΗ1" text,
+  "ΣΤΗΛΗ2" text
+);
+
+and execute
+
+kai sto books or excel_data pername 
+
+SELECT * FROM books;
+
+and execute
