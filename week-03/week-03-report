@@ -115,7 +115,7 @@ npm install express multer xlsx pg
 ✔ Θα δημιουργηθεί φάκελος node_modules
 
 
-5️⃣ Βάση δεδομένων (ΜΗΝ το παραλείψεις)
+############5️⃣ Βάση δεδομένων (ΜΗΝ το παραλείψεις)
 
 Στο pgAdmin → Query Tool τρέξε:
 
@@ -124,7 +124,7 @@ CREATE TABLE excel_data (
     name TEXT,
     age INTEGER,
     salary NUMERIC
-);
+#############);
 
 and execute script
 
@@ -264,4 +264,23 @@ SELECT * FROM books;
 
 ❗ Το node server.js τρέχει ΜΟΝΟ αν βρίσκεσαι
 στον ίδιο φάκελο που είναι το αρχείο
+
+🟢 Βήμα 1 – Έλεγχος στον pgAdmin
+
+Άνοιξε Query Tool και τρέξε:
+
+SELECT COUNT(*) FROM books;
+
+
+Αυτό θα σου δείξει πόσες γραμμές μπήκαν.
+
+Πρέπει να ταιριάζει με τις σειρές του Excel.
+
+🟢 Βήμα 2 – Δες τα δεδομένα
+SELECT * FROM books;
+
+
+Θα δεις ολες τις στήλες όπως στο Excel.
+
+Τα ελληνικά πρέπει να εμφανίζονται σωστά.
 
