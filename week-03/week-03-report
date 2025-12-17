@@ -75,7 +75,7 @@ list_books.html (πίνακας εμφάνισης)
 Στο myproject/urls.py:
 
 Βήμα 8 — Τρέξιμο του server
-Στο terminal:
+Στο terminal: 
 
 otan allazeis ton kodika toy models prpei na trexeis kai ayta:
 python manage.py makemigrations
@@ -87,7 +87,7 @@ python manage.py runserver
 Βήμα 9 — Δοκιμή
 Άνοιξε: http://localhost:8000/books/upload/ → θα δεις τη φόρμα για ανέβασμα Excel.
 
-Ανέβασε το Excel σου.
+Ανέβασε το Excel σου. kai an den bgalei sfalma tote tha emfanizei Η εισαγωγή ολοκληρώθηκε! kai meta paw sto pgadmin
 
 sto pgadmin. refresh thn vash meta briskeis to table refresh meta view/edit data all rows kai emfanizetai o pinakas me tiw exhs entoles se sql:
 
