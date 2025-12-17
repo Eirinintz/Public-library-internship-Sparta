@@ -88,5 +88,5 @@ python manage.py runserver
 
 Ανέβασε το Excel σου.
 
-sto pgadmin. refresh thn vash meta briskeis to table refresh meta view/edit data kai emfanizetai o pinakas me tiw exhs entoles se sql:
+sto pgadmin. refresh thn vash meta briskeis to table refresh meta view/edit data all rows kai emfanizetai o pinakas me tiw exhs entoles se sql:
 
