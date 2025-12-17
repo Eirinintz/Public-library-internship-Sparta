@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'books',
 ]
 
+myproject/settings.py (DATABASES)
+Πήγαινε στο αρχείο myproject/settings.py και βρες το section DATABASES. Αντικατάστησέ το με αυτό:
+
 Βήμα 2 — Φτιάξε το Model
 Στο books/models.py βάλε το μοντέλο που ταιριάζει με τις στήλες του Excel σου:
 
