@@ -1,314 +1,79 @@
 ### Displaying the Database and specifically the Excel in pgadmin and then in the form (on a website)
 
-1️⃣ Φτιάξε έναν κεντρικό φάκελο project
+Βήμα 1 — Έλεγξε ότι έχεις Python
+Άνοιξε το Command Prompt (cmd) και γράψε:
 
-Π.χ. όπου δουλεύεις γενικά:
+bash
+python --version
+ή
+Αν σου δείξει έκδοση (π.χ. Python 3.11.7), τότε η Python είναι εγκατεστημένη.
 
-```
-excel-upload-project/
-```
-Μέσα σε αυτόν όλα τα παρακάτω.
 
-2️⃣ Δομή φακέλων (απλή & σωστή)
+Βήμα 2 — Εγκατάσταση Django
+Αν έχεις Python, γράψε:
 
-Η δομή toy fakeloy πρέπει να είναι:
+bash
+pip install django
 
-excel-upload-project/
-│
-├── server.js
-├── package.json
-├── node_modules/
-└── public/
-    └── index.html
+python -m django startproject myproject
+Αυτό θα δημιουργήσει φάκελο myproject με το αρχείο manage.py και τον υποφάκελο myproject/.
 
-📌 Τι κάνει tο καθένα:
+Έλεγχος
+Μόλις τρέξει η εντολή, δες αν δημιουργήθηκε ο φάκελος:
 
-server.js → ο Node/Express κώδικας
+Code
+myproject/
+    manage.py
+    myproject/
+        settings.py
+        urls.py
+        ...
 
-public/index.html → το page με το upload
+Επόμενο βήμα
+Μπες μέσα στον φάκελο:
 
-package.json → dependencies
+bash
+cd myproject
+και φτιάξε το app:
 
-3️⃣ Δημιουργία αρχείων (βήμα-βήμα)
+bash
+python manage.py startapp books
 
-➤ Βήμα 1: Δημιούργησε τον φάκελο
-mkdir excel-upload-project
-cd excel-upload-project
+Βήμα 1 — Δήλωσε το app στο settings.py
+Άνοιξε το αρχείο myproject/settings.py και μέσα στο INSTALLED_APPS πρόσθεσε:
 
-1️⃣ Κατέβασε σωστά το Node.js
+python
+INSTALLED_APPS = [
+    ...,
+    'books',
+]
 
-Άνοιξε browser
+Βήμα 2 — Φτιάξε το Model
+Στο books/models.py βάλε το μοντέλο που ταιριάζει με τις στήλες του Excel σου:
 
-Πήγαινε στο nodejs.org
+Βήμα 3 — Φτιάξε τη φόρμα για upload
+Στο books/forms.py:
 
-Πάτα LTS (π.χ. 18 ή 20)
+Βήμα 4 — Φτιάξε τα Views
+Στο books/views.py βάλε:
 
-Κατέβασε το .msi
+Βήμα 5 — Templates
+Φτιάξε φάκελο books/templates/ και μέσα:
 
-⚠️ ΜΗΝ κατεβάσεις zip
+upload_excel.html (φόρμα upload)
 
-2️⃣ Εγκατάσταση (ΠΟΛΥ ΣΗΜΑΝΤΙΚΟ)
+list_books.html (πίνακας εμφάνισης)
 
-Όταν τρέξεις το installer:
+Σου έδωσα ήδη έτοιμο κώδικα για αυτά.
 
-Next
+Βήμα 6 — URLs
+Στο books/urls.py:
 
-Next
+Στο myproject/urls.py:
 
-Next
+Βήμα 8 — Τρέξιμο του server
+Στο terminal:
 
-❗ ΜΗΝ ξετικάρεις τίποτα
+bash
+python manage.py runserver
 
-Βεβαιώσου ότι είναι τσεκαρισμένο:
-✔ Add to PATH
-
-Finish
-
-👉 Αν σε ρωτήσει για Tools for Native Modules → πάτα Yes
-
-3️⃣ Κλείσε ΟΛΑ τα terminal
-
-❌ Μην ξαναχρησιμοποιήσεις το παλιό CMD
-✔ Άνοιξε καινούργιο CMD ή PowerShell
-
-4️⃣ Έλεγχος
-
-Γράψε:
-
-node -v
-npm -v
-
-ΑΝ δεις version → είσαι ΟΚ ✅
-
-5️⃣
-
-6️⃣ 
-
-7️⃣ ΜΟΛΙΣ δουλέψει
-
-Ξαναγυρνάμε στο project:
-
-cd excel-upload-project (ton fakelo poy periexei ayton ton fakelo bazoyme)
-npm init -y
-npm install express multer xlsx pg
-node server.js
-
-Για έλεγχο:
-
-dir
-
-πρέπει να δεις:
-
-server.js
-public
-package.json (ή θα δημιουργηθεί)
-
-2️⃣ Δημιούργησε το Node project
-npm init -y
-
-✔ Θα δημιουργήσει το package.json
-
-
-3️⃣ Εγκατάσταση libraries
-npm install express multer xlsx pg
-
-✔ Θα δημιουργηθεί φάκελος node_modules
-
-
-############5️⃣ Βάση δεδομένων (ΜΗΝ το παραλείψεις)
-
-Στο pgAdmin → Query Tool τρέξε:
-
-CREATE TABLE excel_data (
-    id SERIAL PRIMARY KEY,
-    name TEXT,
-    age INTEGER,
-    salary NUMERIC
-#############);
-
-and execute script
-
-1️⃣ Δημιουργία server.js
-
-Στον φάκελο excel-upload-project:
-
-Anebase ton kvdika poy exv sto ***servers.js***
-
-Save as → server.js στον φάκελο excel-upload-project
-
-2️⃣ Δημιουργία φακέλου public και index.html
-
-Μέσα στον φάκελο excel-upload-project δημιούργησε φάκελο:
-
-public
-
-Μέσα στον φάκελο *public*, δημιούργησε αρχείο index.html με ton kodika poy uparxei sto index.html
-
-
-3️⃣ Τρέξε ξανά τον server
-node server.js
-
-
-Αν όλα τα modules είναι σωστά εγκατεστημένα tote → θα δεις to exhs:
-
-Server running on http://localhost:3000
-
-4️⃣ Άνοιξε Browser
-http://localhost:3000
-
-
-➡️ Θα δεις Upload Excel page kai an anebaseis to excel kai meta pathseis upload kai trejei kai emfanisei Upload completed tote ola good! diaforetika tha vgalei error kai tha leei sto cmd ti error einai
-
-Πώς να δεις τα δεδομένα:
-
-Άνοιξε pgAdmin
-
-trexe στον server σου sto cmd:
-
-'node server.js'
-
-Στο αριστερό pane yparxei h exhs seira:
-
-Servers
-  └─ localhost
-      └─ Databases
-          └─ db
-              └─ Schemas
-                  └─ public
-                      └─ Tables
-                          └─ excel_data
-
-
-Κάνε δεξί click στο excel_data → Query Tool
-
-Εκτέλεσε and execute:
-
-SELECT * FROM excel_data;
-
-➡️ Θα εμφανιστούν όλα τα δεδομένα που ανέβηκαν από το Excel sth bash db. An den emfanistoyn tha prpei na tropopoihuei o kodikas se kapoia shmeia
-
----
-
-✅ ΒΗΜΑ 1 – ΠΟΥ ΑΚΡΙΒΩΣ ΤΟ ΚΑΝΕΙΣ
-1️⃣ Άνοιξε pgAdmin
-2️⃣ Στο αριστερό pane:
-Servers
- └─ PostgreSQL (ή localhost)
-     └─ Databases
-         └─ db   ← (αυτή είναι η βάση σου)
-
-
-👉 Κλικ στο db
-
-3️⃣ Άνοιξε Query Tool
-
-Δεξί click στο db
-
-Πάτα Query Tool
-
-(ή από το menu: Tools → Query Tool)
-
-4️⃣ Επικόλλησε ΑΚΡΙΒΩΣ αυτόν τον κώδικα
-DROP TABLE IF EXISTS books;
-
-CREATE TABLE books (
-    id SERIAL PRIMARY KEY,
-    arithmos_eisagogis TEXT,
-    hmerominia_eisagogis TEXT,
-    syggrafeas TEXT,
-    syggrafeas_kona TEXT,
-    titlos TEXT,
-    ekdotis TEXT,
-    ekdosi TEXT,
-    etos TEXT,
-    topos_ekdosis TEXT,
-    sxhma TEXT,
-    selides TEXT,
-    tomos TEXT,
-    tropos_promitheias TEXT,
-    isbn TEXT,
-    stili1 TEXT,
-    stili2 TEXT
-);
-
-5️⃣ Πάτα ▶ Execute
-
-✔ Αν ΔΕΝ βγάλει error → είσαι ΟΚ
-✔ Ο πίνακας books δημιουργήθηκε
-
-🔍 ΠΩΣ ΕΛΕΓΧΕΙΣ ΟΤΙ ΥΠΑΡΧΕΙ
-
-Στο pgAdmin:
-
-Schemas
- └─ public
-     └─ Tables
-         └─ books
-
-
-Αν δεν το δεις αμέσως:
-
-δεξί click στο Tables
-
-Refresh
-
-🧪 Γρήγορος έλεγχος
-
-Στο ίδιο Query Tool:
-
-SELECT * FROM books;
-
-➡️ Θα δεις άδειο table (λογικό, δεν έχουμε κάνει upload ακόμα)
-
-🧠 Κανόνας που να θυμάσαι ΠΑΝΤΑ
-
-❗ Το node server.js τρέχει ΜΟΝΟ αν βρίσκεσαι
-στον ίδιο φάκελο που είναι το αρχείο
-
-🟢 Βήμα 1 – Έλεγχος στον pgAdmin
-
-Άνοιξε Query Tool και τρέξε:
-
-SELECT COUNT(*) FROM books;
-
-
-Αυτό θα σου δείξει πόσες γραμμές μπήκαν.
-
-Πρέπει να ταιριάζει με τις σειρές του Excel.
-
-🟢 Βήμα 2 – Δες τα δεδομένα
-SELECT * FROM books;
-
-
-Θα δεις ολες τις στήλες όπως στο Excel.
-
-Τα ελληνικά πρέπει να εμφανίζονται σωστά.
-
-sthn db query tool pername ayto 
-
-CREATE TABLE books (
-  "ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ" text,
-  "ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ" text,
-  "ΣΥΓΓΡΑΦΕΑΣ" text,
-  "ΣΥΓΓΡΑΦΕΑΣ ΚΟΝΑ" text,
-  "ΤΙΤΛΟΣ" text,
-  "ΕΚΔΟΤΗΣ" text,
-  "ΕΚΔΟΣΗ" text,
-  "ΕΤΟΣ" text,
-  "ΤΟΠΟΣ ΕΚΔΟΣΗΣ" text,
-  "ΣΧΗΜΑ" text,
-  "ΣΕΛΙΔΕΣ" text,
-  "ΤΟΜΟΣ" text,
-  "ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ" text,
-  "ISBN" text,
-  "ΣΤΗΛΗ1" text,
-  "ΣΤΗΛΗ2" text
-);
-
-and execute
-
-kai sto books or excel_data pername 
-
-SELECT * FROM books;
-
-and execute
