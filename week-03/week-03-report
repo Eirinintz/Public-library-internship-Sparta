@@ -92,3 +92,7 @@ python manage.py runserver
 sto pgadmin. refresh thn vash meta briskeis to table refresh meta view/edit data all rows kai emfanizetai o pinakas me tiw exhs entoles se sql:
 SELECT * FROM public.books
 ORDER BY id ASC 
+
+me thn entolh 
+DELETE FROM books;
+diagrafontai ola ta stoixeia otan yparxoyn polles fores se epanalhpsh oi grammes
