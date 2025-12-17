@@ -77,6 +77,7 @@ list_books.html (πίνακας εμφάνισης)
 Βήμα 8 — Τρέξιμο του server
 Στο terminal:
 
+otan allazeis ton kodika toy models prpei na trexeis kai ayta:
 python manage.py makemigrations
 python manage.py 
 
