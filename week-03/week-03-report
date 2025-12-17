@@ -1,5 +1,40 @@
 ### Displaying the Database and specifically the Excel in pgadmin and then in the form (on a website)
 
+Create a New Django Project
+Run:
+django-admin startproject myproject
+
+
+A new folder named 
+myproject
+ will be created in your current path. Automatically, a file named 
+myproject
+ will be created, which contains the files 
+settings.py
+, 
+urls.py
+, 
+wsgi.py
+, 
+asgi.py
+.
+📁 Create a New Django App (in
+ 
+myproject
+ folder)
+
+Run:
+python manage.py startapp excel_data
+
+
+A new folder named excel_data will be created inside your project. The folder contains:
+
+models.py
+views.py
+forms.py
+urls.py
+templates/
+
 Βήμα 1 — Έλεγξε ότι έχεις Python
 Άνοιξε το Command Prompt (cmd) και γράψε:
 
