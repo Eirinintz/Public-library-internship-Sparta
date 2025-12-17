@@ -77,6 +77,9 @@ list_books.html (πίνακας εμφάνισης)
 Βήμα 8 — Τρέξιμο του server
 Στο terminal:
 
+python manage.py makemigrations
+python manage.py 
+
 bash
 python manage.py runserver
 
@@ -85,4 +88,4 @@ python manage.py runserver
 
 Ανέβασε το Excel σου.
 
-Μετά πήγαινε: http://localhost:8000/books/list/ → θα δεις τα δεδομένα που μπήκαν στη βάση.
+
