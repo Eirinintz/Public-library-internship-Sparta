@@ -114,6 +114,14 @@ venv\Scripts\activate
 
 #### 4️⃣ 📦 Install Django
 
+Navigate to your working directory:
+
+```
+cd C:\Users\...
+```
+
+Then install Django:
+
 ```
 pip install django
 ```
