@@ -228,7 +228,7 @@ You can optionally check that the PostgreSQL service is running:
 
 ---
 
-### 🚀 Connecting Django + PostgreSQL Setup Guide
+### Connecting Django + PostgreSQL Setup Guide
 
 ### 🚀 Activate virtual environment (Always)
 
@@ -237,13 +237,16 @@ In the Beginning:
 ```
 venv\Scripts\activate`
 ```
+
 and after
 
 ```
-cd myproject
+cd excel_form_app
 ```
 
 ### 🖥 Start the Django Server
+
+In **CMD** run:
 
 ```
 python manage.py runserver
@@ -259,7 +262,7 @@ In the same terminal where your `manage.py` file is located, run:
 pip install psycopg2-binary
 ```
 
-✔ If it installs successfully, continue.
+✔ If it installs successfully, continue to the next step.
 
 ### 2️⃣ PostgreSQL Database Credentials
 
@@ -276,6 +279,7 @@ These values will be used by Django.
 ### 3️⃣ Configure Django to Use PostgreSQL
 
 Open your Django project’s `settings.py` file and find the `DATABASES = { ... }` block.
+
 Replace it with:
 
 ```python
@@ -284,21 +288,21 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'db',
         'USER': 'postgres',
-        'PASSWORD': 'your_postgres_password',
+        'PASSWORD': 'your_database_password',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 ```
-and save.
+and save the file.
 
-The Database Name should be the same everywhere
+⚠️ Note: The database name given by the user in pgAdmin 4 needs to be the same as the one set in the settings.py code.
 
 🎯 This connects Django to your PostgreSQL server.
 
 ### 4️⃣ Run Initial Migrations
 
-Create Django’s core tables inside PostgreSQL:
+Create Django’s core tables inside PostgreSQL, in the same terminal::
 
 ```
 python manage.py migrate
@@ -308,13 +312,19 @@ python manage.py migrate
 
 ### 5️⃣ Create the Django App for Excel Handling
 
-Run:
+Inside the excel_form_app folder, run:
 
 ```
-python manage.py startapp excel_data
+python manage.py startapp main 
 ```
 
-A new folder named `excel_data` will appear 📁.
+A new folder named main will be created inside your project. The folder contains:
+
+- models.py
+- views.py
+- forms.py
+- urls.py
+- templates/
 
 ### 6️⃣ Register the App in Django Settings
 
