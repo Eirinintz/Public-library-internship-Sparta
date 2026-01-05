@@ -92,8 +92,9 @@ Open **CMD** and run:
 python --version
 ```
 
--If Python is not installed, download and install it from the official website.
--If the command prints a version number, you're good to go ✔️.
+- If Python is not installed, download and install it from the official website.
+
+- If the command prints a version number, you're good to go ✔️.
 
 #### 2️⃣ ⚡ Create virtual environment
 
