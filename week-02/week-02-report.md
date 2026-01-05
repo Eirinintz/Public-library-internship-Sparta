@@ -151,9 +151,7 @@ cd excel_form_app
 
 #### 6️⃣ 🏃 Run Django development server
 
-```
-cd myproject
-```
+Start the Django server:
 
 ```
 python manage.py runserver
@@ -163,23 +161,25 @@ Open the URL it provides (e.g., http://127.0.0.1:8000)
 
 You will see a rocket 🚀 icon indicating the server is running.
 
-#### 7️⃣ 🛠 Create Django app 
-
-For example, run:
+Stop the server anytime with:
 
 ```
-python manage.py startapp my_app
+Ctrl + C
 ```
 
-This will create a folder my_app inside myproject.
+The files manage.py and db.sqlite3 must be located in the root directory created by the user. 
 
-#### 8️⃣ 💻 Open project in Visual Studio Code
+Keeping them in the initial folder ensures that Django can properly manage the project and database.
+
+
+#### 7️⃣ 💻 Open project in Visual Studio Code
+
+Run:
 
 ```
 code .
 ```
-
-This open the file *myproject* in Visual Studio Code.
+This will open excel_form_app project in Visual Studio Code for development.
 
 ---
 
