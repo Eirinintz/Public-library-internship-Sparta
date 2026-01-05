@@ -6,7 +6,7 @@
 
 ### 🎯 Creating a Web Server and displaying messages on a website using Python and PHP 🐍💻
 
-#### For Python, the following steps apply: ✅😊
+### For Python, the following steps apply: ✅😊
 
 1️⃣ Create a folder named `Project_Folder` on the local disk 📁
 
@@ -36,7 +36,7 @@ python app.py
 
 ---
 
-#### For PHP, the following steps apply: ✅🐘
+### For PHP, the following steps apply: ✅🐘
 
 1️⃣ Download PHP, extract the file, and place a new folder named **php** on the local disk containing all the contents of the zip file 📂
 
@@ -56,7 +56,7 @@ php -S localhost:8080
 
 ### 🎯 Combining a Web Server with MySQL and PHP 🐬🔥
 
-#### For MySQL, the following steps apply: ✅💾
+### For MySQL, the following steps apply: ✅💾
 
 1️⃣ Download the latest version of MySQL and install it 🛠️
 
@@ -64,7 +64,7 @@ php -S localhost:8080
 
 ---
 
-#### For Web Server, the following steps apply: ✅🌐
+### For Web Server, the following steps apply: ✅🌐
 
 1️⃣ Download an Apache Server without XAMPP or WAMP, extract the folder, and place its contents in the correct path, specifically `C:\Apache24` on the local disk 📂
 
@@ -108,7 +108,7 @@ to start it 🚀
 
 ---
 
-#### For PHP, the following steps apply: ✅🐘
+### For PHP, the following steps apply: ✅🐘
 
 1️⃣ In the Apache folder, specifically in httpd, replace `AddType` with `AddHandler` on the second-to-last line ✏️
 
