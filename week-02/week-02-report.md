@@ -98,11 +98,15 @@ python --version
 
 #### 2️⃣ ⚡ Create virtual environment
 
+In CMD (Run as Administrator), navigate to your desired directory and run:
+
 ```
 python -m venv venv
 ```
 
 #### 3️⃣ 🚀 Activate virtual environment (Always)
+
+Activate it:
 
 ```
 venv\Scripts\activate
