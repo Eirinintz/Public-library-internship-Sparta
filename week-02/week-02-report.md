@@ -186,9 +186,12 @@ This will open excel_form_app project in Visual Studio Code for development.
 ### 🚀 PostgreSQL Installation (pgadmin) & Database Setup Guide
 
 ### 1️⃣ 🛠️ Install PostgreSQL
-- Download the PostgreSQL installer from the official website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. 📥
+- Download the PostgreSQL for *Windows* installer from the official website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. 📥
 - Run the installer and click **Next** on all steps. 👉
 - Leave all default components selected. ✔️
+- - PostgreSQL Server
+pgAdmin 4
+Stack Builder
 - Choose an installation folder (or leave the default path). 📁
 - Enter a **password for the `postgres` superuser**. 🔐
 - Keep the default **Port: 5432**. 🌐
