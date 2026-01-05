@@ -86,7 +86,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 ### 1️⃣ 🔍 Check Python version
 
-Open **CMD(Run as Administrator)** and run:
+Open **CMD (Run as Administrator)** and run:
 
 ```
 python --version
