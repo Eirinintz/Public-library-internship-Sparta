@@ -86,7 +86,7 @@ Upload it to phpMyAdmin → set delimiter (; instead of ,) → click Import.
 
 ### 1️⃣ 🔍 Check Python version
 
-Open **CMD** and run:
+Open **CMD(Run as Administrator)** and run:
 
 ```
 python --version
@@ -98,7 +98,7 @@ python --version
 
 ### 2️⃣ ⚡ Create virtual environment
 
-In **CMD (Run as Administrator)**, navigate to your desired directory and run:
+In the same CMD, navigate to your desired directory and run:
 
 ```
 python -m venv venv
