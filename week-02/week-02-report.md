@@ -10,7 +10,7 @@ This week, we will integrate PHP with MySQL and Web Server.
 
 ### 🐘 Setting up phpMyAdmin 
 
-#### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
+### 1️⃣ ⬇️ Download phpMyAdmin (all languages) last version
 
 Link: https://www.phpmyadmin.net/downloads/
 
