@@ -332,11 +332,17 @@ Open `settings.py` again and add your new app to `INSTALLED_APPS`:
 
 ```python
 INSTALLED_APPS = [
-    ...,
-    'excel_data',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'main'
 ]
 ```
-and save.
+and save the file.
+
 ⚠️ Do NOT add the database name (`mydb`).
 Only Django apps go here — not databases.
 
@@ -345,13 +351,10 @@ Only Django apps go here — not databases.
 Open:
 
 ```
-excel_data/models.py
+main/models.py
 ```
 
-Replace its content with the code **models.py**.
-Save the file 💾.
-
-These models define the structure of the tables that will store your Excel data.
+Replace its content with the code **models.py** and save the file 💾.
 
 ⚠️ This specific code refers to the library manuals, covering the needs of the Sparta public library.
 
@@ -362,11 +365,16 @@ Run the following:
 ```
 python manage.py makemigrations
 ```
+
+and after
+
 ```
 python manage.py migrate
 ```
 
 ✔ New tables will be created in your PostgreSQL database 🗃️.
+
+⚠️makemigrations and migrate must be executed whenever changes are made to the database schema (models), such as adding, removing, or modifying model fields or models.
 
 ### 9️⃣ Verify Everything
 
