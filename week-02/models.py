@@ -1,55 +1,37 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Book model representing a book record in the database
-class Book(models.Model):
-    # Entry number of the book
-    entry_number = models.IntegerField()
-
-    # Date when the book was entered
-    entry_date = models.DateField()
-
-    # Author of the book
-    author = models.CharField(max_length=255)
-
-    # Alternative author name (e.g. Koha system), optional
-    koha_author = models.CharField(max_length=255, blank=True, null=True)
-
-    # Title of the book
-    title = models.CharField(max_length=255)
-
-    # Publisher name, optional
-    publisher = models.CharField(max_length=255, blank=True, null=True)
-
-    # Edition information, optional
-    edition = models.CharField(max_length=255, blank=True, null=True)
-
-    # Year of publication, optional
-    publish_year = models.IntegerField(blank=True, null=True)
-
-    # Place of publication, optional
-    publish_place = models.CharField(max_length=255, blank=True, null=True)
-
-    # Physical shape or format of the book, optional
-    shape = models.CharField(max_length=255, blank=True, null=True)
-
-    # Number of pages, optional
-    pages = models.CharField(max_length=50, blank=True, null=True)
-
-    # Volume information, optional
-    volume = models.CharField(max_length=50, blank=True, null=True)
-
-    # Additional notes, optional
-    notes = models.TextField(blank=True, null=True)
-
-    # ISBN number, optional
-    isbn = models.CharField(max_length=50, blank=True, null=True)
-
-    # Extra custom field, optional
-    column1 = models.CharField(max_length=255, blank=True, null=True)
-
-    # Extra custom field, optional
-    column2 = models.CharField(max_length=255, blank=True, null=True)
+class Person(models.Model):
+    ari8mosEisagoghs = models.CharField(unique=True, primary_key=True, max_length=200, blank=True)
+    hmeromhnia_eis = models.CharField(max_length=200, null=True, blank=True)
+    syggrafeas = models.CharField(max_length=200, null=True, blank=True)
+    koha = models.CharField(max_length=200, null=True, blank=True)
+    titlos = models.CharField(max_length=200, null=True, blank=True)
+    ekdoths = models.CharField(max_length=200, null=True, blank=True)
+    ekdosh = models.CharField(max_length=200, null=True, blank=True)
+    etosEkdoshs = models.CharField(max_length=20, null=True, blank=True)
+    toposEkdoshs = models.CharField(max_length=200, null=True, blank=True)
+    sxhma = models.CharField(max_length=200, null=True, blank=True)
+    selides = models.CharField(max_length=50, null=True, blank=True)
+    tomos = models.CharField(max_length=50, null=True, blank=True)
+    troposPromPar = models.CharField(max_length=200, null=True, blank=True)
+    ISBN = models.CharField(max_length=50, null=True, blank=True)
+    sthlh1 = models.CharField(max_length=200, null=True, blank=True)
+    sthlh2 = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
-        # String representation of the model
-        return self.title
+        return self.name
+    
+class UploadLog(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name="uploads"
+    )
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    filename = models.CharField(max_length=255)
+    rows_added = models.PositiveIntegerField(default=0)
+    rows_updated = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.filename} by {self.user.username} on {self.uploaded_at}"
