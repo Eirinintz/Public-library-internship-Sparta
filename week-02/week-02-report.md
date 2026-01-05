@@ -126,6 +126,8 @@ Then install Django:
 pip install django
 ```
 
+✅ If installation completes successfully, continue to the next step.
+
 #### 5️⃣ 📁 Create Django project
 
 ```
