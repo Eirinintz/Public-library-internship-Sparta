@@ -204,6 +204,9 @@ When the Stack Builder window appears:
 Click **Cancel** (it is not required for the basic installation). 🙅‍♂️
 
 ### 3️⃣🔎 Verify PostgreSQL Service
+
+You can optionally check that the PostgreSQL service is running:
+
 - Open **Services** (Windows Start → type *Services*). 🖥️
 - Locate **postgresql-x64-18** (or similar version). 📌
 - Ensure the **Status** is **Running**. 🟢
