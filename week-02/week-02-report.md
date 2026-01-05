@@ -228,7 +228,7 @@ You can optionally check that the PostgreSQL service is running:
 
 ---
 
-### 🚀 Django + PostgreSQL Setup Guide
+### 🚀 Connecting Django + PostgreSQL Setup Guide
 
 ### 🚀 Activate virtual environment (Always)
 
