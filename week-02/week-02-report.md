@@ -130,8 +130,23 @@ pip install django
 
 #### 5️⃣ 📁 Create Django project
 
+Run:
+
 ```
-django-admin startproject myproject
+django-admin startproject excel_form_app
+```
+
+A new folder named excel_form_app will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
+
+- settings.py
+- urls.py
+- wsgi.py
+- asgi.py
+
+Move into the project directory:
+
+```
+cd excel_form_app
 ```
 
 #### 6️⃣ 🏃 Run Django development server
