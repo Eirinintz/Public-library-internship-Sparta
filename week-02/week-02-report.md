@@ -111,6 +111,7 @@ Activate it:
 ```
 venv\Scripts\activate
 ```
+and then it will appear in front of venv
 
 ### 4️⃣ 📦 Install Django
 
