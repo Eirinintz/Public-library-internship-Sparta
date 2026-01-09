@@ -276,13 +276,13 @@ All system messages are displayed in Greek, ensuring clarity, usability, and eas
 να βαλω σχολια σε ολους τους κωδικες και να δω μηπως αλλαξε καποιον η ολγα
 να γραψω το καθενα τι αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη οι χρηστες
 
-arxikh
+arxikh, h aposyndesh einai to idio me thn arxikh
 <img width="1345" height="640" alt="image" src="https://github.com/user-attachments/assets/58579d58-504c-49e4-bb18-04c9c5e150c6" />
 
 eggrafh
 <img width="1347" height="630" alt="image" src="https://github.com/user-attachments/assets/325bb6fa-608a-4c5d-a043-699f4fb501c5" />
 
-syndesh
+syndesh 
 <img width="1348" height="638" alt="image" src="https://github.com/user-attachments/assets/87f9d663-11f5-4cac-9ddd-58b986d365d5" />
 
 <img width="1346" height="637" alt="image" src="https://github.com/user-attachments/assets/38af136d-be1f-4e63-829a-299042185665" />
@@ -294,3 +294,9 @@ prepei na kaneiw micemigrations gia na emfanistei
 <img width="1346" height="639" alt="image" src="https://github.com/user-attachments/assets/bc230244-73db-434e-ba10-86ea44cc9b24" />
 
 <img width="1348" height="635" alt="image" src="https://github.com/user-attachments/assets/ac6a4062-c8dc-486e-9dd5-6e4ab4292660" />
+
+nea eisagogh biblioy
+<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/42e4e222-d8ed-4201-aeec-47088ff46bd8" />
+
+oles oi eggrafes
+<img width="1347" height="638" alt="image" src="https://github.com/user-attachments/assets/51d8fd44-86fc-4bf0-9564-c1479b0be31c" />
