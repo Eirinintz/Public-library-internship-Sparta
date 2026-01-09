@@ -290,3 +290,7 @@ syndesh
 eisagogharxeio excel
 <img width="1350" height="640" alt="image" src="https://github.com/user-attachments/assets/bb833a4b-2593-48bd-8ed3-a13c56b18bb7" />
 
+prepei na kaneiw micemigrations gia na emfanistei 
+<img width="1346" height="639" alt="image" src="https://github.com/user-attachments/assets/bc230244-73db-434e-ba10-86ea44cc9b24" />
+
+<img width="1348" height="635" alt="image" src="https://github.com/user-attachments/assets/ac6a4062-c8dc-486e-9dd5-6e4ab4292660" />
