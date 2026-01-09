@@ -28,6 +28,8 @@ During the internship, I was involved in a variety of practical tasks, including
 - 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
 
 - 🤖 GitHub Copilot — for code and documentation assistance.
+  
+- Claude AI gia kodika, epipleon ergaleio
 
 ---
 
@@ -41,8 +43,12 @@ In general, we worked with the following: ✅
 
 - python, php, html gia glosses
 - Django, pgadmin, postgresql, mysql
+- laraven ti einai kai poy xrhsimopoieitai
+
 ---
 
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯😄
 
 Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
+
+- να γραψω και στο γενικο readme οτι καθε εβδομαδα περιπου ασχολουμαστε με διαφορετικα πραγματα 
