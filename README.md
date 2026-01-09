@@ -39,7 +39,8 @@ In general, we worked with the following: ✅
 
 - **RFID (Radio Frequency Identification)** in libraries is used for the organization, management, and automation of book lending. Each book has an RFID tag with a unique code, which can be read by RFID readers without removing the book from the shelf 📚➡️📡. This allows for automated book borrowing and returning with high speed and accuracy ⚡.
 
-- python, php, html gia glosses 
+- python, php, html gia glosses
+- Django, pgadmin, postgresql, mysql
 ---
 
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯😄
