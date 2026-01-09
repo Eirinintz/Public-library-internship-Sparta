@@ -279,9 +279,12 @@ All fields are validated to ensure correct input before submission. ✅
 Users can log in to their account by entering their username and password. 🖥️💻
 Successful login redirects the user to the home page, while incorrect credentials display an error message ❌⚠️.
 
+
 <img width="1348" height="638" alt="image" src="https://github.com/user-attachments/assets/87f9d663-11f5-4cac-9ddd-58b986d365d5" />
 
+
 <img width="1346" height="637" alt="image" src="https://github.com/user-attachments/assets/38af136d-be1f-4e63-829a-299042185665" />
+
 
 
 📊 Excel Upload / Data Import
@@ -294,15 +297,20 @@ Users can upload an Excel file (.xlsx) to import multiple records at once into t
 - Duplicate entries are automatically detected 🔍
 
 - After successful import, a confirmation message is displayed ✅
+
   
 <img width="1350" height="640" alt="image" src="https://github.com/user-attachments/assets/bb833a4b-2593-48bd-8ed3-a13c56b18bb7" />
 
 
+
 ⚠️ You need to run makemigrations and migrate for the database tables to appear 🗄️✨
+
 
 <img width="1346" height="639" alt="image" src="https://github.com/user-attachments/assets/bc230244-73db-434e-ba10-86ea44cc9b24" />
 
+
 <img width="1348" height="635" alt="image" src="https://github.com/user-attachments/assets/ac6a4062-c8dc-486e-9dd5-6e4ab4292660" />
+
 
 
 📚 Add New Book / New Entry
@@ -321,13 +329,16 @@ Users can add a new book record to the database by filling out the form with det
 - Entries imported via Excel follow the correct sequence, and any new record added manually will be inserted in order 🔢
 
 - Ensures consistency and reduces manual errors ✅
+
   
 <img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/42e4e222-d8ed-4201-aeec-47088ff46bd8" />
+
 
 
 🗃️ All Records / Database Entries
 
 The application allows library staff to manage all book/person records efficiently.
+
 
 <img width="1347" height="638" alt="image" src="https://github.com/user-attachments/assets/51d8fd44-86fc-4bf0-9564-c1479b0be31c" />
 
