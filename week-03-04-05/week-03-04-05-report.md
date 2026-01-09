@@ -113,15 +113,18 @@ File: `main/forms.py`
 
 File: `main/views.py`
 
-Handles:
+👁️ Handles:
 
-- Listing entries (people.html)
-- Editing records (edit_person.html)
-- Excel uploads
-- Duplicate detection
-- Success & result pages
+- 📄 Listing entries (people.html)
 
-There, paste the corresponding python code which is also available in the week-03 folder 🗂️.
+- ✏️ Editing records (edit_person.html)
+
+- 📊 Excel uploads
+
+- 🔍 Duplicate detection
+
+- ✅ Success & result pages
+
 
 ### 4️⃣ URL Configuration 🔗
 
