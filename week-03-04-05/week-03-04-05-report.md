@@ -56,6 +56,7 @@ excel_form_app/
 |       └── duplicates_done.html
 ```
 
+
 ### 1️⃣ Verify Database Table 🗄️
 
 Open **CMD** as *Admin* and run:
@@ -97,6 +98,7 @@ exit()
 
 This step is useful after imports if incorrect data was uploaded.
 
+
 ### 2️⃣ Forms Setup 📝
 
 File: `main/forms.py`
@@ -108,6 +110,7 @@ File: `main/forms.py`
 - 🔗 Connects directly to the Person model
 
 - ✍️ Used for manual data entry
+
 
 ### 3️⃣ Views Logic 👁️
 
@@ -139,6 +142,7 @@ Ensure the app URLs are included:
 ```
 path('', include('main.urls'))
 ```
+
 
 ### 5️⃣ Templates are included 🧩
 
@@ -188,10 +192,12 @@ Open:
 http://127.0.0.1:8000/
 ```
 
-Verify:
+✅ Verify:
 
-- people.html loads
-- Entries are saved correctly
+- 🌐 people.html loads
+
+- 💾 Entries are saved correctly
+
 
 ### 7️⃣ Install Required Libraries 📦
 
@@ -200,6 +206,7 @@ pip install pandas openpyxl
 ```
 
 Used for Excel (.xlsx) imports.
+
 
 ### 8️⃣ Authentication Setup 🔐
 
@@ -215,6 +222,7 @@ Create admin user:
 python manage.py createsuperuser
 ```
 
+
 ### 9️⃣ Excel Upload Flow 📊
 
 Implemented in: `main/views.py`
@@ -225,6 +233,7 @@ Features:
 - Uses Pandas
 - Maps rows to Person model
 - Detects duplicates
+
 
 ### 🔟 Import Test 🚀
 
