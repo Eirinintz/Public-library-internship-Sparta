@@ -256,6 +256,7 @@ http://127.0.0.1:8000/login/
 
 - 🌐 Records appear in people.html
 
+In this specific task:
 
 💻📱 All the code is written in Python and HTML, and the application has been designed to run smoothly on both mobile devices and desktop computers. This ensures a responsive and user-friendly experience across different platforms and screen sizes. 🌐✨
 
