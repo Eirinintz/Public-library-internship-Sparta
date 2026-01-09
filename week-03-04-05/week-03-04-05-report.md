@@ -264,8 +264,9 @@ In this specific task:
 📤 File upload functionality is available, and users can also print the uploaded files when needed. 🖨️
 When adding additional records, Koha information appears automatically after entering the author’s name, both during the data entry process and within the database, ensuring consistency and reducing manual errors. 📚🗄️
 
+📚 The application is intended exclusively for library staff and is not designed for public use.
+All system messages are displayed in Greek, ensuring clarity, usability, and ease of understanding for internal users. ✨
+
 να βγαλω φωτο αυτα που εμφανιζει
 να βαλω σχολια σε ολους τους κωδικες και να δω μηπως αλλαξε καποιον η ολγα
-να γραψω τι αφορα τι, ποιους αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη
-η εφαρμογη αφορα αποκλειστικα το προσωπικο της βιβλιοθηκης
-τα μνμτα ειναι στα ελληνικα για λογους σαφηνειας και χρηστικοτητας
+να γραψω τι αφορα τι, τι μπορουν να κανουν για συνδεση και για εγγραφη
