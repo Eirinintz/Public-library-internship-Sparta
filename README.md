@@ -61,6 +61,6 @@ In general, we worked with the following: ✅
 
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯😄
 
-Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
+📅 Each week, we focus on different topics, exploring new tools and technologies 🛠️ to gradually build our skills and understanding. 📚
 
-- να γραψω και στο γενικο readme οτι καθε εβδομαδα περιπου ασχολουμαστε με διαφορετικα πραγματα 
+Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
