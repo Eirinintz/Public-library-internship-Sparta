@@ -257,3 +257,5 @@ http://127.0.0.1:8000/login/
 - 📊 Excel upload succeeds
 
 - 🌐 Records appear in people.html
+
+na bgalo foto to kathe bhma otan tha einai etoimo kai na ta balo edo apo kato
