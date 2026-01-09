@@ -227,12 +227,15 @@ python manage.py createsuperuser
 
 Implemented in: `main/views.py`
 
-Features:
+✨ Features:
 
-- Accepts .xlsx only
-- Uses Pandas
-- Maps rows to Person model
-- Detects duplicates
+- 📄 Accepts .xlsx only
+
+- 🐼 Uses Pandas
+
+- 🔗 Maps rows to Person model
+
+- 🔍 Detects duplicates
 
 
 ### 🔟 Import Test 🚀
@@ -247,8 +250,10 @@ Login:
 http://127.0.0.1:8000/login/
 ```
 
-Verify:
+✅ Verify:
 
-- Login works
-- Excel upload succeeds
-- Records appear in `people.html`
+- 🔑 Login works
+
+- 📊 Excel upload succeeds
+
+- 🌐 Records appear in people.html
