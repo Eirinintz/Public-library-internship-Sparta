@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'books',
         'USER': 'postgres',
-        'PASSWORD': 'Godzilla333.',
+        'PASSWORD': 'Enter_your_password',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -126,4 +126,5 @@ STATICFILES_DIRS = [
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
 LOGIN_URL = 'login'
