@@ -6,6 +6,7 @@
 The application is intended solely for internal library staff to manage records securely and efficiently. 🔒📝
 
 ---
+✅ Once the steps in week-02 are completed, the following actions are performed: 🛠️📂
 
 ### Project Structure
 
