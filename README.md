@@ -47,13 +47,13 @@ In general, we worked with the following: ✅
 
 - 🌐 **HTML (HyperText Markup Language)** is the standard language for creating web pages. It defines the structure and content of a website, using elements like headings, paragraphs, links, images, and forms. HTML works together with CSS and JavaScript to build interactive and visually appealing websites. 💻✨
 
-- 💻 **Django** is a high-level Python web framework that allows developers to build robust and scalable web applications quickly. It comes with built-in features like authentication, ORM, and templating. 🐍🌐
+- 🐬 **MySQL** is another widely-used relational database system, known for speed and reliability, often used in web applications alongside frameworks like Django, PHP, or Node.js. ⚡🌐
 
 - 📊 **PostgreSQL** is a powerful open-source relational database system, known for stability, reliability, and advanced features. It works seamlessly with Django for storing and managing structured data. 🗄️✅
 
 - 🛠️ **pgAdmin** is a popular GUI tool for managing PostgreSQL databases, making it easier to create, query, and maintain databases. 👩‍💻🔍
 
-- 🐬 **MySQL** is another widely-used relational database system, known for speed and reliability, often used in web applications alongside frameworks like Django, PHP, or Node.js. ⚡🌐
+- 💻 **Django** is a high-level Python web framework that allows developers to build robust and scalable web applications quickly. It comes with built-in features like authentication, ORM, and templating. 🐍🌐
   
 - 🌟 **Laravel** is a modern PHP web framework designed to make web application development easier, faster, and more elegant. It provides features like routing, authentication, ORM (Eloquent), templating (Blade), and testing tools. Laravel is mainly used to build robust, secure, and scalable web applications, from small projects to large enterprise systems. 💻⚡
 
