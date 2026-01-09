@@ -277,10 +277,16 @@ All system messages are displayed in Greek, ensuring clarity, usability, and eas
 να γραψω το καθενα τι αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη οι χρηστες
 
 arxikh
-<img width="1361" height="633" alt="image" src="https://github.com/user-attachments/assets/108206a5-8cd5-42b9-8bec-ddd98406764d" />
+<img width="1345" height="640" alt="image" src="https://github.com/user-attachments/assets/58579d58-504c-49e4-bb18-04c9c5e150c6" />
 
 eggrafh
 <img width="1347" height="630" alt="image" src="https://github.com/user-attachments/assets/325bb6fa-608a-4c5d-a043-699f4fb501c5" />
 
 syndesh
-<img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/affb5dfd-b9a5-4a26-a7e9-c25b189b9988" />
+<img width="1348" height="638" alt="image" src="https://github.com/user-attachments/assets/87f9d663-11f5-4cac-9ddd-58b986d365d5" />
+
+<img width="1346" height="637" alt="image" src="https://github.com/user-attachments/assets/38af136d-be1f-4e63-829a-299042185665" />
+
+eisagogharxeio excel
+<img width="1350" height="640" alt="image" src="https://github.com/user-attachments/assets/bb833a4b-2593-48bd-8ed3-a13c56b18bb7" />
+
