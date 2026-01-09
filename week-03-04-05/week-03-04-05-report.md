@@ -170,7 +170,7 @@ upload_result.html   # Excel import results page
 upload_success.html  # Import success confirmation page
 ```
 
-6️⃣ Manual Entry Test ✅
+### 6️⃣ Manual Entry Test ✅
 
 In the *same CMD*, run:
 
@@ -189,7 +189,7 @@ Verify:
 - people.html loads
 - Entries are saved correctly
 
-7️⃣ Install Required Libraries 📦
+### 7️⃣ Install Required Libraries 📦
 
 ```
 pip install pandas openpyxl
@@ -197,7 +197,7 @@ pip install pandas openpyxl
 
 Used for Excel (.xlsx) imports.
 
-8️⃣ Authentication Setup 🔐
+### 8️⃣ Authentication Setup 🔐
 
 ```
 LOGIN_URL = '/login/'
@@ -210,3 +210,32 @@ Create admin user:
 ```
 python manage.py createsuperuser
 ```
+
+### 9️⃣ Excel Upload Flow 📊
+
+Implemented in: `main/views.py`
+
+Features:
+
+- Accepts .xlsx only
+- Uses Pandas
+- Maps rows to Person model
+- Detects duplicates
+
+### 🔟 Import Test 🚀
+
+```
+python manage.py runserver
+```
+
+Login:
+
+```
+http://127.0.0.1:8000/login/
+```
+
+Verify:
+
+- Login works
+- Excel upload succeeds
+- Records appear in `people.html`
