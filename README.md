@@ -27,7 +27,7 @@ During the internship, I was involved in a variety of practical tasks, including
 
 - 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
 
-- 🤖 GitHub Copilot — for code and documentation assistance.
+- 🤖 Copilot — for code and documentation assistance.
   
 - 🤖 Claude AI – An Additional Tool for Code
 
