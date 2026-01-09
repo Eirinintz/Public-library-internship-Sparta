@@ -169,3 +169,23 @@ upload_excel.html    # Excel upload form
 upload_result.html   # Excel import results page
 upload_success.html  # Import success confirmation page
 ```
+
+6️⃣ Manual Entry Test ✅
+
+In the *same CMD*, run:
+
+```
+python manage.py runserver
+```
+
+Open:
+
+```
+http://127.0.0.1:8000/
+```
+
+Verify:
+
+- people.html loads
+- Entries are saved correctly
+
