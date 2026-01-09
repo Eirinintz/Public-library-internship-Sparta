@@ -57,7 +57,7 @@ excel_form_app/
 
 1️⃣ Verify Database Table 🗄️
 
-Open **CMD** as Admin and run:
+Open **CMD** as *Admin* and run:
 
 ```
 python manage.py shell
@@ -69,7 +69,7 @@ from main.models import Person
 Person.objects.all()
 ```
 
-If no errors appear, the model and table exist.
+If *no errors* appear, the model and table exist.
 
 Inspect fields:
 
@@ -121,3 +121,17 @@ Handles:
 - Success & result pages
 
 There, paste the corresponding python code which is also available in the week-03 folder 🗂️.
+
+4️⃣ URL Configuration 🔗
+
+App-level URLs: `main/urls.py`
+
+Paste the corresponding python code which exists in the week-03 folder 🗂️.
+
+Project-level URLs:
+
+excel_form_app/urls.py
+
+Paste the corresponding python code which also exists in the week-03 folder 🗂️.
+
+Ensure the app URLs are included:
