@@ -275,3 +275,12 @@ All system messages are displayed in Greek, ensuring clarity, usability, and eas
 να βγαλω φωτο αυτα που εμφανιζει
 να βαλω σχολια σε ολους τους κωδικες και να δω μηπως αλλαξε καποιον η ολγα
 να γραψω το καθενα τι αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη οι χρηστες
+
+arxikh
+<img width="1361" height="633" alt="image" src="https://github.com/user-attachments/assets/108206a5-8cd5-42b9-8bec-ddd98406764d" />
+
+eggrafh
+<img width="1347" height="630" alt="image" src="https://github.com/user-attachments/assets/325bb6fa-608a-4c5d-a043-699f4fb501c5" />
+
+syndesh
+<img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/affb5dfd-b9a5-4a26-a7e9-c25b189b9988" />
