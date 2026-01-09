@@ -55,7 +55,7 @@ excel_form_app/
 |       └── duplicates_done.html
 ```
 
-1️⃣ Verify Database Table 🗄️
+### 1️⃣ Verify Database Table 🗄️
 
 Open **CMD** as *Admin* and run:
 
@@ -96,7 +96,7 @@ exit()
 
 This step is useful after imports if incorrect data was uploaded.
 
-2️⃣ Forms Setup 📝
+### 2️⃣ Forms Setup 📝
 
 File: `main/forms.py`
 
@@ -108,7 +108,7 @@ Purpose:
 
 Paste the corresponding python code which is available in the week-03 folder 🗂️.
 
-3️⃣ Views Logic 👁️
+### 3️⃣ Views Logic 👁️
 
 File: `main/views.py`
 
@@ -122,7 +122,7 @@ Handles:
 
 There, paste the corresponding python code which is also available in the week-03 folder 🗂️.
 
-4️⃣ URL Configuration 🔗
+### 4️⃣ URL Configuration 🔗
 
 App-level URLs: `main/urls.py`
 
@@ -134,4 +134,38 @@ Ensure the app URLs are included:
 
 ```
 path('', include('main.urls'))
+```
+
+### 5️⃣ Templates are included 🧩
+
+`📂 templates/`
+```
+registration/
+base.html     # Base layout template
+home.html     # Landing page template
+```
+
+`📂 templates/registration/`
+```
+home.html        # Authentication home page
+login.html       # Login form template
+logged_out.html  # Logout confirmation page
+signup.html      # User registration page
+```
+
+`📂 main/templates/main/`
+```
+people.html           # Displays all stored records
+edit_person.html      # Edit record form
+duplicates.html       # Duplicate detection page
+duplicates_done.html  # Confirmation page for duplicates handling
+```
+
+`📂 main/templates/`
+```
+main/
+people.html          # Alternative or extended listing view
+upload_excel.html    # Excel upload form
+upload_result.html   # Excel import results page
+upload_success.html  # Import success confirmation page
 ```
