@@ -54,3 +54,17 @@ excel_form_app/
 |       ├── duplicates.html
 |       └── duplicates_done.html
 ```
+
+1️⃣ Verify Database Table 🗄️
+
+Open CMD as Admin and run:
+
+```
+python manage.py shell
+```
+and after
+
+```
+from main.models import Person
+Person.objects.all()
+```
