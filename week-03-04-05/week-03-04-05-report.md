@@ -98,7 +98,7 @@ This step is useful after imports if incorrect data was uploaded.
 
 2️⃣ Forms Setup 📝
 
-File: main/forms.py
+File: `main/forms.py`
 
 Purpose:
 
@@ -110,7 +110,7 @@ Paste the corresponding python code which is available in the week-03 folder �
 
 3️⃣ Views Logic 👁️
 
-File: main/views.py
+File: `main/views.py`
 
 Handles:
 
@@ -128,10 +128,10 @@ App-level URLs: `main/urls.py`
 
 Paste the corresponding python code which exists in the week-03 folder 🗂️.
 
-Project-level URLs:
-
-excel_form_app/urls.py
-
-Paste the corresponding python code which also exists in the week-03 folder 🗂️.
+Project-level URLs: `excel_form_app/urls.py`
 
 Ensure the app URLs are included:
+
+```
+path('', include('main.urls'))
+```
