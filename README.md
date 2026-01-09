@@ -29,7 +29,7 @@ During the internship, I was involved in a variety of practical tasks, including
 
 - 🤖 GitHub Copilot — for code and documentation assistance.
   
-- Claude AI gia kodika, epipleon ergaleio
+- 🤖 Claude AI – An Additional Tool for Code
 
 ---
 
