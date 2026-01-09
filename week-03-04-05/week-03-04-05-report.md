@@ -101,13 +101,13 @@ This step is useful after imports if incorrect data was uploaded.
 
 File: `main/forms.py`
 
-Purpose:
+🎯 Purpose:
 
-- Defines Django forms
-- Connects directly to the Person model
-- Used for manual data entry
+- 📝 Defines Django forms
 
-Paste the corresponding python code which is available in the week-03 folder 🗂️.
+- 🔗 Connects directly to the Person model
+
+- ✍️ Used for manual data entry
 
 ### 3️⃣ Views Logic 👁️
 
