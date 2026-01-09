@@ -107,3 +107,17 @@ Purpose:
 - Used for manual data entry
 
 Paste the corresponding python code which is available in the week-03 folder 🗂️.
+
+3️⃣ Views Logic 👁️
+
+File: main/views.py
+
+Handles:
+
+- Listing entries (people.html)
+- Editing records (edit_person.html)
+- Excel uploads
+- Duplicate detection
+- Success & result pages
+
+There, paste the corresponding python code which is also available in the week-03 folder 🗂️.
