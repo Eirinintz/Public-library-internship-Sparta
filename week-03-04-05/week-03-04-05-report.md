@@ -189,3 +189,24 @@ Verify:
 - people.html loads
 - Entries are saved correctly
 
+7️⃣ Install Required Libraries 📦
+
+```
+pip install pandas openpyxl
+```
+
+Used for Excel (.xlsx) imports.
+
+8️⃣ Authentication Setup 🔐
+
+```
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+```
+
+Create admin user:
+
+```
+python manage.py createsuperuser
+```
