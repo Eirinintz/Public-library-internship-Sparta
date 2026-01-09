@@ -31,7 +31,7 @@ During the internship, I was involved in a variety of practical tasks, including
 
 ---
 
-In general, we worked with CSV, Excel, and RFID. ✅
+In general, we worked with the above: ✅
 
 - **CSV (Comma-Separated Values)** is a simple text file format used to store and exchange data in a table-like structure. Each line in the file represents a record, and the values are separated by commas (or another delimiter) making it easy to open in programs like Excel or Google Sheets. Ideal for simple data storage and transferring information between applications. 📄✨
 
