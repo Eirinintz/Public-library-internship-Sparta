@@ -2,13 +2,14 @@
 
 ## Introduction
 
-This phase finalizes the Django form workflow by seamlessly combining models, views, templates, authentication, Excel imports, and PostgreSQL. The application is intended solely for internal library staff to manage records securely and efficiently.
+✨ This phase finalizes the Django form workflow by seamlessly combining models, views, templates, authentication, Excel imports, and PostgreSQL. 📚💻
+The application is intended solely for internal library staff to manage records securely and efficiently. 🔒📝
 
 ---
 
 ### Project Structure
 
-This folder appears on the previous page, which is as follows:
+This folder appears on the previous page, which is as follows: 🖼️📁
 
 ```
 php glossa
