@@ -68,3 +68,31 @@ and after
 from main.models import Person
 Person.objects.all()
 ```
+
+If no errors appear, the model and table exist.
+
+Inspect fields:
+
+```
+for field in Person._meta.fields:
+    print(field.name, field.get_internal_type())
+```
+
+👉🏻🗑️ Delete Imported Data (If Needed)
+
+Inside the same CMD, run:
+
+```
+python manage.py shell
+```
+
+ande after 
+
+```
+from main.models import Person
+Person.objects.all().delete()
+exit()
+```
+
+This step is useful after imports if incorrect data was uploaded.
+
