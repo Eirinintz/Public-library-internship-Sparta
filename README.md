@@ -34,6 +34,8 @@ During the internship, I was involved in a variety of practical tasks, including
 
 ---
 
+Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
+
 In general, we worked with the following: ✅
 
 - 📄 **CSV (Comma-Separated Values)** is a simple text file format used to store and exchange data in a table-like structure. Each line in the file represents a record, and the values are separated by commas (or another delimiter) making it easy to open in programs like Excel or Google Sheets. Ideal for simple data storage and transferring information between applications. 📄✨
@@ -63,5 +65,3 @@ In general, we worked with the following: ✅
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 🎯😄
 
 📅 Each week, we focus on different topics, exploring new tools and technologies 🛠️ to gradually build our skills and understanding. 📚
-
-Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
