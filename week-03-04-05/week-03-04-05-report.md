@@ -254,11 +254,14 @@ Additionally, entries imported via Excel are added in order, and if someone adds
 📚 The application is intended exclusively for library staff and is not designed for public use.
 All system messages are displayed in Greek, ensuring clarity, usability, and ease of understanding for internal users. ✨
 
+
 🌐 Below, I present the website we created: 🖥️✨
+
 
 
 🏠 Home / Logout
 The logout page is the same as the home page, providing a consistent interface for users. 🔄✨
+
 
 <img width="1345" height="640" alt="image" src="https://github.com/user-attachments/assets/58579d58-504c-49e4-bb18-04c9c5e150c6" />
 
@@ -267,7 +270,9 @@ The logout page is the same as the home page, providing a consistent interface f
 Users can create a new account by filling out the registration form. 🔐✨
 All fields are validated to ensure correct input before submission. ✅
 
+
 <img width="1347" height="630" alt="image" src="https://github.com/user-attachments/assets/325bb6fa-608a-4c5d-a043-699f4fb501c5" />
+
 
 
 🔑 Login / Sign In
