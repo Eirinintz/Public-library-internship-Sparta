@@ -262,7 +262,11 @@ In this specific task:
 
 
 📤 File upload functionality is available, and users can also print the uploaded files when needed. 🖨️
-When adding additional records, Koha information appears automatically after entering the author’s name, both during the data entry process and within the database, ensuring consistency and reducing manual errors. 📚🗄️
+
+
+When adding additional records, Koha information appears automatically after entering the author’s name, both during the data entry process and within the database 📚🗄️.
+Additionally, entries imported via Excel are added in order, and if someone adds a new record later, it follows the correct sequence in the database, ensuring consistency and reducing manual errors 🔢✨
+
 
 📚 The application is intended exclusively for library staff and is not designed for public use.
 All system messages are displayed in Greek, ensuring clarity, usability, and ease of understanding for internal users. ✨
