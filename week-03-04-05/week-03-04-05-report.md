@@ -133,8 +133,6 @@ File: `main/views.py`
 
 App-level URLs: `main/urls.py`
 
-Paste the corresponding python code which exists in the week-03 folder 🗂️.
-
 Project-level URLs: `excel_form_app/urls.py`
 
 Ensure the app URLs are included:
@@ -259,12 +257,12 @@ http://127.0.0.1:8000/login/
 - 🌐 Records appear in people.html
 
 
-να βγαλω φωτο αυτα που εμφανιζει
-να βαλω σχολια σε ολους τους κωδικες
-να γραψω τι αφορα τι
+💻📱 All the code is written in Python and HTML, and the application has been designed to run smoothly on both mobile devices and desktop computers. This ensures a responsive and user-friendly experience across different platforms and screen sizes. 🌐✨
 
-παιρναω τον φακελο στο 03-04 και το report apo thn olga
-το εχουμε κανει να τρεχει και για κινητα και για υπολογιστες
-ποιους αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη 
-μεταφορτωση αρχειο + καποιος μπορει να το κανει εκτυπωση 
-ο koha εμφανιζεται αυτοματα αφου μπει το ονομα συγγραφεα οταν παει καποιος να προσθεσει καποια επιπλεον εγγραφη kai sth bash kai otan to prostheteis
+
+📤 File upload functionality is available, and users can also print the uploaded files when needed. 🖨️
+When adding additional records, Koha information appears automatically after entering the author’s name, both during the data entry process and within the database, ensuring consistency and reducing manual errors. 📚🗄️
+
+να βγαλω φωτο αυτα που εμφανιζει
+να βαλω σχολια σε ολους τους κωδικες και να δω μηπως αλλαξε καποιον η ολγα
+να γραψω τι αφορα τι, ποιους αφορα, τι μπορουν να κανουν για συνδεση και για εγγραφη
