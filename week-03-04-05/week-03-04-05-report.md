@@ -57,7 +57,7 @@ excel_form_app/
 
 1️⃣ Verify Database Table 🗄️
 
-Open CMD as Admin and run:
+Open **CMD** as Admin and run:
 
 ```
 python manage.py shell
@@ -80,13 +80,13 @@ for field in Person._meta.fields:
 
 👉🏻🗑️ Delete Imported Data (If Needed)
 
-Inside the same CMD, run:
+Inside the *same CMD*, run:
 
 ```
 python manage.py shell
 ```
 
-ande after 
+and after 
 
 ```
 from main.models import Person
@@ -96,3 +96,14 @@ exit()
 
 This step is useful after imports if incorrect data was uploaded.
 
+2️⃣ Forms Setup 📝
+
+File: main/forms.py
+
+Purpose:
+
+- Defines Django forms
+- Connects directly to the Person model
+- Used for manual data entry
+
+Paste the corresponding python code which is available in the week-03 folder 🗂️.
