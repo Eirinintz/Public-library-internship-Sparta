@@ -177,85 +177,65 @@ upload_result.html   # Excel import results page
 upload_success.html  # Import success confirmation page
 ```
 
-### 6️⃣ Manual Entry Test ✅
+### 🌐 To run the web application locally, follow these steps: 🛠️💻
 
-In the *same CMD*, run:
+1️⃣ Open the command prompt and navigate to your project folder:
 
+Run **CMD** as *Admin*:
 ```
-python manage.py runserver
-```
-
-Open:
-
-```
-http://127.0.0.1:8000/
+cd <your_project_folder>
 ```
 
-✅ Verify:
+2️⃣ Create a *virtual environment* and activate it:
 
-- 🌐 people.html loads
+In the same CMD, run:
+```
+python -m venv venv
+```
+and after 
+```
+venv\Scripts\activate
+```
+3️⃣ Install required libraries:
 
-- 💾 Entries are saved correctly
+And After:
 
-
-### 7️⃣ Install Required Libraries 📦
-
+```
+pip install django
+```
+```
+pip install psycopg2-binary
+```
 ```
 pip install pandas openpyxl
 ```
 
-Used for Excel (.xlsx) imports.
+4️⃣ Apply database migrations:
 
-
-### 8️⃣ Authentication Setup 🔐
-
-```
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/login/'
-```
-
-Create admin user:
+And then:
 
 ```
-python manage.py createsuperuser
+python manage.py makemigrations
+```
+and
+```
+python manage.py migrate
 ```
 
+5️⃣ Start the development server:
 
-### 9️⃣ Excel Upload Flow 📊
-
-Implemented in: `main/views.py`
-
-✨ Features:
-
-- 📄 Accepts .xlsx only
-
-- 🐼 Uses Pandas
-
-- 🔗 Maps rows to Person model
-
-- 🔍 Detects duplicates
-
-
-### 🔟 Import Test 🚀
+And finish with this:
 
 ```
 python manage.py runserver
 ```
 
-Login:
+6️⃣ Open your browser and go to:
 
 ```
-http://127.0.0.1:8000/login/
+http://127.0.0.1:8000/ 
 ```
 
-✅ Verify:
-
-- 🔑 Login works
-
-- 📊 Excel upload succeeds
-
-- 🌐 Records appear in people.html
 
 In this specific task:
 
