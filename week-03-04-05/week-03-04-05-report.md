@@ -228,7 +228,7 @@ python manage.py migrate
 
 ### 5️⃣ Start the development server
 
-And finish with this:
+And after this:
 
 ```
 python manage.py runserver
