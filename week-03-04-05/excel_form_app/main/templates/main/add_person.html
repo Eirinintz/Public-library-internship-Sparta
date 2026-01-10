@@ -7,63 +7,59 @@
 
 <style>
 
-/* Container under the input */
+/* ========================= */
+/* AUTOCOMPLETE SUGGESTIONS */
+/* ========================= */
+
+/* Container under the title input */
 #title-suggestions {
     border: 1px solid #ccc;
     max-height: 200px;
     overflow: auto;
     width: 100%;
     background-color: white;
-    position: absolute; /* allows it to float over the form */
+    position: absolute; /* Allows the box to float over the form */
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 0;
     margin: 0;
 }
 
-/* Individual suggestion boxes */
+/* Individual autocomplete suggestion item */
 .suggestion-item {
     padding: 8px 12px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
 }
 
+/* Hover effect for suggestion item */
 .suggestion-item:hover {
     background-color: #f0f0f0;
 }
 
-
+/* Publisher autocomplete container */
 #ekdoths-suggestions {
     border: 1px solid #ccc;
     max-height: 200px;
     overflow: auto;
     width: 100%;
     background-color: white;
-    position: absolute; /* allows it to float over the form */
+    position: absolute;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 0;
     margin: 0;
 }
 
-/* Individual suggestion boxes */
-.suggestion-item {
-    padding: 8px 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-}
-
-.suggestion-item:hover {
-    background-color: #f0f0f0;
-}
-
-
-
+/* ========================= */
+/* GENERAL PAGE STYLES */
+/* ========================= */
 
 * {
     box-sizing: border-box;
 }
 
+/* Page background and base font */
 body {
     background: #f4f7fb;
     font-family: "Segoe UI", sans-serif;
@@ -71,6 +67,7 @@ body {
     padding: 0;
 }
 
+/* Main page container */
 .page-wrapper {
     max-width: 1400px;
     margin: 30px auto;
@@ -80,11 +77,13 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* Page title */
 h1 {
     margin-bottom: 25px;
     color: #1f3c88;
 }
 
+/* Form grid layout */
 form {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -92,6 +91,7 @@ form {
     width: 100%;
 }
 
+/* Individual field container */
 .field-box {
     position: relative;
     background: #e8f0ff;
@@ -100,6 +100,7 @@ form {
     border-left: 4px solid #1f3c88;
 }
 
+/* Field labels */
 .field-box label {
     display: block;
     font-size: 13px;
@@ -108,6 +109,7 @@ form {
     color: #1f3c88;
 }
 
+/* Inputs, textareas and selects */
 input,
 textarea,
 select {
@@ -119,12 +121,13 @@ select {
     background: #fff;
 }
 
+/* Read-only input styling */
 input[readonly] {
     background: #dde6ff;
     font-weight: bold;
 }
 
-/* textarea μικρό αρχικά – μεγαλώνει προς τα κάτω */
+/* Textarea auto-resize behavior */
 textarea {
     resize: none;
     overflow: auto;
@@ -132,7 +135,11 @@ textarea {
     line-height: 1.3;
 }
 
-/* ΚΟΥΜΠΙΑ */
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+/* Submit section container */
 .submit-wrapper {
     grid-column: 1 / -1;
     display: flex;
@@ -143,6 +150,7 @@ textarea {
     flex-wrap: wrap;
 }
 
+/* Main button */
 button {
     background: #1f3c88;
     color: white;
@@ -154,10 +162,12 @@ button {
     cursor: pointer;
 }
 
+/* Button hover effect */
 button:hover {
     background: #162c63;
 }
 
+/* Secondary button */
 .btn-secondary {
     background: #2d6cdf;
     color: white;
@@ -168,11 +178,12 @@ button:hover {
     font-weight: 600;
 }
 
+/* Secondary button hover */
 .btn-secondary:hover {
     background: #1f56b3;
 }
 
-/* ΜΗΝΥΜΑ ΥΠΟΒΟΛΗΣ */
+/* Submit success message */
 .submit-msg {
     font-size: 14px;
     color: #1f3c88;
@@ -185,119 +196,91 @@ button:hover {
 <div class="page-wrapper">
     <h1>Νέα Εισαγωγή Βιβλίου</h1>
 
+    <!-- Main form -->
     <form method="post">
         {% csrf_token %}
 
+        <!-- Auto-generated entry number -->
         <div class="field-box">
             <label>ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ</label>
             <input type="text" value="{{ next_number }}" readonly>
         </div>
 
+        <!-- Entry date -->
         <div class="field-box">
             <label>ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ</label>
             {{ form.hmeromhnia_eis }}
         </div>
 
+        <!-- Author -->
         <div class="field-box">
             <label>ΣΥΓΓΡΑΦΕΑΣ</label>
             {{ form.syggrafeas }}
         </div>
 
+        <!-- KOHA Author -->
         <div class="field-box">
             <label>ΣΥΓΓΡΑΦΕΑΣ KOHA</label>
             {{ form.koha }}
         </div>
 
+        <!-- Title with autocomplete -->
         <div class="field-box">
             <label>ΤΙΤΛΟΣ</label>
             {{ form.titlos }}
             <div id="title-suggestions" class="autocomplete-box"></div>
-            
         </div>
 
-        
-
+        <!-- Publisher with autocomplete -->
         <div class="field-box">
             <label>ΕΚΔΟΤΗΣ</label>
             {{ form.ekdoths }}
             <div id="ekdoths-suggestions" class="autocomplete-box"></div>
         </div>
 
-        <div class="field-box">
-            <label>ΕΚΔΟΣΗ</label>
-            {{ form.ekdosh }}
-        </div>
+        <!-- Remaining form fields -->
+        <div class="field-box"><label>ΕΚΔΟΣΗ</label>{{ form.ekdosh }}</div>
+        <div class="field-box"><label>ΕΤΟΣ ΕΚΔΟΣΗΣ</label>{{ form.etosEkdoshs }}</div>
+        <div class="field-box"><label>ΤΟΠΟΣ ΕΚΔΟΣΗΣ</label>{{ form.toposEkdoshs }}</div>
+        <div class="field-box"><label>ΣΧΗΜΑ</label>{{ form.sxhma }}</div>
+        <div class="field-box"><label>ΣΕΛΙΔΕΣ</label>{{ form.selides }}</div>
+        <div class="field-box"><label>ΤΟΜΟΣ</label>{{ form.tomos }}</div>
+        <div class="field-box"><label>ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ / ΠΑΡΑΤΗΡΗΣΕΙΣ</label>{{ form.troposPromPar }}</div>
+        <div class="field-box"><label>ISBN</label>{{ form.ISBN }}</div>
+        <div class="field-box"><label>ΣΤΗΛΗ 1</label>{{ form.sthlh1 }}</div>
+        <div class="field-box"><label>ΣΤΗΛΗ 2</label>{{ form.sthlh2 }}</div>
 
-        <div class="field-box">
-            <label>ΕΤΟΣ ΕΚΔΟΣΗΣ</label>
-            {{ form.etosEkdoshs }}
-        </div>
-
-        <div class="field-box">
-            <label>ΤΟΠΟΣ ΕΚΔΟΣΗΣ</label>
-            {{ form.toposEkdoshs }}
-        </div>
-
-        <div class="field-box">
-            <label>ΣΧΗΜΑ</label>
-            {{ form.sxhma }}
-        </div>
-
-        <div class="field-box">
-            <label>ΣΕΛΙΔΕΣ</label>
-            {{ form.selides }}
-        </div>
-
-        <div class="field-box">
-            <label>ΤΟΜΟΣ</label>
-            {{ form.tomos }}
-        </div>
-
-        <div class="field-box">
-            <label>ΤΡΟΠΟΣ ΠΡΟΜΗΘΕΙΑΣ / ΠΑΡΑΤΗΡΗΣΕΙΣ</label>
-            {{ form.troposPromPar }}
-        </div>
-
-        <div class="field-box">
-            <label>ISBN</label>
-            {{ form.ISBN }}
-        </div>
-
-        <div class="field-box">
-            <label>ΣΤΗΛΗ 1</label>
-            {{ form.sthlh1 }}
-        </div>
-
-        <div class="field-box">
-            <label>ΣΤΗΛΗ 2</label>
-            {{ form.sthlh2 }}
-        </div>
-
+        <!-- Submit section -->
         <div class="submit-wrapper">
             <a href="{% url 'home' %}" class="btn-secondary">Αρχική</a>
             <button type="submit" onclick="return confirmSubmit();">Υποβολή</button>
 
-
+            <!-- Success message after submit -->
             {% if request.GET.submitted == "1" %}
-                
             <span class="submit-msg" id="submit-msg">Υποβλήθηκε</span>
             {% endif %}
         </div>
     </form>
 </div>
 
+<!-- Confirmation dialog before submit -->
 <script>
 function confirmSubmit() {
     return confirm("Είσαι σίγουρος για αυτήν την υποβολή?");
 }
 </script>
 
+<!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Autocomplete logic -->
 <script src="{% static 'main/autocomplete.js' %}"></script>
 
+<!-- Auto-resize textareas & hide success message -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Auto-expand textareas while typing
     document.querySelectorAll("textarea").forEach(el => {
         el.addEventListener("input", function () {
             this.style.height = "auto";
@@ -305,23 +288,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Hide submit message after 3 seconds and clean URL
     const msg = document.getElementById("submit-msg");
     if (msg) {
         setTimeout(() => {
             msg.style.display = "none";
-
-            // 🔥 ΚΑΘΑΡΙΖΕΙ ΤΟ URL ΓΙΑ ΠΑΝΤΑ
-            window.history.replaceState(
-                {},
-                document.title,
-                window.location.pathname
-            );
-
+            window.history.replaceState({}, document.title, window.location.pathname);
         }, 3000);
     }
 });
 </script>
 
+<!-- Auto-fill KOHA author field -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const authorInput = document.getElementById("id_syggrafeas");
@@ -336,12 +314,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!value.includes(",")) return;
 
         let parts = value.split(",");
-
         if (parts.length !== 2) return;
 
         let surname = parts[0].trim();
         let name = parts[1].trim();
-
         if (!surname || !name) return;
 
         // Autofill KOHA as "name surname"
@@ -349,7 +325,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-
 
 </body>
 </html>
