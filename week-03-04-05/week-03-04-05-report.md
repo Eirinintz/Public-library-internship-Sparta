@@ -266,6 +266,9 @@ All system messages are displayed in Greek, ensuring clarity, usability, and eas
 The logout page is the same as the home page, providing a consistent interface for users. 🔄✨
 
 
+
+
+
 <img width="1345" height="640" alt="image" src="https://github.com/user-attachments/assets/58579d58-504c-49e4-bb18-04c9c5e150c6" />
 
 
