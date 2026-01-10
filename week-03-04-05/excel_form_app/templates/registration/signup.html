@@ -1,68 +1,81 @@
 {% extends "base.html" %}
+{# Κληρονομεί το βασικό layout από το base.html #}
 
 {% block title %}Εγγραφή Προσωπικού{% endblock %}
+{# Ο τίτλος της σελίδας που εμφανίζεται στο browser tab #}
 
 {% block content %}
+{# Κύριο περιεχόμενο της σελίδας #}
 
 <div class="container" style="
     font-family: Arial, sans-serif;
-    background-color:#f5f0e6;   /* μπεζ */
-    border: 2px solid #d6c9b8;
-    border-radius:8px;
-    padding:25px;
-    width:350px;
-    margin:50px auto;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    background-color:#f5f0e6;   /* Μπεζ πλαίσιο */
+    border: 2px solid #d6c9b8;   /* Ελαφρώς πιο έντονο περίγραμμα */
+    border-radius:8px;            /* Στρογγυλεμένες γωνίες */
+    padding:25px;                 /* Εσωτερικό padding */
+    width:350px;                  /* Σταθερό πλάτος */
+    margin:50px auto;             /* Κεντράρισμα με απόσταση από πάνω */
+    box-shadow:0 4px 12px rgba(0,0,0,0.1); /* Ελαφριά σκιά */
 ">
+    {# Πλαίσιο εγγραφής #}
 
     <h2 style="text-align:center; margin-bottom:20px;">
         Εγγραφή Προσωπικού Βιβλιοθήκης
     </h2>
+    {# Κεντρικός τίτλος της φόρμας #}
 
     <form method="post" id="signupForm" style="display:flex; flex-direction:column;">
         {% csrf_token %}
+        {# CSRF token για προστασία από CSRF επιθέσεις #}
 
         <!-- Username -->
         <label for="id_username">Όνομα χρήστη:</label>
         {{ form.username }}
         <p id="usernameError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Εμφάνιση του πεδίου username και container για μηνύματα λάθους #}
 
         <!-- Email -->
         <label for="id_email">Email:</label>
         {{ form.email }}
         <p id="emailError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο email και container για μηνύματα λάθους #}
 
         <!-- Password -->
         <label for="id_password1">Κωδικός πρόσβασης:</label>
         {{ form.password1 }}
         <p id="passwordError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο password και container για μηνύματα λάθους #}
 
         <!-- Confirm Password -->
         <label for="id_password2">Επιβεβαίωση κωδικού πρόσβασης:</label>
         {{ form.password2 }}
         <p id="confirmError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο επιβεβαίωσης password και container για μηνύματα λάθους #}
 
         <button type="submit" style="
             padding:10px;
-            background-color:#c9b18f;  /* πιο έντονο χρώμα */
+            background-color:#c9b18f;  /* πιο έντονο χρώμα κουμπιού */
             border:2px solid #a89377;  /* αντίστοιχο περίγραμμα */
-            border-radius:8px;
-            color:white;               /* καλύτερη αντίθεση */
+            border-radius:8px;          /* στρογγυλεμένες γωνίες */
+            color:white;               /* λευκό κείμενο για αντίθεση */
             font-weight:700;
             cursor:pointer;
             margin-top:15px;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: transform 0.2s ease, background 0.2s ease; /* μικρή animation */
         ">
             Εγγραφή
         </button>
+        {# Κουμπί υποβολής #}
     </form>
 
     <p style="margin-top:20px;font-size:0.8em;">
         ❓ Αν αντιμετωπίσετε οποιοδήποτε πρόβλημα κατά την εγγραφή, επικοινωνήστε με τον διαχειριστή.
     </p>
+    {# Βοηθητικό μήνυμα για τον χρήστη #}
 </div>
 
 <script>
+    // Επιλογή πεδίων input και containers για λάθη
     const usernameInput = document.getElementById('id_username');
     const emailInput = document.getElementById('id_email');
     const passwordInput = document.getElementById('id_password1');
@@ -75,6 +88,7 @@
 
     const form = document.getElementById('signupForm');
 
+    // Event listener για την υποβολή της φόρμας
     form.addEventListener('submit', function(event) {
         let valid = true;
 
@@ -89,7 +103,7 @@
             usernameError.style.display = 'none';
         }
 
-        // Έλεγχος email
+        // Έλεγχος email (απλός έλεγχος περιλαμβάνει '@')
         if (!emailInput.value.includes('@')) {
             emailError.textContent =
                 '❌ Παρακαλώ εισάγετε έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.';
@@ -99,7 +113,7 @@
             emailError.style.display = 'none';
         }
 
-        // Έλεγχος κωδικού πρόσβασης
+        // Έλεγχος ισχυρού κωδικού πρόσβασης
         const passwordRegex =
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[,-.@$!%*?&]).{8,}$/;
 
@@ -122,6 +136,7 @@
             confirmError.style.display = 'none';
         }
 
+        // Αν υπάρχουν σφάλματα, αποτροπή υποβολής της φόρμας
         if (!valid) {
             event.preventDefault();
         }
