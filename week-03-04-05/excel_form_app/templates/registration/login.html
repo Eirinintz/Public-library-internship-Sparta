@@ -1,28 +1,28 @@
 {% extends "base.html" %}
-{# Κληρονομεί το βασικό layout από base.html #}
+{# Κληρονομεί το βασικό layout από το base.html #}
 
 {% block title %}Σύνδεση Προσωπικού{% endblock %}
-{# Τίτλος της σελίδας που εμφανίζεται στο tab του browser #}
+{# Ο τίτλος της σελίδας που εμφανίζεται στο browser tab #}
 
 {% block content %}
 {# Κύριο περιεχόμενο της σελίδας #}
 
 <div class="container" style="
     font-family: Arial, sans-serif;
-    background-color: #f5f0e6;   /* μπεζ πλαίσιο όπως τα κουμπιά nav */
-    border: 2px solid #d6c9b8;   /* ελαφρώς πιο έντονο πλαίσιο */
-    border-radius: 8px;
-    padding: 25px;
-    width: 350px;
-    margin: 50px auto;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #f5f0e6;   /* Μπεζ πλαίσιο όπως τα κουμπιά nav */
+    border: 2px solid #d6c9b8;   /* Ελαφρώς πιο έντονο περίγραμμα */
+    border-radius: 8px;           /* Στρογγυλεμένες γωνίες */
+    padding: 25px;                /* Εσωτερικό padding */
+    width: 350px;                 /* Σταθερό πλάτος */
+    margin: 50px auto;            /* Κεντράρισμα με απόσταση από πάνω */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Ελαφριά σκιά */
 ">
-    {# Το κεντρικό πλαίσιο σύνδεσης, κεντραρισμένο και με σκιές #}
+    {# Πλαίσιο σύνδεσης #}
 
     <h2 style="text-align:center; margin-bottom:20px;">
         Σύνδεση Προσωπικού Βιβλιοθήκης
     </h2>
-    {# Κεντρικός τίτλος #}
+    {# Κεντρικός τίτλος της φόρμας #}
 
     <form method="post" id="loginForm" style="display:flex; flex-direction:column;">
         {% csrf_token %}
@@ -32,46 +32,45 @@
         <label for="id_username">Όνομα χρήστη:</label>
         <input type="text" id="id_username" name="username">
         <p id="usernameError" style="display:none; color:red; font-size:0.9em;"></p>
-        {# Πεδίο username και container για μήνυμα λάθους #}
+        {# Πεδίο username και container για μηνύματα λάθους #}
 
         <!-- Email -->
         <label for="id_email">Email:</label>
         <input type="email" id="id_email" name="email">
         <p id="emailError" style="display:none; color:red; font-size:0.9em;"></p>
-        {# Πεδίο email και container για μήνυμα λάθους #}
+        {# Πεδίο email και container για μηνύματα λάθους #}
 
         <!-- Password -->
         <label for="id_password">Κωδικός πρόσβασης:</label>
         <input type="password" id="id_password" name="password">
         <p id="passwordError" style="display:none; color:red; font-size:0.9em;"></p>
-        {# Πεδίο password και container για μήνυμα λάθους #}
+        {# Πεδίο password και container για μηνύματα λάθους #}
 
         <button type="submit" style="
             padding:10px;
-            background-color:#c9b18f;  /* πιο έντονο χρώμα */
+            background-color:#c9b18f;  /* πιο έντονο χρώμα για το κουμπί */
             border:2px solid #a89377;  /* αντίστοιχο περίγραμμα */
-            border-radius:8px;
-            color:white;               /* καλύτερη αντίθεση */
+            border-radius:8px;          /* στρογγυλεμένες γωνίες */
+            color:white;                /* λευκό κείμενο για αντίθεση */
             font-weight:700;
-            cursor:pointer;
+            cursor:pointer;             /* αλλαγή cursor σε pointer */
             margin-top:15px;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition: transform 0.2s ease, background 0.2s ease; /* μικρή animation */
         ">
             Σύνδεση
         </button>
-        {# Κουμπί υποβολής με στυλ και μικρή μετάβαση για hover effects #}
+        {# Κουμπί υποβολής #}
     </form>
 
     <p style="margin-top:20px; font-size:0.8em;">
         ❓ Αν έχετε ξεχάσει τα στοιχεία σας ή αντιμετωπίζετε πρόβλημα,
         επικοινωνήστε με τον διαχειριστή.
     </p>
-    {# Βοηθητικό κείμενο για τον χρήστη #}
+    {# Βοηθητικό μήνυμα για τους χρήστες #}
 </div>
 
 <script>
-    {# JavaScript έλεγχος client-side πριν την υποβολή #}
-
+    // Επιλογή πεδίων input και containers για λάθη
     const usernameInput = document.getElementById('id_username');
     const emailInput = document.getElementById('id_email');
     const passwordInput = document.getElementById('id_password');
@@ -82,6 +81,7 @@
 
     const form = document.getElementById('loginForm');
 
+    // Event listener για την υποβολή της φόρμας
     form.addEventListener('submit', function(event) {
         let valid = true;
 
@@ -117,8 +117,9 @@
             passwordError.style.display = 'none';
         }
 
+        // Αν υπάρχουν σφάλματα, αποτροπή υποβολής της φόρμας
         if (!valid) {
-            event.preventDefault(); // Αποτροπή υποβολής εάν υπάρχει σφάλμα
+            event.preventDefault();
         }
     });
 </script>
