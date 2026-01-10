@@ -88,7 +88,7 @@ Inside the *same CMD*, run:
 python manage.py shell
 ```
 
-and after 
+and 
 
 ```
 from main.models import Person
@@ -193,7 +193,7 @@ In the *same CMD*, run:
 ```
 python -m venv venv
 ```
-and after 
+and 
 ```
 venv\Scripts\activate
 ```
