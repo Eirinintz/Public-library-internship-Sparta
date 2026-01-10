@@ -1,8 +1,11 @@
 {% extends "base.html" %}
+{# Κληρονομεί το βασικό layout από base.html #}
 
 {% block title %}Σύνδεση Προσωπικού{% endblock %}
+{# Τίτλος της σελίδας που εμφανίζεται στο tab του browser #}
 
 {% block content %}
+{# Κύριο περιεχόμενο της σελίδας #}
 
 <div class="container" style="
     font-family: Arial, sans-serif;
@@ -14,28 +17,34 @@
     margin: 50px auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 ">
+    {# Το κεντρικό πλαίσιο σύνδεσης, κεντραρισμένο και με σκιές #}
 
     <h2 style="text-align:center; margin-bottom:20px;">
         Σύνδεση Προσωπικού Βιβλιοθήκης
     </h2>
+    {# Κεντρικός τίτλος #}
 
     <form method="post" id="loginForm" style="display:flex; flex-direction:column;">
         {% csrf_token %}
+        {# CSRF token για προστασία από CSRF επιθέσεις #}
 
         <!-- Username -->
         <label for="id_username">Όνομα χρήστη:</label>
         <input type="text" id="id_username" name="username">
         <p id="usernameError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο username και container για μήνυμα λάθους #}
 
         <!-- Email -->
         <label for="id_email">Email:</label>
         <input type="email" id="id_email" name="email">
         <p id="emailError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο email και container για μήνυμα λάθους #}
 
         <!-- Password -->
         <label for="id_password">Κωδικός πρόσβασης:</label>
         <input type="password" id="id_password" name="password">
         <p id="passwordError" style="display:none; color:red; font-size:0.9em;"></p>
+        {# Πεδίο password και container για μήνυμα λάθους #}
 
         <button type="submit" style="
             padding:10px;
@@ -50,16 +59,19 @@
         ">
             Σύνδεση
         </button>
+        {# Κουμπί υποβολής με στυλ και μικρή μετάβαση για hover effects #}
     </form>
 
     <p style="margin-top:20px; font-size:0.8em;">
         ❓ Αν έχετε ξεχάσει τα στοιχεία σας ή αντιμετωπίζετε πρόβλημα,
         επικοινωνήστε με τον διαχειριστή.
     </p>
-
+    {# Βοηθητικό κείμενο για τον χρήστη #}
 </div>
 
 <script>
+    {# JavaScript έλεγχος client-side πριν την υποβολή #}
+
     const usernameInput = document.getElementById('id_username');
     const emailInput = document.getElementById('id_email');
     const passwordInput = document.getElementById('id_password');
@@ -106,7 +118,7 @@
         }
 
         if (!valid) {
-            event.preventDefault(); // Αποτροπή υποβολής
+            event.preventDefault(); // Αποτροπή υποβολής εάν υπάρχει σφάλμα
         }
     });
 </script>
