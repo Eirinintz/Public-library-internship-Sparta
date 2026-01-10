@@ -272,6 +272,8 @@ The logout page is the same as the home page, providing a consistent interface f
 <img width="1345" height="640" alt="image" src="https://github.com/user-attachments/assets/58579d58-504c-49e4-bb18-04c9c5e150c6" />
 
 
+
+
 📝 Registration / Signup
 
 Users can create a new account by filling out the registration form. 🔐✨
@@ -282,6 +284,8 @@ All fields are validated to ensure correct input before submission. ✅
 
 
 <img width="1347" height="630" alt="image" src="https://github.com/user-attachments/assets/325bb6fa-608a-4c5d-a043-699f4fb501c5" />
+
+
 
 
 
@@ -322,7 +326,10 @@ Users can upload an Excel file (.xlsx) to import multiple records at once into t
 
 
 
+
+
 ⚠️ You need to run makemigrations and migrate for the database tables to appear 🗄️✨
+
 
 
 
@@ -333,6 +340,8 @@ Users can upload an Excel file (.xlsx) to import multiple records at once into t
 
 
 <img width="1348" height="635" alt="image" src="https://github.com/user-attachments/assets/ac6a4062-c8dc-486e-9dd5-6e4ab4292660" />
+
+
 
 
 
@@ -358,6 +367,7 @@ Users can add a new book record to the database by filling out the form with det
 
   
 <img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/42e4e222-d8ed-4201-aeec-47088ff46bd8" />
+
 
 
 
