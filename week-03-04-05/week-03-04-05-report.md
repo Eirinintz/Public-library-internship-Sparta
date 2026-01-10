@@ -178,16 +178,16 @@ upload_success.html  # Import success confirmation page
 
 ---
 
-### 🌐 To run the web application locally, follow these steps: 🛠️💻
+## 🌐 To run the web application locally, follow these steps: 🛠️💻
 
-1️⃣ Open the command prompt and navigate to your project folder:
+### 1️⃣ Open the command prompt and navigate to your project folder:
 
 Run **CMD** as *Admin*:
 ```
 cd <your_project_folder>
 ```
 
-2️⃣ Create a *virtual environment* and activate it:
+### 2️⃣ Create a *virtual environment* and activate it:
 
 In the same CMD, run:
 ```
@@ -197,7 +197,8 @@ and after
 ```
 venv\Scripts\activate
 ```
-3️⃣ Install required libraries:
+
+### 3️⃣ Install required libraries:
 
 And After:
 
@@ -211,7 +212,7 @@ pip install psycopg2-binary
 pip install pandas openpyxl
 ```
 
-4️⃣ Apply database migrations:
+### 4️⃣ Apply database migrations:
 
 And then:
 
@@ -225,7 +226,7 @@ python manage.py migrate
 
 💡 Tip: Make sure your PostgreSQL database is running and your settings in settings.py are correct before running migrations. 🐘✅
 
-5️⃣ Start the development server:
+### 5️⃣ Start the development server:
 
 And finish with this:
 
@@ -233,7 +234,7 @@ And finish with this:
 python manage.py runserver
 ```
 
-6️⃣ Open your browser and go to:
+### 6️⃣ Open your browser and go to:
 
 ```
 http://127.0.0.1:8000/ 
