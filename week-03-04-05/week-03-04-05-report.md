@@ -12,7 +12,6 @@ The application is intended solely for internal library staff to manage records 
 This folder appears on the previous page, which is as follows: 🖼️📁
 
 ```
-php glossa
 excel_form_app/
 │── manage.py
 │── urls.py
