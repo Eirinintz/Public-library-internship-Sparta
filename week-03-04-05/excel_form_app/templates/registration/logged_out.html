@@ -1,9 +1,16 @@
+{% extends "base.html" %}  
+{# Κληρονομεί το βασικό template base.html ώστε να μην χρειάζεται να επαναλαμβάνουμε το HTML boilerplate #}
 
-{% extends "base.html" %}
+{% block title %}Logged Out{% endblock %}  
+{# Ο τίτλος της σελίδας που εμφανίζεται στο tab του browser #}
 
-{% block title %}Logged Out{% endblock %}
+{% block content %}  
+{# Το κύριο περιεχόμενο της σελίδας #}
 
-{% block content %}
-<p>You are now logged out.</p>
-<a href="{% url 'login' %}">Log in again</a>
-{% endblock %}
+<p>You are now logged out.</p>  
+{# Μήνυμα ενημέρωσης για τον χρήστη ότι έχει αποσυνδεθεί επιτυχώς #}
+
+<a href="{% url 'login' %}">Log in again</a>  
+{# Σύνδεσμος για να κάνει login ξανά, χρησιμοποιώντας το Django URL name 'login' #}
+
+{% endblock %}  
