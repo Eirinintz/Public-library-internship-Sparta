@@ -5,6 +5,9 @@
     <title>Προβολή όλων των εγγραφών</title>
 
     <style>
+        /* ============================= */
+        /* Table styling */
+        /* ============================= */
         table {
             border-collapse: collapse;
             width: 100%;
@@ -26,7 +29,7 @@
 
         /* ====== PRINT ONLY ====== */
         @media print {
-
+            /* Elements to hide in print */
             .no-print {
                 display: none !important;
             }
@@ -35,17 +38,18 @@
                 margin: 0;
             }
 
+            /* Page setup for A3 landscape */
             @page {
                 size: A3 landscape;
                 margin: 10mm;
             }
 
-            /* καθαρή προεπισκόπηση – χωρίς scrollbars */
+            /* Disable scrollbars in print preview */
             html, body {
                 overflow: hidden !important;
             }
 
-            /* σταθερή διάταξη για σωστό print */
+            /* Table fixed layout for proper print */
             table {
                 table-layout: fixed;
                 width: 100%;
@@ -56,7 +60,7 @@
                 font-size: 10.5px;
             }
 
-            /* λίγο μεγαλύτερα πλάτη για Τίτλο & Εκδότη ώστε να μην σπάει η λέξη */
+            /* Adjust column widths to avoid word breaking */
             col.title-col {
                 width: 13%;
             }
@@ -69,17 +73,17 @@
                 width: 9%;
             }
 
-            /* αποφυγή άσχημου σπασίματος λέξεων */
             td {
                 white-space: normal;
                 overflow-wrap: normal;
             }
 
-            /* γραμμές να φαίνονται σωστά σε αλλαγή σελίδας */
+            /* Ensure header repeats on each printed page */
             thead {
                 display: table-header-group;
             }
 
+            /* Avoid page break inside table rows */
             tr {
                 page-break-inside: avoid;
             }
@@ -89,6 +93,7 @@
 
 <body>
 
+<!-- Navigation button to go back to home, hidden in print -->
 <div class="no-print" style="margin-bottom:15px; display:flex; gap:10px;">
     <a href="{% url 'home' %}"
        style="padding:6px 14px; background:#2c7be5; color:white; text-decoration:none; border-radius:4px; font-weight:bold;">
@@ -96,10 +101,12 @@
     </a>
 </div>
 
+<!-- Page heading only when not printing -->
 {% if not request.GET %}
 <h1>Προβολή όλων των εγγραφών</h1>
 {% endif %}
 
+<!-- Form for selecting a range to print, hidden in print -->
 {% if not request.GET %}
 <form class="no-print"
       method="get"
@@ -119,9 +126,11 @@
 </form>
 {% endif %}
 
+<!-- Main table containing all book entries -->
 <div>
 <table id="booksTable">
 
+    <!-- Column width configuration -->
     <colgroup>
         <col>
         <col>
@@ -143,6 +152,7 @@
 
     <thead>
         <tr>
+            <!-- Column headers -->
             <th>Αριθμός Εισαγωγής</th>
             <th>Ημερομηνία Εισαγωγής</th>
             <th>Συγγραφέας</th>
@@ -163,6 +173,7 @@
     </thead>
 
     <tbody>
+        <!-- Loop through all book entries and display them -->
         {% for p in people %}
         <tr>
             <td>{{ p.ari8mosEisagoghs }}</td>
@@ -188,6 +199,7 @@
 </table>
 </div>
 
+<!-- JavaScript to filter table rows by input range and auto-trigger print -->
 <script>
 window.onload = function () {
 
@@ -199,6 +211,7 @@ window.onload = function () {
         const from = Number(params.get('from_num'));
         const to = Number(params.get('to_num'));
 
+        // Hide rows outside of the specified range
         rows.forEach(row => {
             const value = Number(row.cells[0].innerText);
             if (value < from || value > to) {
@@ -206,6 +219,7 @@ window.onload = function () {
             }
         });
 
+        // Trigger print dialog
         window.print();
     }
 };
