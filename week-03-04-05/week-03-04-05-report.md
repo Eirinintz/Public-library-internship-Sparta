@@ -284,10 +284,11 @@ All fields are validated to ensure correct input before submission. ✅
 
 Users can log in to their account by entering their username and password. 🖥️💻
 
-Successful login redirects the user to the home page, while incorrect credentials display an error message ❌⚠️.
-
 
 <img width="1348" height="638" alt="image" src="https://github.com/user-attachments/assets/87f9d663-11f5-4cac-9ddd-58b986d365d5" />
+
+
+Successful login redirects the user to the home page, while incorrect credentials display an error message ❌⚠️.
 
 
 <img width="1346" height="637" alt="image" src="https://github.com/user-attachments/assets/38af136d-be1f-4e63-829a-299042185665" />
