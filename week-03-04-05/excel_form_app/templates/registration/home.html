@@ -1,18 +1,24 @@
+{% extends "base.html" %}  {# Κληρονομεί το βασικό template base.html #}
 
-{% extends "base.html" %}
+{% block title %}Home{% endblock %}  {# Ο τίτλος της σελίδας #}
 
-{% block title %}Home{% endblock %}
+{% block content %}  {# Το κύριο περιεχόμενο της σελίδας #}
 
-{% block content %}
-  {% if user.is_authenticated %}
-    <p>Hi {{ user.username }}!</p>
+  {% if user.is_authenticated %}  {# Έλεγχος αν ο χρήστης έχει κάνει login #}
+    <p>Hi {{ user.username }}!</p>  {# Προβολή ονόματος χρήστη #}
+
+    {# Φόρμα για logout με POST για ασφαλή αποσύνδεση #}
     <form action="{% url 'logout' %}" method="post">
-      {% csrf_token %}
-      <button type="submit">Log Out</button>
+      {% csrf_token %}  {# Απαραίτητο token ασφαλείας για POST #}
+      <button type="submit">Log Out</button>  {# Κουμπί logout #}
     </form>
-  {% else %}
-    <p>You are not logged in.</p>
+
+  {% else %}  {# Αν ο χρήστης δεν έχει κάνει login #}
+    <p>You are not logged in.</p>  {# Μήνυμα ενημέρωσης #}
+    
+    {# Σύνδεσμοι για login και signup #}
     <a href="{% url 'login' %}">Log In</a> |
     <a href="{% url 'signup' %}">Sign Up</a>
   {% endif %}
+
 {% endblock %}
