@@ -9,19 +9,23 @@ The application is intended solely for internal library staff to manage records 
 
 ### Project Structure
 
-This folder appears on the previous page, which is as follows: 🖼️📁
+The folder `excel_form_app` appears on the previous page, which is as follows: 🖼️📁
 
 ```
 excel_form_app/
 │── manage.py
+│── requirements.txt
 │── urls.py
+│
 │── excel_form_app/
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
-│   └── wsgi.py
-│
+│   ├── wsgi.py
+|   └── static/main
+│        └── autocomplete.js
+|
 ├── main/
 │   ├── __init__.py
 │   ├── admin.py
@@ -33,6 +37,21 @@ excel_form_app/
 │   ├── urls.py
 │   └── migrations/
 │       └── __init__.py
+|
+├── main/templates
+│   ├── upload_excel.html
+│   ├── upload_result.html
+│   ├── upload_success.html
+|   └── main/
+|       ├── add_person.html
+|       ├── people.html
+|       ├── edit_person.html
+|       ├── duplicates.html
+|       └── duplicates_done.html
+|
+├── main/static
+|   ├── images/
+|       └── book_background.jpg
 │
 ├── templates/
 │   ├── base.html
@@ -42,17 +61,6 @@ excel_form_app/
 │       ├── login.html
 │       ├── logged_out.html
 │       └── signup.html
-│
-├── main/templates
-|   ├── people.html
-│   ├── upload_excel.html
-│   ├── upload_result.html
-│   ├── upload_success.html
-|   └── main/
-|       ├── people.html
-|       ├── edit_person.html
-|       ├── duplicates.html
-|       └── duplicates_done.html
 ```
 
 ---
