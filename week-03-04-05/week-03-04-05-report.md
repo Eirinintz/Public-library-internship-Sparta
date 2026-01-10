@@ -258,6 +258,7 @@ All system messages are displayed in Greek, ensuring clarity, usability, and eas
 
 
 🏠 Home / Logout
+
 The logout page is the same as the home page, providing a consistent interface for users. 🔄✨
 
 
@@ -265,7 +266,9 @@ The logout page is the same as the home page, providing a consistent interface f
 
 
 📝 Registration / Signup
+
 Users can create a new account by filling out the registration form. 🔐✨
+
 All fields are validated to ensure correct input before submission. ✅
 
 
@@ -274,7 +277,9 @@ All fields are validated to ensure correct input before submission. ✅
 
 
 🔑 Login / Sign In
+
 Users can log in to their account by entering their username and password. 🖥️💻
+
 Successful login redirects the user to the home page, while incorrect credentials display an error message ❌⚠️.
 
 
@@ -286,6 +291,7 @@ Successful login redirects the user to the home page, while incorrect credential
 
 
 📊 Excel Upload / Data Import
+
 Users can upload an Excel file (.xlsx) to import multiple records at once into the database. 🗂️💾
 
 - The system reads the Excel file using Pandas 🐼
@@ -312,6 +318,7 @@ Users can upload an Excel file (.xlsx) to import multiple records at once into t
 
 
 📚 Add New Book / New Entry
+
 Users can add a new book record to the database by filling out the form with details such as:
 
 - Author ✍️
@@ -339,6 +346,3 @@ The application allows library staff to manage all book/person records efficient
 
 
 <img width="1347" height="638" alt="image" src="https://github.com/user-attachments/assets/51d8fd44-86fc-4bf0-9564-c1479b0be31c" />
-
-
-να βαλω σχολια σε ολους τους κωδικες και να δω μηπως αλλαξε καποιον η ολγα
