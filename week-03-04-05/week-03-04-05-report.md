@@ -214,7 +214,7 @@ pip install pandas openpyxl
 
 ### 4️⃣ Apply database migrations
 
-And then:
+Then:
 
 ```
 python manage.py makemigrations
