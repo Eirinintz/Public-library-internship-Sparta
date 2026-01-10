@@ -189,7 +189,7 @@ cd <your_project_folder>
 
 ### 2️⃣ Create a *virtual environment* and activate it:
 
-In the same CMD, run:
+In the *same CMD*, run:
 ```
 python -m venv venv
 ```
