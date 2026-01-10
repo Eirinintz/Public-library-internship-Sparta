@@ -55,6 +55,7 @@ excel_form_app/
 |       └── duplicates_done.html
 ```
 
+---
 
 ### 1️⃣ Verify Database Table 🗄️
 
@@ -175,6 +176,8 @@ upload_result.html   # Excel import results page
 upload_success.html  # Import success confirmation page
 ```
 
+---
+
 ### 🌐 To run the web application locally, follow these steps: 🛠️💻
 
 1️⃣ Open the command prompt and navigate to your project folder:
@@ -236,6 +239,7 @@ python manage.py runserver
 http://127.0.0.1:8000/ 
 ```
 
+---
 
 In this specific task:
 
@@ -252,9 +256,9 @@ Additionally, entries imported via Excel are added in order, and if someone adds
 📚 The application is intended exclusively for library staff and is not designed for public use.
 All system messages are displayed in Greek, ensuring clarity, usability, and ease of understanding for internal users. ✨
 
+---
 
 🌐 Below, I present the website we created: 🖥️✨
-
 
 
 🏠 Home / Logout
