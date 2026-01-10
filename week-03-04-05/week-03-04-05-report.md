@@ -200,7 +200,7 @@ venv\Scripts\activate
 
 ### 3️⃣ Install required libraries
 
-And After:
+And after:
 
 ```
 pip install django
