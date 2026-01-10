@@ -1,33 +1,37 @@
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.shortcuts import render, redirect, get_object_or_404
-import pandas as pd
-from .forms import UploadExcelForm, CustomUserCreationForm, PersonForm
-from .models import Person, UploadLog
+from django.contrib.auth.decorators import login_required  # Για προστασία views με login
+from django.contrib import messages  # Για μηνύματα επιτυχίας/σφάλματος
+from django.shortcuts import render, redirect, get_object_or_404  # Βοηθητικές συναρτήσεις
+import pandas as pd  # Για επεξεργασία Excel
+from .forms import UploadExcelForm, CustomUserCreationForm, PersonForm, PersonManualForm  # Import forms
+from .models import Person, UploadLog  # Import models
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView
-from .forms import PersonManualForm
-from django.db.models.functions import Cast
-from django.db.models import Func
+from django.db.models.functions import Cast, Func
 from django.db.models import IntegerField, Value
 from django.http import HttpResponse, JsonResponse
 from django.template.loader import render_to_string
 
 
+# ============================
+# AUTOCOMPLETE VIEWS
+# ============================
+
 @login_required
 def autocomplete_title(request):
+    """AJAX endpoint for title autocomplete"""
     q = request.GET.get('q', '')
     results = (
-        Person.objects.filter(titlos__icontains=q)
+        Person.objects.filter(titlos__icontains=q)  # Filter titles containing query
         .values_list('titlos', flat=True)
-        .distinct()[:10]
+        .distinct()[:10]  # Limit results to 10 unique titles
     )
     return JsonResponse({'results': list(results)})
 
 
 @login_required
 def autocomplete_ekdoths(request):
+    """AJAX endpoint for publisher autocomplete"""
     q = request.GET.get('q', '')
     results = (
         Person.objects.filter(ekdoths__icontains=q)
@@ -36,81 +40,90 @@ def autocomplete_ekdoths(request):
     )
     return JsonResponse({'results': list(results)})
 
+
+# ============================
+# HOME & SIGNUP VIEWS
+# ============================
+
 def home(request):
+    """Render the home page"""
     return render(request, 'home.html')
 
-class SignUpView( CreateView):
+
+class SignUpView(CreateView):
+    """User registration view"""
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
-    
-    
-    
+
+
+# ============================
+# HELPER FUNCTIONS
+# ============================
 
 def clean(value):
+    """Clean a cell value from Excel: NaN → None, strip spaces"""
     if pd.isna(value):
         return None
     return str(value).strip()
-    
+
+
 def clean_ari8mos(value):
+    """Clean ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ: convert floats like 115011.0 → '115011'"""
     if pd.isna(value):
         return None
     try:
-        return str(int(value))  # 115011.0 → "115011"
+        return str(int(value))
     except (ValueError, TypeError):
-        return str(value).strip() 
+        return str(value).strip()
+
+
+def generate_koha_from_author(author):
+    """Convert 'surname,name' → 'name surname'"""
+    if not author or "," not in author:
+        return None
+    parts = author.split(",")
+    if len(parts) != 2:
+        return None
+    surname = parts[0].strip()
+    name = parts[1].strip()
+    if not surname or not name:
+        return None
+    return f"{name} {surname}"
+
+
+# ============================
+# SHOW PEOPLE
+# ============================
 
 @login_required
 def show_people(request):
+    """Display all Person records, ordered by numeric ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ"""
     people = (
         Person.objects
         .exclude(ari8mosEisagoghs__isnull=True)
         .exclude(ari8mosEisagoghs__exact='')
-        .annotate(
-            ari8mos_int=Cast('ari8mosEisagoghs', IntegerField())
-        )
+        .annotate(ari8mos_int=Cast('ari8mosEisagoghs', IntegerField()))
         .order_by('ari8mos_int')
     )
-
     return render(request, 'main/people.html', {'people': people})
 
-def generate_koha_from_author(author):
-    """
-    Converts 'surname,name' → 'name surname'
-    """
-    if not author or "," not in author:
-        return None
 
-    parts = author.split(",")
-    if len(parts) != 2:
-        return None
-
-    surname = parts[0].strip()
-    name = parts[1].strip()
-
-    if not surname or not name:
-        return None
-
-    return f"{name} {surname}"
-
+# ============================
+# UPLOAD EXCEL VIEW
+# ============================
 
 @login_required
 def upload_excel(request):
+    """Handle Excel file upload and processing"""
     if request.method == 'POST':
         form = UploadExcelForm(request.POST, request.FILES)
-
         if form.is_valid():
             excel_file = request.FILES['excel_file']
             df = pd.read_excel(excel_file)
-            
-            # ✅ υπάρχοντα IDs στη βάση
-            existing_ids = set(
-                Person.objects.values_list('ari8mosEisagoghs', flat=True)
-            )
 
-            # 🔴 Νέο set για να εντοπίζει διπλότυπα μέσα στο ίδιο Excel
-            seen_in_file = set()
-
+            existing_ids = set(Person.objects.values_list('ari8mosEisagoghs', flat=True))
+            seen_in_file = set()  # Track duplicates within Excel
             added = []
             skipped = []
             duplicates = []
@@ -119,38 +132,28 @@ def upload_excel(request):
             for index, row in df.iterrows():
                 ari8mos = clean_ari8mos(row.get('ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ'))
                 syggrafeas = clean(row.get('ΣΥΓΓΡΑΦΕΑΣ'))
-                koha = clean(row.get('ΣΥΓΓΡΑΦΕΑΣ KOHA'))
-                
-                if not koha and syggrafeas:
-                  koha = generate_koha_from_author(syggrafeas)
+                koha = clean(row.get('ΣΥΓΓΡΑΦΕΑΣ KOHA')) or generate_koha_from_author(syggrafeas)
 
                 if not ari8mos:
-                    skipped.append({
-                        'row': index + 2,
-                        'reason': 'Missing ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ'
-                    })
+                    skipped.append({'row': index + 2, 'reason': 'Missing ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ'})
                     continue
 
-                # 🔴 DUPLICATE ΜΕΣΑ ΣΤΟ ΙΔΙΟ EXCEL
+                # Check for duplicates inside Excel
                 if ari8mos in seen_in_file:
-                    skipped.append({
-                        'row': index + 2,
-                        'reason': 'Duplicate ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ inside Excel'
-                    })
+                    skipped.append({'row': index + 2, 'reason': 'Duplicate ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ inside Excel'})
                     continue
                 seen_in_file.add(ari8mos)
 
-                # 🔴 DUPLICATE CHECK (existing_ids = βάση δεδομένων)
+                # Check for duplicates in DB
                 if ari8mos in existing_ids:
                     existing_person = Person.objects.filter(ari8mosEisagoghs=ari8mos).first()
-
                     if not existing_person:
-                        # Ασφαλές insert
+                        # Safe insert if somehow not found
                         new_objects.append(Person(
                             ari8mosEisagoghs=ari8mos,
                             hmeromhnia_eis=clean(row.get('ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ')),
-                            syggrafeas=clean(row.get('ΣΥΓΓΡΑΦΕΑΣ')),
-                            koha=clean(row.get('ΣΥΓΓΡΑΦΕΑΣ KOHA')),
+                            syggrafeas=syggrafeas,
+                            koha=koha,
                             titlos=clean(row.get('ΤΙΤΛΟΣ')),
                             ekdoths=clean(row.get('ΕΚΔΟΤΗΣ')),
                             ekdosh=clean(row.get('ΕΚΔΟΣΗ')),
@@ -163,38 +166,18 @@ def upload_excel(request):
                             ISBN=clean(row.get('ISBN')),
                             sthlh1=clean(row.get('Στήλη1')),
                             sthlh2=clean(row.get('Στήλη2')),
-                            
-                            
                         ))
-                        
                         existing_ids.add(ari8mos)
                         continue
 
-                    # Πραγματικό duplicate → αποθήκευση για resolve
+                    # Real duplicate → store for resolution
                     duplicates.append({
-                        "left": {
-                            "ari8mos": existing_person.ari8mosEisagoghs,
-                            "hmeromhnia_eis": existing_person.hmeromhnia_eis,
-                            "syggrafeas": existing_person.syggrafeas,
-                            "koha": existing_person.koha,
-                            "titlos": existing_person.titlos,
-                            "ekdoths": existing_person.ekdoths,
-                            "ekdosh": existing_person.ekdosh,
-                            "etosEkdoshs": existing_person.etosEkdoshs,
-                            "toposEkdoshs": existing_person.toposEkdoshs,
-                            "sxhma": existing_person.sxhma,
-                            "selides": existing_person.selides,
-                            "tomos": existing_person.tomos,
-                            "troposPromPar": existing_person.troposPromPar,
-                            "ISBN": existing_person.ISBN,
-                            "sthlh1": existing_person.sthlh1,
-                            "sthlh2": existing_person.sthlh2,
-                        },
+                        "left": {k: getattr(existing_person, k) for k in vars(existing_person) if not k.startswith('_')},
                         "right": {
                             "ari8mos": ari8mos,
                             "hmeromhnia_eis": clean(row.get('ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ')),
-                            "syggrafeas": clean(row.get('ΣΥΓΓΡΑΦΕΑΣ')),
-                            "koha": clean(row.get('ΣΥΓΓΡΑΦΕΑΣ KOHA')),
+                            "syggrafeas": syggrafeas,
+                            "koha": koha,
                             "titlos": clean(row.get('ΤΙΤΛΟΣ')),
                             "ekdoths": clean(row.get('ΕΚΔΟΤΗΣ')),
                             "ekdosh": clean(row.get('ΕΚΔΟΣΗ')),
@@ -211,7 +194,7 @@ def upload_excel(request):
                     })
                     continue
 
-                # ✅ SAFE INSERT
+                # Safe insert
                 new_objects.append(Person(
                     ari8mosEisagoghs=ari8mos,
                     hmeromhnia_eis=clean(row.get('ΗΜΕΡΟΜΗΝΙΑ ΕΙΣΑΓΩΓΗΣ')),
@@ -231,21 +214,15 @@ def upload_excel(request):
                     sthlh2=clean(row.get('Στήλη2')),
                 ))
                 existing_ids.add(ari8mos)
-                
-                        
+                added.append({'ari8mos': ari8mos, 'titlos': clean(row.get('ΤΙΤΛΟΣ')), 'syggrafeas': syggrafeas})
 
-                added.append({
-                    'ari8mos': ari8mos,
-                    'titlos': clean(row.get('ΤΙΤΛΟΣ')),
-                    'syggrafeas': clean(row.get('ΣΥΓΓΡΑΦΕΑΣ')),
-                })
-           
+            # Bulk create all new Person objects
             Person.objects.bulk_create(new_objects, batch_size=1000)
 
-            # ✅ Store duplicates for next step
+            # Store duplicates in session for resolve step
             request.session['duplicates'] = duplicates
 
-            # ✅ Log upload
+            # Log upload
             UploadLog.objects.create(
                 user=request.user,
                 filename=excel_file.name,
@@ -261,70 +238,61 @@ def upload_excel(request):
                 'skipped_count': len(skipped),
                 'total_records': total_records,
             })
-
     else:
         form = UploadExcelForm()
 
     return render(request, 'upload_excel.html', {'form': form})
 
-# ———————————————— Υπόλοιπες view functions παραμένουν ίδιες ————————————————
+
+# ============================
+# DUPLICATES RESOLUTION
+# ============================
+
 @login_required
 def resolve_duplicates(request):
+    """Show duplicates from session"""
     duplicates = request.session.get('duplicates', [])
-
     if not duplicates:
-        return render(
-             request,
-            'main/duplicates_done.html'  
-        )
-    
-    current = duplicates[0]
+        return render(request, 'main/duplicates_done.html')
     return render(request, 'main/duplicates.html', {'duplicates': duplicates})
+
 
 @login_required
 def handle_duplicate(request):
+    """Handle edit/skip action for a single duplicate"""
     if request.method != "POST":
         return redirect("resolve_duplicates")
 
     ari8mos = request.POST.get("ari8mos")
     action = request.POST.get("action")
-
-    if not ari8mos or not action:
-        return redirect("resolve_duplicates")
-
     duplicates = request.session.get("duplicates", [])
 
-    # ΒΡΙΣΚΟΥΜΕ ΤΟ ΣΥΓΚΕΚΡΙΜΕΝΟ DUPLICATE
-    dup = next(
-        (d for d in duplicates if str(d["left"]["ari8mos"]) == str(ari8mos)),
-        None
-    )
-
+    # Find the specific duplicate
+    dup = next((d for d in duplicates if str(d["left"]["ari8mos"]) == str(ari8mos)), None)
     if not dup:
         return redirect("resolve_duplicates")
 
-    # ΑΦΑΙΡΟΥΜΕ ΜΟΝΟ ΑΥΤΟ ΠΟΥ ΠΑΤΗΘΗΚΕ
     duplicates.remove(dup)
     request.session["duplicates"] = duplicates
 
     if action == "edit":
-        return redirect(
-            f"{reverse('edit_person', args=[ari8mos])}?next=duplicates"
-        )
-
+        return redirect(f"{reverse('edit_person', args=[ari8mos])}?next=duplicates")
     # action == "skip"
     return redirect("resolve_duplicates")
 
 
 @login_required
 def skip_all_duplicates(request):
+    """Skip all duplicates at once"""
     if request.method == "POST":
         request.session['duplicates'] = []
         return redirect('show_people')
     return redirect('resolve_duplicates')
 
+
 @login_required
 def edit_person(request, pk):
+    """Edit a single Person record"""
     person = get_object_or_404(Person, pk=pk)
     next_url = request.GET.get('next')
 
@@ -341,34 +309,34 @@ def edit_person(request, pk):
 
     return render(request, 'main/edit_person.html', {'form': form, 'person': person})
 
+
+# ============================
+# ADD PERSON MANUALLY
+# ============================
+
 class RegexpReplace(Func):
+    """Custom DB function for regex replace in queries"""
     function = 'REGEXP_REPLACE'
     arity = 3
 
+
 @login_required
 def add_person(request):
+    """Add a new Person manually, auto-incrementing ΑΡΙΘΜΟΣ ΕΙΣΑΓΩΓΗΣ"""
     last_number = (
         Person.objects
         .exclude(ari8mosEisagoghs__isnull=True)
         .exclude(ari8mosEisagoghs__exact='')
-        .annotate(
-            clean_num=Cast(
-                RegexpReplace(
-                    'ari8mosEisagoghs',
-                    Value(r'\..*$'),
-                    Value('')
-                ),
-                IntegerField()
-            )
-        )
+        .annotate(clean_num=Cast(
+            RegexpReplace('ari8mosEisagoghs', Value(r'\..*$'), Value('')),
+            IntegerField()
+        ))
         .order_by('-clean_num')
         .values_list('clean_num', flat=True)
         .first()
     )
 
     next_number = (last_number or 0) + 1
-
-    # ✅ FLAG ΑΠΟ REDIRECT
     submitted = request.GET.get("submitted") == "1"
 
     if request.method == 'POST':
@@ -377,21 +345,9 @@ def add_person(request):
             person = form.save(commit=False)
             person.ari8mosEisagoghs = str(next_number)
             person.save()
-
-            # ✅ POST → REDIRECT → GET
+            # POST → REDIRECT → GET
             return redirect(f"{reverse('add_person')}?submitted=1")
     else:
         form = PersonManualForm()
 
-    return render(
-        request,
-        'main/add_person.html',
-        {
-            'form': form,
-            'next_number': next_number,
-            'submitted': submitted,
-        }
-    )
-
-
-
+    return render(request, 'main/add_person.html', {'form': form, 'next_number': next_number, 'submitted': submitted})
