@@ -24,6 +24,10 @@ During the internship, I was involved in a variety of practical tasks, including
 
 - 🖨️ Assisting with digitization of files.
 
+++++++++++++++++++++++++++
+
+να σημειωσουμε οτι μαθαμε την διαδιακσια του δανεισμου και της επιστροφης βιβλιων στη δημοσια βιβλιοθηκη 
+
 ## Tools Used 🧰
 
 - 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
@@ -67,6 +71,4 @@ This repository serves as a comprehensive record of the practical experience gai
 📅 Each week, we focus on different topics, exploring new tools and technologies 🛠️ to gradually build our skills and understanding. 📚
 
 
-++++++++++++++++++++++++++
 
-να σημειωσουμε οτι μαθαμε την διαδιακσια του δανεισμου και της επιστροφης βιβλιων στη δημοσια βιβλιοθηκη 
