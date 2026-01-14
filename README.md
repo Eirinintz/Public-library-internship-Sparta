@@ -14,19 +14,17 @@ This repository contains all tasks, projects, notes, and documentation created d
 
 During the internship, I was involved in a variety of practical tasks, including:
 
-- 📖 Registering new books and materials in the library system.
+- 📖 Registering new books and materials in the library system, as well as supporting the borrowing and return procedures of library items.
 
-- ✅ Verifying the accuracy of metadata.
+- 🔄 Assisting in the loan and return process, ensuring that borrowed books were properly recorded and returned on time.
 
-- 🗂️ Assisting in the organization and maintenance of the library collection.
+- ✅ Verifying the accuracy and completeness of bibliographic metadata.
 
-- 💻 Managing digital databases.
+- 🗂️ Assisting in the organization, classification, and maintenance of the library collection.
 
-- 🖨️ Assisting with digitization of files.
+- 💻 Managing and updating digital databases used by library staff.
 
-++++++++++++++++++++++++++
-
-να σημειωσουμε οτι μαθαμε την διαδιακσια του δανεισμου και της επιστροφης βιβλιων στη δημοσια βιβλιοθηκη 
+- 🖨️ Assisting with the digitization of physical files and archival material.
 
 ---
 
