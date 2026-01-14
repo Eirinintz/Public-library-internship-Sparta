@@ -32,11 +32,11 @@ During the internship, I was involved in a variety of practical tasks, including
 
 ## Tools Used 🧰
 
-- 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
+- 🧠 *ChatGPT* — AI tool for guidance and drafting. 🤓
 
-- 🤖 Copilot — for code and documentation assistance.
+- 🤖 *Copilot* — for code and documentation assistance.
   
-- 🤖 Claude AI – An Additional Tool for Code
+- 🤖 *Claude AI* – An Additional Tool for Code
 
 ---
 
