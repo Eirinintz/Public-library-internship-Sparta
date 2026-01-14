@@ -38,6 +38,8 @@ During the internship, I was involved in a variety of practical tasks, including
 
 ---
 
+## Generally 
+
 Alongside the tasks mentioned above, I also worked with Excel to record data for books 📚 that had not yet been cataloged, so they could later be added to the database. Additionally, I gained experience with the RFID system, which allows for quick identification and tracking of books 📖 based on the unique identifier stored on their tags 🔖🙂.
 
 In general, we worked with the following: ✅
