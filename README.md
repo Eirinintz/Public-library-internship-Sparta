@@ -70,6 +70,8 @@ In general, we worked with the following: ✅
 
 ---
 
+## Finish 
+
 This repository serves as a comprehensive record of the practical experience gained, the skills developed, and the contributions made during the internship. 😄
 
 📅 Each week, we focus on different topics, exploring new tools and technologies 🛠️ to gradually build our skills and understanding. 📚
