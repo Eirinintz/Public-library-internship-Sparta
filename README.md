@@ -28,6 +28,8 @@ During the internship, I was involved in a variety of practical tasks, including
 
 να σημειωσουμε οτι μαθαμε την διαδιακσια του δανεισμου και της επιστροφης βιβλιων στη δημοσια βιβλιοθηκη 
 
+---
+
 ## Tools Used 🧰
 
 - 🧠 ChatGPT — AI tool for guidance and drafting. 🤓
