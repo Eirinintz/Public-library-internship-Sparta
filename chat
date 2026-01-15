@@ -4,10 +4,12 @@
 
 <div class="container py-5">
 
+    <!-- Τίτλος -->
     <h1 class="text-center fw-bold mb-5">Συμπλήρωση Εγγράφων</h1>
 
+    <!-- Success Message -->
     @if(session('success'))
-    <div class="alert alert-success text-center">{{ session('success') }}</div>
+        <div class="alert alert-success text-center">{{ session('success') }}</div>
     @endif
 
     <div class="row gx-5 gy-4">
@@ -19,56 +21,22 @@
                     Εισερχόμενα Έγγραφα
                 </div>
                 <div class="card-body">
-
                     <form action="{{ route('incoming.store') }}" method="POST">
                         @csrf
 
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Α/Α</label>
-                            <input type="text" name="aa" class="form-control form-control-lg">
-                        </div>
+                        <input type="number" name="aa" placeholder="Α/Α" class="form-control mb-3">
+                        <input type="date" name="received_date" placeholder="Ημερομηνία Παραλαβής" class="form-control mb-3">
+                        <input type="text" name="incoming_number" placeholder="Αριθμός Εισερχομένου Εγγράφου" class="form-control mb-3">
+                        <input type="text" name="place" placeholder="Τόπος που εκδόθηκε" class="form-control mb-3">
+                        <input type="text" name="authority" placeholder="Αρχή που το έχει εκδόσει" class="form-control mb-3">
+                        <input type="text" name="year" placeholder="Χρονολογία εγγράφου" class="form-control mb-3">
+                        <textarea name="summary" placeholder="Περίληψη" class="form-control mb-3"></textarea>
+                        <input type="text" name="folder" placeholder="Φάκελος Αρχείου" class="form-control mb-3">
 
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Ημερομηνία Παραλαβής</label>
-                            <input type="date" name="received_date" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Αριθμός Εισερχομένου Εγγράφου</label>
-                            <input type="text" name="incoming_number" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Τόπος που εκδόθηκε</label>
-                            <input type="text" name="place" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Αρχή που το έχει εκδόσει</label>
-                            <input type="text" name="authority" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Χρονολογία Εγγράφου</label>
-                            <input type="text" name="year" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Περίληψη</label>
-                            <textarea name="summary" class="form-control form-control-lg" rows="4"></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Φάκελος Αρχείου</label>
-                            <input type="text" name="folder" class="form-control form-control-lg">
-                        </div>
-
-                        <button type="submit"
-                             class="btn btn-primary w-100 py-2 fw-bold">
-                             Αποθήκευση Εισερχομένου
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
+                            Αποθήκευση Εισερχομένου
                         </button>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -80,51 +48,21 @@
                     Εξερχόμενα Έγγραφα
                 </div>
                 <div class="card-body">
-
                     <form action="{{ route('outgoing.store') }}" method="POST">
                         @csrf
 
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Α/Α</label>
-                            <input type="text" name="aa" class="form-control form-control-lg">
-                        </div>
+                        <input type="number" name="aa" placeholder="Α/Α" class="form-control mb-3">
+                        <input type="text" name="target" placeholder="Αρχή στην οποία απευθύνεται" class="form-control mb-3">
+                        <textarea name="summary" placeholder="Περίληψη Εξερχομένου Εγγράφου" class="form-control mb-3"></textarea>
+                        <input type="text" name="year" placeholder="Χρονολογία" class="form-control mb-3">
+                        <input type="text" name="related" placeholder="Σχετικοί Αριθμοί" class="form-control mb-3">
+                        <input type="text" name="folder" placeholder="Φάκελος Αρχείου" class="form-control mb-3">
+                        <textarea name="notes" placeholder="Παρατηρήσεις" class="form-control mb-3"></textarea>
 
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Αρχή στην οποία απευθύνεται</label>
-                            <input type="text" name="target" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Περίληψη Εξερχομένου Εγγράφου</label>
-                            <textarea name="summary" class="form-control form-control-lg" rows="4"></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Χρονολογία</label>
-                            <input type="text" name="year" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Σχετικοί Αριθμοί</label>
-                            <input type="text" name="related" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Φάκελος Αρχείου</label>
-                            <input type="text" name="folder" class="form-control form-control-lg">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Παρατηρήσεις</label>
-                            <textarea name="notes" class="form-control form-control-lg" rows="3"></textarea>
-                        </div>
-
-                        <button type="submit"
-                             class="btn btn-success w-100 py-2 fw-bold">
-                             Αποθήκευση Εξερχομένου
+                        <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                            Αποθήκευση Εξερχομένου
                         </button>
                     </form>
-
                 </div>
             </div>
         </div>
