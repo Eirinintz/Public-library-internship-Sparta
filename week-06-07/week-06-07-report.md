@@ -6,4 +6,4 @@ project laraven ti einai και πως παιζει kai gia arxh ua to egkatsths
 
 gia lavaren: ta bhmata ta exv ola sto chatgpt: lavaren
 
-τα βηματα τα εχει το chat
+τα βηματα τα εχει το chat kai to co pilot
