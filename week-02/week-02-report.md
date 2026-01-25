@@ -137,7 +137,7 @@ Run:
 django-admin startproject Project 1
 ```
 
-A new folder named excel_form_app will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
+A new folder named Project 1 will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
 
 - settings.py
 - urls.py
@@ -180,7 +180,7 @@ Run:
 ```
 code .
 ```
-This will open excel_form_app project in Visual Studio Code for development.
+This will open Project 1 in Visual Studio Code for development.
 
 ---
 
@@ -313,7 +313,7 @@ python manage.py migrate
 
 ### 5️⃣ Create the Django App for Excel Handling
 
-Inside the excel_form_app folder, run:
+Inside the Project 1, run:
 
 ```
 python manage.py startapp main 
