@@ -57,7 +57,6 @@ Project 1/
         ├── print_range.html
         ├── resolve_duplicates.html
 |       ├── edit_person.html
-|       ├── duplicates.html
 |       └── duplicates_done.html
 |
 ├── main/static
