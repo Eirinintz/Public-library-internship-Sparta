@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-from pathlib import Path  # Used to handle filesystem paths in an OS-independent way
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,54 +20,54 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mkiu+ph5%jsbi(6+9jhxu)py)en@(h8m=g%ve+z31j&eezkiq9'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Enables debug mode (should be False in production)
+DEBUG = True
 
-ALLOWED_HOSTS = []  # List of allowed host/domain names for the project
+ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',        # Admin site
-    'django.contrib.auth',         # Authentication framework
-    'django.contrib.contenttypes', # Content type system
-    'django.contrib.sessions',     # Session framework
-    'django.contrib.messages',     # Messaging framework
-    'django.contrib.staticfiles',  # Static file handling
-    'main'                         # Custom application
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'main'
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',          # Security-related middleware
-    'django.contrib.sessions.middleware.SessionMiddleware',  # Session handling
-    'django.middleware.common.CommonMiddleware',              # Common HTTP middleware
-    'django.middleware.csrf.CsrfViewMiddleware',              # CSRF protection
-    'django.contrib.auth.middleware.AuthenticationMiddleware',# Authentication support
-    'django.contrib.messages.middleware.MessageMiddleware',   # Messaging support
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', # Clickjacking protection
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'excel_form_app.urls'  # Root URL configuration module
+ROOT_URLCONF = 'excel_form_app.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Template engine
-        'DIRS': [BASE_DIR / "templates"],  # Project-level templates directory
-        'APP_DIRS': True,                  # Enable app-level templates
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / "templates"],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.request',  # Adds request to templates
-                'django.contrib.auth.context_processors.auth', # Adds user/auth data
-                'django.contrib.messages.context_processors.messages', # Adds messages
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'excel_form_app.wsgi.application'  # WSGI entry point
+WSGI_APPLICATION = 'excel_form_app.wsgi.application'
 
 
 # Database
@@ -75,12 +75,12 @@ WSGI_APPLICATION = 'excel_form_app.wsgi.application'  # WSGI entry point
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL database engine
-        'NAME': 'books',                            # Database name
-        'USER': 'postgres',                         # Database user
-        'PASSWORD': 'Enter_your_password',          # Database password
-        'HOST': 'localhost',                        # Database host
-        'PORT': '5432',                             # Database port
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -90,16 +90,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # Prevents similar passwords
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # Enforces minimum password length
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator', # Prevents common passwords
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',# Prevents numeric-only passwords
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -107,24 +107,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'  # Default language
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'  # Time zone setting
+TIME_ZONE = 'UTC'
 
-USE_I18N = True  # Enable internationalization
+USE_I18N = True
 
-USE_TZ = True  # Enable timezone-aware datetimes
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = '/static/'  # URL prefix for static files
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # Project-level static files directory
+    BASE_DIR / "static",  # optional if you have a project-level static folder
 ]
 
-LOGIN_REDIRECT_URL = 'home'   # Redirect after successful login
-LOGOUT_REDIRECT_URL = 'home'  # Redirect after logout
-
-LOGIN_URL = 'login'  # URL used for login
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
