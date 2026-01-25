@@ -4,6 +4,8 @@
 
 ## Project Structure
 
+The folder... appears on the previous page, which is as follows: 🖼️📁
+
 ## To run, follow these steps: 🛠️💻
 
 ## 🌐 Below, I present the...we created:
