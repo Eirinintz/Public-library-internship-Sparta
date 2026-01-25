@@ -32,8 +32,6 @@ Project 1/
 ├── main/
     └── migrations/
 │       └── __init__.py
-│   └──static/images
-│        └── books_background
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
