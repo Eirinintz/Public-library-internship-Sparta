@@ -16,6 +16,8 @@ Project 1/
 │── manage.py
 │── requirements.txt
 │── urls.py
+└── static/main
+│        └── autocomplete.js
 │
 │── excel_form_app/
 │   ├── __init__.py
