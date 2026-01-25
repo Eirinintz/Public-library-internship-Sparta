@@ -357,4 +357,4 @@ Users can add a new book record to the database by filling out the form with det
 The application allows library staff to manage all book/person records efficiently.
 
 
-<img width="1347" height="638" alt="image" src="https://github.com/user-attachments/assets/51d8fd44-86fc-4bf0-9564-c1479b0be31c" />
+<img width="1346" height="636" alt="image" src="https://github.com/user-attachments/assets/99a4d880-c96f-4723-8790-4123d2f34654" />
