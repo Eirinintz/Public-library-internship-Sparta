@@ -1,12 +1,12 @@
 # Week 6 & 7 & 8 💪⌛🗓️
 
-# Introduction
+## Introduction
 
-# Project Structure
+## Project Structure
 
-# To run, follow these steps: 🛠️💻
+## To run, follow these steps: 🛠️💻
 
-# 🌐 Below, I present the...we created:
+## 🌐 Below, I present the...we created:
 
 php, myspl, lavaren perasmenos fakelos one drive kai katevasmenos ston ypologisth legetai πρωτοκολλο_2025
 
