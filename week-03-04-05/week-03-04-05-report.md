@@ -59,7 +59,7 @@ Project 1/
 |
 ├── main/static
 |   ├── images/
-|       └── book_background.jpg
+|       └── books_background.jpg
 │
 ├── templates/
 │   ├── base.html
