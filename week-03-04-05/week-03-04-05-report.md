@@ -7,7 +7,7 @@ The application is intended solely for internal library staff to manage records 
 
 ---
 
-### Project Structure
+## Project Structure
 
 The folder `Project 1` appears on the previous page, which is as follows: 🖼️📁
 
@@ -69,92 +69,6 @@ Project 1/
 │       ├── login.html
 │       ├── logged_out.html
 │       └── signup.html
-```
-
----
-
-### 1️⃣ Verify Database Table 🗄️
-
-Open **CMD** as *Admin* and run:
-
-```
-python manage.py shell
-```
-and after
-
-```
-from main.models import Person
-Person.objects.all()
-```
-
-If *no errors* appear, the model and table exist.
-
-Inspect fields:
-
-```
-for field in Person._meta.fields:
-    print(field.name, field.get_internal_type())
-```
-
-👉🏻🗑️ Delete Imported Data (If Needed)
-
-Inside the *same CMD*, run:
-
-```
-python manage.py shell
-```
-
-and 
-
-```
-from main.models import Person
-Person.objects.all().delete()
-exit()
-```
-
-This step is useful after imports if incorrect data was uploaded.
-
-
-### 2️⃣ Forms Setup 📝
-
-File: `main/forms.py`
-
-🎯 Purpose:
-
-- 📝 Defines Django forms
-
-- 🔗 Connects directly to the Person model
-
-- ✍️ Used for manual data entry
-
-
-### 3️⃣ Views Logic 👁️
-
-File: `main/views.py`
-
-👁️ Handles:
-
-- 📄 Listing entries (people.html)
-
-- ✏️ Editing records (edit_person.html)
-
-- 📊 Excel uploads
-
-- 🔍 Duplicate detection
-
-- ✅ Success & result pages
-
-
-### 4️⃣ URL Configuration 🔗
-
-App-level URLs: `main/urls.py`
-
-Project-level URLs: `Project 1/urls.py`
-
-Ensure the app URLs are included:
-
-```
-path('', include('main.urls'))
 ```
 
 ---
