@@ -29,6 +29,10 @@ Project 1/
 │        └── autocomplete.js
 |
 ├── main/
+    └── migrations/
+│       └── __init__.py
+│   └──static/images
+│        └── books_background
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
@@ -37,8 +41,7 @@ Project 1/
 │   ├── tests.py
 │   ├── views.py
 │   ├── urls.py
-│   └── migrations/
-│       └── __init__.py
+│   
 |
 ├── main/templates
 │   ├── upload_excel.html
