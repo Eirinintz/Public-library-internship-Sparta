@@ -1,4 +1,4 @@
-# week 6 & 7 & 8
+# Week 6 & 7 & 8 💪⌛🗓️
 
 php, myspl, lavaren perasmenos fakelos one drive kai katevasmenos ston ypologisth legetai πρωτοκολλο_2025
 
