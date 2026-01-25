@@ -1,0 +1,50 @@
+{% comment %}
+Loop through all records in the current page (pagination)
+{% endcomment %}
+{% for p in page_obj %}
+<tr>
+    {# Display record fields, use "-" if value is empty #}
+    <td>{{ p.ari8mosEisagoghs }}</td>
+    <td>{{ p.hmeromhnia_eis|default:"-" }}</td>
+    <td>{{ p.syggrafeas|default:"-" }}</td>
+    <td>{{ p.koha|default:"-" }}</td>
+    <td>{{ p.titlos|default:"-" }}</td>
+    <td>{{ p.ekdoths|default:"-" }}</td>
+    <td>{{ p.ekdosh|default:"-" }}</td>
+    <td>{{ p.etosEkdoshs|default:"-" }}</td>
+    <td>{{ p.toposEkdoshs|default:"-" }}</td>
+    <td>{{ p.sxhma|default:"-" }}</td>
+    <td>{{ p.selides|default:"-" }}</td>
+    <td>{{ p.tomos|default:"-" }}</td>
+    <td>{{ p.troposPromPar|default:"-" }}</td>
+    <td>{{ p.ISBN|default:"-" }}</td>
+
+    {# Actions column: Edit and Delete buttons #}
+    <td class="actions">
+        {% if p.ari8mosEisagoghs %}
+            {# Edit button always available #}
+            <a href="{% url 'edit_person' p.ari8mosEisagoghs %}" class="btn btn-edit">
+                ✏️ Edit
+            </a>
+
+            {# Delete button only for superusers, use escapejs for safe JS #}
+            {% if request.user.is_superuser %}
+            <button 
+                onclick="confirmDelete({{ p.ari8mosEisagoghs }}, '{{ p.titlos|default:"this record"|escapejs }}')" 
+                class="btn btn-delete">
+                🗑️ Delete
+            </button>
+            {% endif %}
+        {% else %}
+            {# Fallback if record has no ID #}
+            <span style="color: #999;">No ID</span>
+        {% endif %}
+    </td>
+</tr>
+
+{% empty %}
+{# Display if no records exist #}
+<tr>
+    <td colspan="15" style="text-align: center;">No records found</td>
+</tr>
+{% endfor %}
