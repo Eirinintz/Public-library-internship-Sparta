@@ -14,7 +14,7 @@ This repository contains all tasks, projects, notes, and documentation created d
 
 During the internship, I was involved in a variety of practical tasks, including:
 
-- 📖 Registering new books and materials in the library system, as well as customer serving by supporting the borrowing and returning processes of library items.
+- 📖 Registering new books and materials in the library system, as well as customer service by supporting the borrowing and returning processes of library items.
 
 - 🔄 Assisting in the loan and return process, ensuring that borrowed books were properly recorded and returned on time.
 
