@@ -1,5 +1,5 @@
 """
-WSGI config for excel_form_app project.
+WSGI config for Project 1 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -14,3 +14,4 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'excel_form_app.settings')
 
 application = get_wsgi_application()
+
