@@ -149,7 +149,7 @@ File: `main/views.py`
 
 App-level URLs: `main/urls.py`
 
-Project-level URLs: `excel_form_app/urls.py`
+Project-level URLs: `Project 1/urls.py`
 
 Ensure the app URLs are included:
 
