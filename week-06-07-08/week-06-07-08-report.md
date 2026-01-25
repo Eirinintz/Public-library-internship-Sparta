@@ -2,6 +2,8 @@
 
 ## Introduction
 
+εγκατασταση Laravel, χρησιμοποιησαμε php και mysql
+
 ## Project Structure
 
 The folder... appears on the previous page, which is as follows: 🖼️📁
@@ -445,6 +447,94 @@ php artisan serve
 Αν εμφανιστεί 127.0.0.1:8000, πάτα Ctrl + Click ή άνοιξε browser σε αυτό
 
 Θα πρέπει να δεις τη Laravel welcome page
+
+Τέλεια! 🎉 Τώρα που η Laravel δουλεύει και βλέπεις τη welcome page, μπορούμε να εμφανίσουμε Hello World στη σελίδα σου. Θα το κάνουμε με τον πιο απλό τρόπο: Route + Closure.
+
+1️⃣ Άνοιξε το αρχείο web.php
+
+Το αρχείο βρίσκεται εδώ:
+
+C:\Apache24\htdocs\laravelapp\routes\web.php
+
+
+Άνοιξε το με Notepad ή VS Code.
+
+2️⃣ Πρόσθεσε μια νέα route
+
+Στο τέλος του αρχείου, πρόσθεσε:
+
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+
+
+💡 Τι κάνει αυτό:
+
+Όταν πας στη διεύθυνση /hello, η Laravel θα τυπώσει Hello World.
+
+3️⃣ Αποθήκευση
+
+Αποθήκευσε το αρχείο.
+
+4️⃣ Άνοιξε τον browser
+
+Πήγαινε στη διεύθυνση:
+
+http://127.0.0.1:8000/hello
+
+
+ή, αν έχεις Virtual Host:
+
+http://laravel.test/hello
+
+
+➡️ Θα δεις Hello World στη σελίδα.
+
+Φυσικά 🙂 ορίστε συνοπτικά και καθαρά τα βήματα ώστε να έχεις ΚΑΙ τις δύο σελίδες:
+
+✅ 1️⃣ Σελίδα Laravel (welcome page)
+
+Αρχείο:
+
+routes/web.php
+
+
+Αυτή η route υπάρχει ήδη (μην τη σβήσεις):
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+📍 Διεύθυνση στον browser:
+
+http://127.0.0.1:8000/
+
+✅ 2️⃣ Σελίδα Hello World
+
+Στο ίδιο αρχείο routes/web.php, πρόσθεσε από κάτω:
+
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+
+
+📍 Διεύθυνση στον browser:
+
+http://127.0.0.1:8000/hello
+
+✅ 3️⃣ Εκκίνηση Laravel server (αν δεν τρέχει)
+cd C:\Apache24\htdocs\laravelapp
+php artisan serve
+
+🎯 Τελικό αποτέλεσμα
+Σελίδα	URL
+Laravel welcome	http://127.0.0.1:8000/
+Hello World	http://127.0.0.1:8000/hello
+
+
++++++++ο φακελος με τους κωδικες
++++++++να βαλω σχολια σε αυτους τους κωδικες
 
 
 ## 🌐 Below, I present the...we created:
