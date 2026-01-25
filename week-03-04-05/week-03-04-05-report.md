@@ -157,41 +157,6 @@ Ensure the app URLs are included:
 path('', include('main.urls'))
 ```
 
-
-### 5️⃣ Templates are included 🧩
-
-`📂 templates/`
-```
-registration/
-base.html     # Base layout template
-home.html     # Landing page template
-```
-
-`📂 templates/registration/`
-```
-home.html        # Authentication home page
-login.html       # Login form template
-logged_out.html  # Logout confirmation page
-signup.html      # User registration page
-```
-
-`📂 main/templates/main/`
-```
-people.html           # Displays all stored records
-edit_person.html      # Edit record form
-duplicates.html       # Duplicate detection page
-duplicates_done.html  # Confirmation page for duplicates handling
-```
-
-`📂 main/templates/`
-```
-main/
-people.html          # Alternative or extended listing view
-upload_excel.html    # Excel upload form
-upload_result.html   # Excel import results page
-upload_success.html  # Import success confirmation page
-```
-
 ---
 
 ## 🌐 To run the web application locally, follow these steps: 🛠️💻
