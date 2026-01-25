@@ -2,7 +2,11 @@
 
 # Introduction
 
-This week 
+# Project Structure
+
+# To run, follow these steps: 🛠️💻
+
+# 🌐 Below, I present the...we created:
 
 php, myspl, lavaren perasmenos fakelos one drive kai katevasmenos ston ypologisth legetai πρωτοκολλο_2025
 
