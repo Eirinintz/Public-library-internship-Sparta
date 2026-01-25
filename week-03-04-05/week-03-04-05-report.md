@@ -45,7 +45,7 @@ Project 1/
 │   
 |
 ├── main/templates
-    ├── incomplete_records
+    ├── incomplete_records.html
 │   ├── upload_excel.html
 │   ├── upload_result.html
 │   ├── upload_success.html
