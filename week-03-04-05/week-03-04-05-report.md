@@ -51,7 +51,11 @@ Project 1/
 │   ├── upload_success.html
 |   └── main/
 |       ├── add_person.html
+        ├── autocomplete.js
 |       ├── people.html
+        ├── people_table_rows.html
+        ├── print_range.html
+        ├── resolve_duplicates.html
 |       ├── edit_person.html
 |       ├── duplicates.html
 |       └── duplicates_done.html
