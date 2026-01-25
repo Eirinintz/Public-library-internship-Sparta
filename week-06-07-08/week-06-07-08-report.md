@@ -4,6 +4,12 @@
 
 εγκατασταση Laravel, χρησιμοποιησαμε php και mysql
 
++++++++ο φακελος με τους κωδικες
+
++++++++να βαλω σχολια σε αυτους τους κωδικες
+
++++++++na bgalo foto to pos emfanizetai
+
 ## Project Structure
 
 The folder... appears on the previous page, which is as follows: 🖼️📁
@@ -532,9 +538,6 @@ php artisan serve
 Laravel welcome	http://127.0.0.1:8000/
 Hello World	http://127.0.0.1:8000/hello
 
-
-+++++++ο φακελος με τους κωδικες
-+++++++να βαλω σχολια σε αυτους τους κωδικες
 
 
 ## 🌐 Below, I present the...we created:
