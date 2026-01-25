@@ -1,4 +1,4 @@
-# Week 2💪⌛🗓️
+# Week 2 💪⌛🗓️
 
 ## 🌐 Combining a Web Server with PHP and MySQL
 
