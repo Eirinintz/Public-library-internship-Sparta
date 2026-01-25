@@ -9,10 +9,10 @@ The application is intended solely for internal library staff to manage records 
 
 ### Project Structure
 
-The folder `excel_form_app` appears on the previous page, which is as follows: 🖼️📁
+The folder `Project 1` appears on the previous page, which is as follows: 🖼️📁
 
 ```
-excel_form_app/
+Project 1/
 │── manage.py
 │── requirements.txt
 │── urls.py
