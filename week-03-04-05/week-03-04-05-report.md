@@ -13,11 +13,12 @@ The folder `Project 1` appears on the previous page, which is as follows: 🖼�
 
 ```
 Project 1/
+└── static/main
+│        └── autocomplete.js
 │── manage.py
 │── requirements.txt
 │── urls.py
-└── static/main
-│        └── autocomplete.js
+
 │
 │── excel_form_app/
 │   ├── __init__.py
