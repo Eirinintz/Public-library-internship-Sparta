@@ -2,7 +2,7 @@
 
 ## Introduction
 
-εγκατασταση Laravel, χρησιμοποιησαμε php και mysql
+εγκατασταση Laravel, χρησιμοποιησαμε php και mysql kai fainetai h vash sto phpmyadmin
 
 +++++++ο φακελος με τους κωδικες
 
