@@ -134,15 +134,17 @@ pip install django
 Run:
 
 ```
-django-admin startproject Project 1
+django-admin startproject excel_form_app
 ```
 
-A new folder named Project 1 will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
+A new folder named excel_form_app will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
 
 - settings.py
 - urls.py
 - wsgi.py
 - asgi.py
+
+The File `excel_form_app` was renamed to `Project 1`
 
 Move into the project directory:
 
@@ -180,7 +182,7 @@ Run:
 ```
 code .
 ```
-This will open Project 1 in Visual Studio Code for development.
+This will open excel_form_app in Visual Studio Code for development.
 
 ---
 
