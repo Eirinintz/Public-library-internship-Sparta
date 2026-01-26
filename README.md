@@ -12,7 +12,7 @@ This repository contains all tasks, projects, notes, and documentation created d
 
 ## Key Tasks During the Internship 🛠️
 
-During the 12 weeks of practice, I was involved in a variety of practical tasks, including:
+During the 12 weeks of internship, I was involved in a variety of practical tasks, including:
 
 - 📖 Registering new books and materials in the library system, as well as customer service by supporting the borrowing and returning processes of library items.
 
