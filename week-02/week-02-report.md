@@ -137,7 +137,7 @@ Run:
 django-admin startproject excel_form_app
 ```
 
-A new folder named excel_form_app will be created in your current path. Automatically, a file named excel_form_app will be created, which contains the files:
+A new folder named `excel_form_app` will be created in your current path. Automatically, a file named `excel_form_app` will be created, which contains the files:
 
 - settings.py
 - urls.py
@@ -170,7 +170,7 @@ Stop the server anytime with:
 Ctrl + C
 ```
 
-The files manage.py and db.sqlite3 must be located in the root directory created by the user. 
+The files `manage.py` and `db.sqlite3` must be located in the root directory created by the user. 
 
 Keeping them in the initial folder ensures that Django can properly manage the project and database.
 
@@ -315,13 +315,13 @@ python manage.py migrate
 
 ### 5️⃣ Create the Django App for Excel Handling
 
-Inside the Project 1, run:
+Inside the `Project 1`, run:
 
 ```
 python manage.py startapp main 
 ```
 
-A new folder named main will be created inside your project. The folder contains:
+A new folder named `main` will be created inside your project. The folder contains:
 
 - models.py
 - views.py
