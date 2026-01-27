@@ -538,6 +538,8 @@ php artisan serve
 Laravel welcome	http://127.0.0.1:8000/
 Hello World	http://127.0.0.1:8000/hello
 
+php -S 127.0.0.1:8080
+
 
 
 ## 🌐 Below, I present the...we created:
