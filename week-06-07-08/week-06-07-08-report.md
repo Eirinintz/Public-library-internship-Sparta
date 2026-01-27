@@ -538,9 +538,11 @@ php artisan serve
 Laravel welcome	http://127.0.0.1:8000/
 Hello World	http://127.0.0.1:8000/hello
 
+cd C:\Apache24\htdocs\phpmyadmin
 php -S 127.0.0.1:8080
 
-
+cd C:\docker-projects\eiserx_exerx_app
+php artisan serve
 
 ## 🌐 Below, I present the...we created:
 
