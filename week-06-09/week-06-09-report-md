@@ -9,3 +9,20 @@ git pull origin main
 php artisan serve
 
 prin apo ayta kaname cd... kai git clone... mia fora ginetai ayto
+
+gia push:
+
+git branch
+
+git checkout -b my-branch
+
+git checkout -b user-auth
+
+git status
+
+git add .
+
+git commit -m "Περιγραφή αλλαγών"
+
+git push origin my-branch
+
