@@ -1,1 +1,11 @@
+gia na exoume thn teleytai ekdosh tou giorgou:
 
+git branch
+
+git fetch origin
+
+git pull origin main
+
+php artisan serve
+
+prin apo ayta kaname cd... kai git clone... mia fora ginetai ayto
