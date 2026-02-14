@@ -10,8 +10,6 @@ na baloume foto apo to project
 
 +++++++ο φακελος με τους κωδικες
 
-+++++++να βαλω σχολια σε αυτους τους κωδικες
-
 +++++++na bgalo foto to pos emfanizetai
 
 ## Project Structure
