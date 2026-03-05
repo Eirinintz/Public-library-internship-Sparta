@@ -56,6 +56,8 @@ In general, we worked with the following: ✅
 
 - 🐬 **MySQL** is another widely-used relational database system, known for speed and reliability, often used in web applications alongside frameworks like Django, PHP, or Node.js. ⚡🌐
 
+- 💻 **phpMyAdmin** is a free web-based tool used to manage MySQL and MariaDB databases through a browser 🌐. It provides a simple graphical interface that allows users to create databases, edit tables, add or delete data, and run SQL queries without using the command line 🚀.
+  
 - 📊 **PostgreSQL** is a powerful open-source relational database system, known for stability, reliability, and advanced features. It works seamlessly with Django for storing and managing structured data. 🗄️✅
 
 - 🛠️ **pgAdmin** is a popular GUI tool for managing PostgreSQL databases, making it easier to create, query, and maintain databases. 👩‍💻🔍
