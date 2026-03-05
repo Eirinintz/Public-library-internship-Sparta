@@ -60,7 +60,7 @@ In general, we worked with the following: ✅
   
 - 📊 **PostgreSQL** is a powerful open-source relational database system, known for stability, reliability, and advanced features. It works seamlessly with Django for storing and managing structured data. 🗄️✅
 
-- 🛠️ **pgAdmin** is a popular GUI tool for managing PostgreSQL databases, making it easier to create, query, and maintain databases. 👩‍💻🔍
+- 🛠️ **pgAdmin4** is a popular GUI tool for managing PostgreSQL databases, making it easier to create, query, and maintain databases. 👩‍💻🔍
 
 - 💻 **Django** is a high-level Python web framework that allows developers to build robust and scalable web applications quickly. It comes with built-in features like authentication, ORM, and templating. 🐍🌐
   
