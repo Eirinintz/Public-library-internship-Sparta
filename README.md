@@ -24,8 +24,6 @@ During the 12 weeks of internship, I was involved in a variety of practical task
 
 - 💻 Managing and updating digital databases used by library staff.
 
-- 🖨️ Assisting with the digitization of physical files and archival material.
-
 ---
 
 ## Tools Used 🧰
